@@ -1,0 +1,1613 @@
+---
+# ─── UE IDENTITY ───────────────────────────────────────────────────────────────
+title: "UE20 — Neurologie : Parkinson, STTB, Syndrome Cérébelleux"
+color: "c2"
+
+# ─── NAV ────────────────────────────────────────────────────────────────────────
+coursNav:
+  - { id: "c-parkinson-physio", label: "Parkinson — Physiopathologie" }
+  - { id: "c-parkinson-bilan", label: "Parkinson — Bilans" }
+  - { id: "c-parkinson-pec", label: "Parkinson — PEC & Rééducation" }
+  - { id: "c-lsvt", label: "Méthode LSVT Big" }
+  - { id: "c-marche-freezing", label: "Marche & Freezing" }
+  - { id: "c-sttb", label: "Syndrome STTB" }
+  - { id: "c-cerebelleux", label: "Syndrome Cérébelleux" }
+
+fichesNav:
+  - { id: "f-parkinson-debut", label: "Cas clinique — Parkinson débutant" }
+  - { id: "f-parkinson-evolue", label: "Cas clinique — Parkinson évolué" }
+  - { id: "f-sttb-cc", label: "Cas clinique — STTB" }
+  - { id: "f-cerebelleux-cc", label: "Cas clinique — Syndrome cérébelleux" }
+
+---
+
+{/* ── IMPORTS ─────────────────────────────────────── */}
+import Section   from '../components/Section.astro';
+import Card      from '../components/Card.astro';
+import AlertBox  from '../components/AlertBox.astro';
+import Grid2     from '../components/Grid2.astro';
+import Grid3     from '../components/Grid3.astro';
+import MiniCard  from '../components/MiniCard.astro';
+import Badge     from '../components/Badge.astro';
+import Grade     from '../components/Grade.astro';
+import Tree      from '../components/Tree.astro';
+import FlashCard from '../components/FlashCard.astro';
+import QcmCard   from '../components/QcmCard.astro';
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — PARKINSON PHYSIOPATHOLOGIE
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-parkinson-physio">
+
+<Card title="Épidémiologie">
+
+La maladie de Parkinson est la **2e maladie neurodégénérative** la plus fréquente après Alzheimer et la **2e cause de handicap moteur neurologique** chez le sujet âgé.
+
+<Grid3>
+  <MiniCard val="+167 000" label="personnes en France" />
+  <MiniCard val="25 000" label="nouveaux cas/an" />
+  <MiniCard val="×1,5" label="sex-ratio H/F" />
+</Grid3>
+
+- Pic d'incidence vers **60 ans** (rare avant 45 ans)
+- Facteurs multifactoriels : âge, génétique, environnement (pesticides, métaux lourds)
+
+</Card>
+
+<Card title="Physiopathologie">
+
+Maladie neurodégénérative **lente et progressive**, caractérisée par :
+- **Destruction des neurones dopaminergiques** de la substance noire
+- **Accumulation de corps de Lewy** (agrégats d'α-synucléine) toxiques
+- Activité anormale des mitochondries, inflammation du tissu cérébral
+
+<AlertBox type="key">Le diagnostic est posé quand 50 à 70% des neurones dopaminergiques sont déjà détruits. La phase pré-clinique peut durer plusieurs années.</AlertBox>
+
+**Phases d'évolution :**
+
+<Tree>
+Phase pré-clinique (années avant diagnostic)
+├── Phase précoce → signes parkinsoniens unilatéraux
+├── Phase compliquée → signes bilatéraux, phases ON/OFF
+└── Phase tardive → perte d'autonomie (fauteuil roulant / alité)
+</Tree>
+
+</Card>
+
+<Card title="Triade motrice parkinsonienne">
+
+<AlertBox type="danger">La triade = TREMBLEMENTS + RIGIDITÉ + AKINÉSIE/BRADYKINÉSIE. Un 4e signe est maintenant ajouté : l'instabilité posturale.</AlertBox>
+
+<table>
+<thead><tr><th>Signe</th><th>Description</th><th>Évaluation kiné</th></tr></thead>
+<tbody>
+<tr><td><Badge color="red">Tremblements</Badge></td><td>Tremblements de repos, disparaissent à la contraction volontaire</td><td>Observation, taping test</td></tr>
+<tr><td><Badge color="amber">Rigidité</Badge></td><td>Hypertonie plastique, type "roue dentée"</td><td>Mouvements de va-et-vient du poignet</td></tr>
+<tr><td><Badge color="blue">Akinésie/Bradykinésie</Badge></td><td>Lenteur et difficulté à initier le mouvement</td><td>Taping test, opposition des doigts chronométrés</td></tr>
+<tr><td><Badge color="teal">Instabilité posturale</Badge></td><td>Réductions des réactions d'ajustement automatique (4e signe)</td><td>Pull test, Mini-BESTest</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Troubles non moteurs">
+
+- Troubles du sommeil (insomnie, agitation nocturne)
+- Anosmie (souvent précède le diagnostic)
+- Constipation, mictions urgentes
+- Troubles cognitifs, dépression, anxiété
+- Douleurs (seuil douloureux plus bas que la population générale)
+- Dysarthrie, dysphagie, hypersalivation
+- Amimie faciale (masque parkinsonien)
+- Micrographie (écriture de plus en plus petite)
+- Troubles du comportement (achats compulsifs si agonistes dopaminergiques ++)
+
+<AlertBox type="trap">Les achats compulsifs peuvent être un effet secondaire du Ropinirole (agoniste dopaminergique). Toujours alerter le médecin traitant pour réduire la dose !</AlertBox>
+
+</Card>
+
+<Card title="Traitements médicamenteux — repères pour le kiné">
+
+<table>
+<thead><tr><th>Médicament</th><th>Classe</th><th>Point de vigilance</th></tr></thead>
+<tbody>
+<tr><td>Modopar / Sinomet (Lévodopa)</td><td>Antiparkinsonien (L-DOPA)</td><td>Phases ON/OFF selon la prise — adapter l'horaire des séances !</td></tr>
+<tr><td>Azilect (Rasagiline)</td><td>IMAO-B (empêche dégradation de la dopamine)</td><td>—</td></tr>
+<tr><td>Ropinirole / Requip (LP)</td><td>Agoniste dopaminergique</td><td>Effets secondaires : achats compulsifs, addictions</td></tr>
+<tr><td>Mantadix (Amantadine)</td><td>Antiparkinsonien</td><td>—</td></tr>
+<tr><td>Gutron</td><td>Traitement hypotension orthostatique</td><td>Fin d'exercice en dégressif !</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">La séance de kiné doit être programmée en **phase ON** (pic d'efficacité du traitement). Toujours demander au patient à quel moment il est le mieux.</AlertBox>
+
+<AlertBox type="danger">Contre-indications en cas de stimulation cérébrale profonde : ondes courtes, diathermie, ultrasons. Les massages ciblant les muscles contracturés parkinsoniens sont délétères.</AlertBox>
+
+</Card>
+
+<Card title="Échelle de Hoehn et Yahr">
+
+<table>
+<thead><tr><th>Stade</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><Badge color="green">Stade 1</Badge></td><td>Atteinte unilatérale, sans retentissement fonctionnel significatif</td></tr>
+<tr><td><Badge color="green">Stade 2</Badge></td><td>Atteinte bilatérale, sans trouble de l'équilibre</td></tr>
+<tr><td><Badge color="amber">Stade 3</Badge></td><td>Atteinte bilatérale avec troubles de l'équilibre, autonomie conservée</td></tr>
+<tr><td><Badge color="red">Stade 4</Badge></td><td>Handicap sévère, autonomie limitée, patient encore capable de marcher/se tenir debout</td></tr>
+<tr><td><Badge color="red">Stade 5</Badge></td><td>Patient dépendant, souvent en fauteuil ou alité</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — PARKINSON BILANS
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-parkinson-bilan">
+
+<Card title="Drapeaux rouges">
+
+<AlertBox type="danger">Fracture non consolidée — AEG — Douleur intense — Phase OFF difficilement stimulable — Vertiges (appeler le médecin traitant)</AlertBox>
+
+</Card>
+
+<Card title="Bilan complet — Vue d'ensemble">
+
+<Grid2>
+  <div>
+
+**Bilans spécifiques Parkinson :**
+- **UPDRS / MDS-UPDRS** : échelle globale (sections 2 et 3 pour le kiné). Plus le score est élevé, plus la maladie est avancée
+- **Hoehn et Yahr** : stade de la maladie
+- **PDQ-39 / PDQ-8** : qualité de vie
+- **Échelle d'Obeso** : dyskinésies induites par la L-DOPA (DIL)
+</div>
+<div>
+
+**Bilans fonctionnels :**
+- **TUG** (Timed Up and Go) : norme < 12s
+- **Five Times Sit-To-Stand** (FTSST) : norme 4-15,1s à 62 ans
+- **TDM6** : périmètre de marche (norme ≈ 450m)
+- **Modified-PAS** : transferts et mobilité au lit (sur 56)
+- **Mini-BESTest** : gold standard pour l'équilibre
+
+</div>
+</Grid2>
+
+</Card>
+
+<Card title="Bilan de la triade parkinsonienne">
+
+**Tremblements :**
+- Observation clinique (repos vs. mouvement)
+- Arrêt du tremblement à la contraction musculaire volontaire
+
+**Rigidité :**
+- Mouvements de va-et-vient du poignet (roue dentée)
+- Testing musculaire (Held et Pierrot-Deseilligny) — attention : les IJ et pectoraux sont souvent rétractés à cause de la posture
+
+**Akinésie / Bradykinésie :**
+- Taping test chronométré
+- Opposition des doigts chronométrée
+- Dyskinésies : échelle d'Obeso
+
+</Card>
+
+<Card title="Bilan de l'équilibre">
+
+<table>
+<thead><tr><th>Test</th><th>Description</th><th>Cotation normale</th></tr></thead>
+<tbody>
+<tr><td>Pull test (test de poussée-relâchement)</td><td>Kiné derrière le patient, mains sur les scapulas → le patient pousse puis le kiné lâche brusquement</td><td>Score 0 = récupère en 1 pas normal</td></tr>
+<tr><td>Mini-BESTest</td><td>Gold standard équilibre Parkinson</td><td>—</td></tr>
+<tr><td>Équilibre unipodal</td><td>Norme : > 10s</td><td>—</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="trap">Le test de Romberg ne sert à rien chez le patient parkinsonien ! Utiliser le pull test ou le mini-BESTest.</AlertBox>
+
+**Cotation du pull test :**
+- **0** : Récupère en 1 pas de longueur et de largeur normaux → NORMAL
+- **1** : 2 à 3 petits pas en arrière, récupère de manière autonome
+- **2** : 4 pas ou plus en arrière, récupère de manière autonome
+- **3** : Fait des pas mais besoin d'être assisté pour éviter une chute
+- **4** : Tombe sans tenter de faire un pas / incapable de se tenir debout sans assistance
+
+</Card>
+
+<Card title="Bilan morphostatique et postural">
+
+**Posture typique du parkinsonien (« posture du skieur ») :**
+- Flexion de la tête, du tronc, des hanches, des genoux et des chevilles
+- Épaules projetées vers l'avant (enroulement)
+- Cyphose dorsale
+- Antécolis possible (flexion du cou avec déplacement antérieur)
+
+**Mesures objectives :**
+- **C7 plumb line** : passage de C7 en avant des têtes fémorales
+- **Debout contre un mur** : mesurer la distance nuque/mur, T7/mur, L3/mur
+- **Photo avec goniomètre** : angle entre ligne grand trochanter-acromion et verticale
+
+**Déformations posturales :**
+
+<table>
+<thead><tr><th>Déformation</th><th>Réductible ?</th><th>Prise en charge</th></tr></thead>
+<tbody>
+<tr><td>Camptocormie haute (≥ 45°)</td><td>Oui</td><td>Hyperactivité obliques abdominaux → étirements + renforcement grand dorsal</td></tr>
+<tr><td>Camptocormie basse (≥ 30°)</td><td>Oui</td><td>Hyperactivité psoas → étirements psoas, IJ, abdominaux</td></tr>
+<tr><td>Syndrome de Pise (inclinaison latérale)</td><td>Oui</td><td>Mobilisations en translation, exercices asymétriques MS</td></tr>
+<tr><td>Antécolis</td><td>Oui</td><td>Contracté/relâché muscles antérieurs du cou, renforcement trapèze sup</td></tr>
+<tr><td>Scoliose</td><td>Non</td><td>Surveillance ++ (évolue rapidement dans Parkinson)</td></tr>
+<tr><td>Cyphose</td><td>Non</td><td>Entretien de la mobilité, pas de correction possible</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Bilans psychologique et kinésiophobie">
+
+- **Échelle d'anxiété d'Hamilton** : seuil significatif à 20/56
+- **Échelle de TAMPA** (kinésiophobie) : sur 68
+- **MMS** (bilan cognitif) : /30 — attention aux troubles exécutifs et cognitifs
+
+<AlertBox type="key">La kinésiophobie est très fréquente. Elle alimente la sédentarité qui aggrave la maladie. C'est un axe majeur de l'éducation thérapeutique.</AlertBox>
+
+</Card>
+
+<Card title="CIF type — Maladie de Parkinson">
+
+<table>
+<thead><tr><th>Déficiences</th><th>Limitations d'activités</th><th>Restrictions de participation</th></tr></thead>
+<tbody>
+<tr>
+  <td>
+    - Triade : tremblements, rigidité, bradykinésie<br/>
+    - Douleur EVA/DN4<br/>
+    - Déformations posturales (cyphose, enroulement épaules, flexum hanche/genou)<br/>
+    - Rétraction IJ et pectoraux<br/>
+    - Diminution amplitudes articulaires<br/>
+    - Dim. ampliation thoracique<br/>
+    - Diminution périmètre de marche<br/>
+    - Déconditionnement global
+  </td>
+  <td>
+    - Marche, déplacements<br/>
+    - Conduite automobile<br/>
+    - AVQ : s'habiller, faire ses courses<br/>
+    - Transferts (lever du lit, du fauteuil)
+  </td>
+  <td>
+    - Rôle familial (garder petits-enfants)<br/>
+    - Activités sociales (cinéma, bridge)<br/>
+    - Activités sportives<br/>
+    - Vie professionnelle
+  </td>
+</tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — PARKINSON PEC & RÉÉDUCATION
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-parkinson-pec">
+
+<Card title="Principes généraux de prise en charge">
+
+<AlertBox type="key">L'activité physique est AUSSI IMPORTANTE que les médicaments. Objectif : 150 min/semaine à intensité modérée à soutenue (le patient peut parler mais avec difficulté).</AlertBox>
+
+**Principes : Intensité — Diversité — Régularité — Continuité**
+
+**Modalités d'organisation des séances :**
+- **Option 1** : 2 séances/semaine régulières au cabinet
+- **Option 2** : Stage intensif (4 séances/semaine × 6 semaines) puis auto-exercices, puis reprise
+- **Option 3** : LSVT BIG (4 semaines, 4 séances/semaine)
+
+**Activités physiques recommandées :**
+- Danse (tango ++) : rythme, coordination, déplacements multidirectionnels, dimension sociale
+- Taï-chi : mouvements lents, amples, équilibre, respiration
+- Ping-pong : vitesse de réaction, coordination œil-main, stimulation cognitive
+- Marche nordique, vélo (ATTENTION : fin d'exercice en dégressif si HTO)
+
+<AlertBox type="trap">Le ménage et les activités quotidiennes ne comptent PAS comme activité physique efficace si la FC n'augmente pas significativement.</AlertBox>
+
+</Card>
+
+<Card title="Travail postural">
+
+**Assouplissements et étirements actifs (passifs pour aller plus loin) :**
+- Rachis complet (la rigidité axiale réduit mobilité et équilibre)
+- Grand pectoral ++ (rétracté par la posture en enroulement)
+- Chaîne postérieure MI (IJ rétractés)
+- Psoas (flessum de hanche)
+
+**Exemples d'exercices :**
+- En décubitus dorsal sur un coussin (ouverture thoracique)
+- À 4 pattes ou en chevalier servant : lever un bras sur le côté / enrouler entre les jambes
+- Élévation d'un bâton au-dessus de la tête et sur les côtés
+
+**Renforcement musculaire :**
+- Érecteurs du rachis (auto-grandissement)
+- Abdominaux
+- Quadriceps et moyen fessier (abducteurs de hanche ++)
+- 50 transferts assis-debout-assis = excellent exercice de renforcement du quadri
+
+<AlertBox type="key">Pour toutes les déformations : travailler vers l'attitude INVERSE. Donner un feedback si les mouvements sont d'amplitude insuffisante (le cerveau du patient lui ment — règle des 300%).</AlertBox>
+
+</Card>
+
+<Card title="Travail de l'équilibre">
+
+**Équilibre statique :**
+- Bipodal → unipodal
+- Sol stable → instable (tapis mousse, plateforme)
+- Yeux ouverts → fermés
+- Simple tâche → double tâche (passes de ballon + compter à rebours de 7 en 7)
+
+**Équilibre dynamique :**
+- Dissociation des ceintures (schémas réciproques)
+- Vélo elliptique (coordination bras-jambes pour automatiser le ballant des bras)
+- Grandes fentes avant (50 fois) puis sur le côté
+- Pull test comme exercice (provoquer 3 pas de rattrapage max)
+
+**Prévention et gestion des chutes :**
+- Apprentissage de comment tomber sans se blesser (se regrouper, protéger les mains)
+- Relevés du sol à travailler à **CHAQUE séance** (différentes séquences de NEMS)
+- Réaction "parachute"
+- Projection progressive du centre de gravité vers l'avant (ballon de Klein)
+
+</Card>
+
+<Card title="Travail de la marche">
+
+**Objectif : allonger la hauteur ET la longueur du pas**
+
+**Initiation du mouvement (anti-freezing) :**
+- Repères visuels au sol (lignes horizontales, cerceaux)
+- Bandes de scotch / repères de couleur
+- Métronome (rythme auditif)
+- Pousser un ballon avec le pied
+- Fentes avant (enclenche le premier pas)
+
+**Progression de la marche :**
+- Marche sur sol ++ (plutôt que tapis de marche : plus fonctionnel et sécuritaire)
+- Parcours de marche : avant, arrière, en ligne, latéral
+- Sauts, cerceaux
+- Demi-tours : décomposer, travailler en quarts de tour progressivement
+- Travail du nombre d'enjambées sur 10m (diminuer progressivement)
+
+**Double tâche dès les premières séances :**
+- Marcher + regarder des objets autour
+- Marcher + faire passer un objet autour de la taille
+- Marcher + compter les gens portant des lunettes
+
+<AlertBox type="trap">30% des patients chutent tous les 3 mois quand ils ont du freezing + festination. La festination (accélération involontaire) se traite par repères visuels au sol et métronome.</AlertBox>
+
+</Card>
+
+<Card title="Travail des transferts">
+
+**Principe :** décomposer le mouvement en étapes conscientes (contourner le défaut d'automatisation)
+
+**Exemple — lever de chaise :**
+1. Avancer les pieds
+2. Pencher le tronc vers l'avant
+3. Pousser sur les membres inférieurs
+4. Se redresser
+
+**Imagerie motrice :** "Levez-vous comme un avion, pas comme une fusée" / "Faites la poule"
+
+**Mobilité au lit :**
+- Moulinette avec les pieds pour amener le drap
+- Pont fessier pour se retourner sans s'emprisonner dans les draps
+- Barre de lit recommandée
+
+**Conduite automobile :** Toujours vérifier si le patient a passé la visite de contrôle d'aptitude (médecin agréé par la préfecture) !
+
+</Card>
+
+<Card title="Rééducation respiratoire">
+
+**Atteintes respiratoires dans Parkinson :**
+- Bradykinésie des muscles respiratoires
+- Dyskinésies du diaphragme
+- Dystonies des muscles hyoïdiens
+
+**Traitements avec le plus de preuves :**
+- **EMST** (muscles expiratoires) : efficace pour déglutition et phonation
+- **EMST + Air Stacking** : pour la toux
+- **IMST** (muscles inspiratoires) : pour la phonation
+- **Spirométrie incitative** : pour la dyspnée
+
+**Le chant** a des effets positifs sur la parole, la voix, la respiration et la déglutition.
+
+</Card>
+
+<Card title="Éducation thérapeutique et coordination pluridisciplinaire">
+
+**ETP — Thèmes clés :**
+- L'activité physique est aussi importante que les médicaments
+- Bons sites : Centre Expert Parkinson, France Parkinson, Parkinson Québec, Pôle MND
+- Méfiance vis-à-vis des réseaux sociaux et sites non validés
+- Informer sur la réglementation de la conduite automobile
+- Sommeil : éviter la chaleur la nuit, stratégies d'hygiène de sommeil
+
+**Coordination avec les autres professionnels :**
+
+<table>
+<thead><tr><th>Professionnel</th><th>Indication</th><th>Remboursement</th></tr></thead>
+<tbody>
+<tr><td>Orthophoniste</td><td>Déglutition, écriture, mémoire, voix</td><td>Oui (SS)</td></tr>
+<tr><td>Ergothérapeute</td><td>Positionnement au fauteuil, aménagements domicile (barres d'appui, douche italienne, surélévateur WC)</td><td>Non (SS)</td></tr>
+<tr><td>Psychologue</td><td>Anxiété, dépression, kinésiophobie</td><td>—</td></tr>
+<tr><td>Neurologue</td><td>Adaptation du traitement, suivi</td><td>—</td></tr>
+<tr><td>Médecin traitant</td><td>Coordination, aides à domicile, aides sociales</td><td>—</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">Le kiné est souvent le professionnel le plus fréquemment rencontré → rôle de surveillance et d'alerte. Ne jamais proposer une démarche médicale soi-même : signaler au médecin traitant qui décide.</AlertBox>
+
+</Card>
+
+<Card title="Aides techniques à la marche">
+
+<table>
+<thead><tr><th>Aide technique</th><th>Indication</th></tr></thead>
+<tbody>
+<tr><td>Rollator 4 roues</td><td>Instabilité posturale</td></tr>
+<tr><td>Rollator 2 roues + 2 patins</td><td>Déplacements intérieur (bon outil)</td></tr>
+<tr><td>Rollator avec frein</td><td>Festination</td></tr>
+<tr><td>Rollator avec indice visuel</td><td>Festination + freezing</td></tr>
+<tr><td>Déambulateur appui antébrachial</td><td>Syndrome de Pise, camptocormie</td></tr>
+<tr><td>Canne simple</td><td>Attention : peut augmenter la déviation latérale → non recommandé seul</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="trap">Régler le rollator à la bonne hauteur. Apprendre les demi-tours et changements de direction avec l'aide technique ± languette anti-freezing.</AlertBox>
+
+</Card>
+
+<Card title="Douleurs dans la maladie de Parkinson">
+
+<Grid2>
+  <div>
+    <Badge color="blue">Douleurs centrales</Badge>
+    Spécifiques à la maladie. Améliorées par les médicaments antiparkinsoniens. Différence importante entre phase ON et OFF.
+  </div>
+  <div>
+    <Badge color="amber">Douleurs secondaires</Badge>
+    Non spécifiques (cervicalgies, lombalgies liées aux déformations). Augmentées par les symptômes moteurs.
+  </div>
+</Grid2>
+
+**Approches thérapeutiques :**
+- Approches actives (exercice physique, mouvements) = **les plus efficaces**
+- Relaxation et méditation = preuves existantes
+- Massages, TENS = efficacité limitée (traitement des zones non parkinsonniennes uniquement)
+
+<AlertBox type="trap">Le seuil de douleur est plus bas chez les parkinsoniens. Les massages ciblant les contractures parkinsonniennes sont DÉLÉTÈRES.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — MÉTHODE LSVT BIG
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-lsvt">
+
+<Card title="Présentation de la méthode LSVT Big">
+
+**Lee Silverman Voice Treatment BIG** — méthode américaine, peu de kinés formés en France.
+
+<Grid3>
+  <MiniCard val="4 sem." label="Durée du protocole" />
+  <MiniCard val="4×/sem." label="Séances au cabinet" />
+  <MiniCard val="70-80%" label="Intensité des mouvements" />
+</Grid3>
+
+**Principe :** Grands mouvements à haute intensité en actif → stimuler la production de dopamine et exploiter la plasticité cérébrale pour améliorer l'amplitude, la vitesse et la qualité du mouvement.
+
+**Origine :** LSVT Loud (orthophonie) → observation que les exercices vocaux amélioraient aussi la motricité → LSVT Big pour la kinésithérapie.
+
+<AlertBox type="key">La méthode repose sur le principe des 300% : le patient doit avoir l'impression d'en faire BEAUCOUP TROP pour atteindre un mouvement proche de la normale. Le cerveau du patient lui ment — ses perceptions sont réduites.</AlertBox>
+
+**Avant de commencer :** interroger le patient sur sa motivation et sa capacité à réaliser les auto-exercices à domicile. Rendre la séance ludique !
+
+</Card>
+
+<Card title="Auto-exercices LSVT Big — Séquence en position assise">
+
+**Position de base : assis, jambes écartées sur la chaise**
+
+**Exercice 1 :**
+Tendre les bras vers l'avant → toucher le sol avec les mains → tendre les mains vers le plafond → bras tendus sur les côtés, mains en supination → compter fort jusqu'à 10 → enchaîner 4 fois.
+*Mime : se baisser pour ramasser + se lever + s'étirer*
+
+**Exercice 2 :**
+Tendre une main sur le côté → pivot assis → ramener le bras en l'air collé contre l'oreille → compter fort jusqu'à 10 → enchaîner 4 fois de chaque côté.
+*Mime : entrer/sortir de la voiture, pivot de lever de chaise*
+
+**Exercice 3 (assis → debout) :**
+Bras tendus devant → se lever en écartant les bras, coudes tendus, mains en supination, doigts tendus.
+*Mime : lever de chaise. Lutte contre la posture d'enroulement. Travail élasticité des doigts.*
+
+<AlertBox type="trap">On ne fait jamais le mouvement en alterné dans LSVT Big ! 8 répétitions d'un côté PUIS on passe à l'autre côté.</AlertBox>
+
+</Card>
+
+<Card title="Auto-exercices LSVT Big — Séquence debout">
+
+**Exercice 4 — Fente avant :**
+Fente en avant (pas trop grande) + bras en abduction, coudes en extension, mains en supination → revenir en arrière en levant le genou.
+*Importance : aide à enclencher le premier pas. Améliore le regard droit devant.*
+
+**Exercice 5 — Pas de côté :**
+Genou devant puis ouvert sur le côté, ouverture des bras comme un hiéroglyphe, tête tournée du côté du pas → retour position initiale.
+*Mime : le demi-tour. Technique pour débloquer un freezing.*
+
+**Exercice 6 — Fente arrière (révérence) :**
+Fente arrière en baissant les bras → revenir en tapant fort le pied (vibration → réveille la posture et le tonus).
+*Mime : ramasser un objet au sol, ouvrir une porte.*
+
+**Exercice 7 — Bascule avant-arrière :**
+Transferts d'appui avant-arrière en alternant les bras sans bouger le bassin.
+*Mime : aller chercher un objet en hauteur.*
+
+**Exercice 8 — Rotation du tronc :**
+Rotation vers l'arrière bras tendus côté → retour.
+*Mime : changement de direction.*
+
+**Exercice 9 — Marche BIG :**
+Grands mouvements, intensité et répétition → monter les genoux + détendre les bras. Introduire des chansons appréciées du patient pour acquérir l'automatisme de la marche fluide.
+*Imposer la Marche Big dehors ET dans la maison.*
+
+</Card>
+
+<Card title="Tâches complexes LSVT Big">
+
+- **Sortir du lit** : moulinette avec les pieds pour amener le drap → bascule synchronisée bras/buste + jambes qui sortent. Barre de lit recommandée.
+- **Se retourner dans le lit** : pont fessier pour éviter de s'emprisonner dans les draps
+- **Théâtre / sièges étroits** : pas de côté + bras sur la rangée de devant pour se pencher et s'asseoir
+- **Se mettre à table** : se coller à la table puis tirer la chaise en se penchant en avant
+- **Monter/descendre de la voiture** : pivot assis ou se tenir selon type de voiture et taille du patient
+
+**Si les exercices deviennent trop faciles → les mettre en difficulté !**
+
+**Double tâche :** parler au patient pendant l'exercice, mettre de la musique, imagerie mentale (visualiser une personne dont la démarche plaît).
+
+**En libéral :** possibilité de séances collectives avec 4 patients maximum.
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — MARCHE & FREEZING
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-marche-freezing">
+
+<Card title="Troubles continus vs troubles épisodiques de la marche">
+
+<Grid2>
+  <div>
+    <Badge color="amber">Troubles continus (permanents)</Badge>
+
+- Marche à petits pas (diminution longueur)
+- Diminution vitesse de marche
+- Réduction du ballant des bras (souvent asymétrique)
+- Difficulté à initier la marche
+- Posture en flexion du tronc
+- Altération de la coordination
+
+</div>
+  <div>
+    <Badge color="red">Troubles épisodiques (intermittents)</Badge>
+
+- **Freezing** : pieds "collés au sol"
+- **Festination** : accélération involontaire + diminution longueur des pas
+
+*Déclencheurs : changement de direction, passage étroit, stress, surcharge cognitive, double tâche*
+
+  </div>
+</Grid2>
+
+<AlertBox type="danger">30% des patients chutent tous les 3 mois quand ils ont du freezing + festination.</AlertBox>
+
+</Card>
+
+<Card title="Le freezing — Physiopathologie et stratégies">
+
+**Voie automatique (ganglions de la base) :** altérée dans Parkinson → perte de fluidité, difficulty à initier, freezing.
+
+**Voie volontaire (cortex) :** relativement préservée → c'est sur elle que repose toute la rééducation.
+
+**Principe :** court-circuiter la voie automatique défaillante via des signaux qui sollicitent l'attention et les entrées sensorielles.
+
+**7 catégories de stratégies anti-freezing :**
+
+<table>
+<thead><tr><th>Catégorie</th><th>Exemples</th></tr></thead>
+<tbody>
+<tr><td>1. Signaux externes</td><td>Lignes au sol, laser, bandes de scotch, métronome, musique, voix</td></tr>
+<tr><td>2. Signaux internes</td><td>Se dire "grands pas", compter les pas, se dire "1-2-1-2"</td></tr>
+<tr><td>3. Modifier les conditions d'équilibre / déclencher un mouvement</td><td>Lever le genou très haut, faire des grandes fentes, transfert de poids avant l'initiation</td></tr>
+<tr><td>4. Altération de l'état mental</td><td>Se concentrer sur autre chose, chanson dans la tête</td></tr>
+<tr><td>5. Imagerie motrice / observation de l'action</td><td>Observer et copier une autre personne, imaginer une personne dont la démarche plaît</td></tr>
+<tr><td>6. Nouvelle façon de marcher</td><td>Marche sur le côté, marche en arrière, marcher avec de très grands pas</td></tr>
+<tr><td>7. Alternative à la marche normale</td><td>Faire du vélo, trottinette</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="trap">Une stratégie qui fonctionne devient progressivement automatique et perd son efficacité. Il faut régulièrement trouver de nouvelles stratégies. Les stratégies externes sont les plus simples aux stades avancés.</AlertBox>
+
+</Card>
+
+<Card title="Travail du demi-tour">
+
+Le demi-tour est une situation typique de freezing. La progression :
+
+**Exercice 1 :** sans changement de direction (marche en carré/rectangle)
+
+**Exercice 2 :** avec changement de direction progressif (1/4 de tour → 1/2 tour)
+
+**Exercice 3 :** sans repères / sans cerceau
+
+**Astuce LSVT :** pas de côté avec les bras en hiéroglyphe + tête tournée du côté du pas → déblocage du freezing.
+
+</Card>
+
+<Card title="La festination">
+
+Accélération involontaire de la marche avec diminution progressive de la longueur des pas. Les pieds se retrouvent involontairement en arrière du centre de gravité.
+
+**Traitement :**
+- Repères visuels au sol (bandes horizontales)
+- Métronome pour imposer un rythme
+- Rollator avec frein
+- Travail du transfert de poids vers l'avant
+
+</Card>
+
+<Card title="Rétropulsion — Traitement">
+
+Tendance à reculer involontairement lors d'un déséquilibre.
+
+**Exercices de déplacement du centre de gravité vers l'avant :**
+- Exercices de pointage avec l'index
+- Monter sur les pointes de pied
+- Entraînement assis-debout (se pencher en avant)
+- Marche en poussant quelque chose / tirer un élastique autour du bassin
+- Biofeedback du positionnement
+
+*Astuce stade avancé : talons de 4 cm pour déplacer le centre de gravité en avant.*
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — STTB
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-sttb">
+
+<Card title="Définition et épidémiologie">
+
+**Syndrome de la Traversée Thoraco-Brachiale (STTB)** = Irritation ou compression du pédicule vasculo-nerveux axillo-sous-clavier pendant son passage du thorax au membre supérieur.
+
+Autres noms : syndrome de la 1e côte, du défilé inter-scalénique, du défilé costo-claviculaire, Thoracic Outlet Syndrome (TOS).
+
+<Grid3>
+  <MiniCard val="70-80%" label="Femmes" />
+  <MiniCard val="30-35 ans" label="Âge de prédilection" />
+  <MiniCard val="30%" label="Bilatéralisation" />
+</Grid3>
+
+<AlertBox type="trap">60% des patients testés positifs lors d'une mise en tension du plexus brachial n'ont aucune plainte ! Diagnostic différentiel : canal carpien (25% associés), névralgie cervico-brachiale, hernie/arthrose cervicale, phlébite du MS.</AlertBox>
+
+</Card>
+
+<Card title="3 zones de passage et physiopathologie">
+
+**3 zones de compression possibles :**
+1. Entre 1e côte et clavicule
+2. Entre scalène antérieur et moyen
+3. Dans le tunnel du petit pectoral
+
+**Fermeture du défilé par :**
+- Rétropulsion + abaissement du moignon de l'épaule
+- Élévation du gril costal + inspiration costale
+- Pesanteur + scalènes, sous-clavier, pectoraux
+
+**Ouverture du défilé par :**
+- Élévation + antépulsion moignon + expiration
+- Trapèze (sup, moy), élévateur de la scapula, SCOM, rhomboïdes, grand dentelé
+
+</Card>
+
+<Card title="Signes cliniques">
+
+<Grid2>
+  <div>
+    <Badge color="blue">Neurologiques (80%)</Badge>
+    Territoire C8-T1 → douleur, paresthésies distales, amyotrophie intrinsèque de la main
+  </div>
+  <div>
+    <Badge color="red">Vasculaires</Badge>
+    <b>Artériel (15-20%) :</b> fatigabilité, refroidissement, pâleur, crampes, ischémie<br/>
+    <b>Veineux (8-27%) :</b> turgescence veines, œdème mains/doigts, lourdeur, phlébite
+  </div>
+</Grid2>
+
+**Morphotype à risque :**
+- Épaules basses, carrure étroite (épaules "en portemanteau")
+- Déséquilibre musculaires cervico-scapulaires
+- Surmenage : professionnel (travail MS en hauteur, sports de lancer), sportif
+
+</Card>
+
+<Card title="Bilans spécifiques STTB">
+
+**Tests diagnostiques :**
+
+<table>
+<thead><tr><th>Test</th><th>Description</th><th>Positif si</th></tr></thead>
+<tbody>
+<tr><td>Test de Roos (chandelier dynamique)</td><td>MS en position R3 (abd 90°, RE 90°, coudes fléchis) → ouvrir et fermer les mains 3 min</td><td>Paresthésies, fatigue, incapacité à tenir la position</td></tr>
+<tr><td>Manœuvre d'Adson</td><td>"Violoniste inspiré" — plier coudes à 90°, flexion des doigts 3 min</td><td>Symptômes reproduits</td></tr>
+<tr><td>Manœuvre de Wright</td><td>Élévation + abduction du MS</td><td>Symptômes reproduits</td></tr>
+<tr><td>Manœuvre de Sanders</td><td>Abaissement + rétropulsion moignon "garde-à-vous"</td><td>Symptômes reproduits</td></tr>
+</tbody>
+</table>
+
+**Autres bilans :**
+- Morphostatique : amyotrophie, enroulement épaules, ventilation costale, cyanose, œdème
+- Bilan vasculaire : œdème (Godet/Stemmer), coloration des doigts, photographies
+- BNM territoire C8-T1 (muscles de la main et du bras)
+- QuickDASH (fonctionnel MS) et PSFS (activités spécifiques du patient)
+- DN4 (origine neuropathique ?)
+
+</Card>
+
+<Card title="Rééducation STTB">
+
+<Grid3>
+  <MiniCard val="20-30" label="séances au total" />
+  <MiniCard val="3×/sem." label="fréquence" />
+  <MiniCard val="3 mois" label="durée minimum" />
+</Grid3>
+
+**Objectifs :**
+1. Ouvrir le passage et le maintenir ouvert
+2. Harmoniser la région cervico-scapulaire (posture)
+3. Ergonomie de l'environnement (travail, sport)
+
+**Ordre de priorité :**
+1. **Respiration** (ventilation abdominale, éviter la ventilation costale haute)
+2. **Posture** (autograndissement, rééducation posturale)
+3. **Mobilité** cervicale et scapulaire
+4. **Ouverture** du plan antérieur (coin du mur, étirements pectoraux)
+5. **Renforcement** du plan postérieur (adducteurs de la scapula, trapèze moyen, rhomboïdes)
+
+<AlertBox type="danger">Stopper si aggravation. Toujours travailler en infraindolore et progressivement.</AlertBox>
+
+**Exercices de renforcement (Protocole de Peet) :**
+- Élévation/abaissement des épaules avec poids (1→2,5→5 kg)
+- Lever les bras au-dessus de la tête (paume vers le bas)
+- En coin de mur : ouverture du plan antérieur + respiration
+- Inclinaisons latérales du cou
+- En décubitus ventral : soulever tête et thorax, épaules en arrière
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — SYNDROME CÉRÉBELLEUX
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-cerebelleux">
+
+<Card title="Généralités et étiologies">
+
+<AlertBox type="trap">Ne pas confondre avec le syndrome pyramidal (hémiplégie) ou le syndrome extra-pyramidal (Parkinson) ! Le test de Romberg est NÉGATIF dans le syndrome cérébelleux.</AlertBox>
+
+**Étiologies :**
+- Isolé : AIT, AVC cérébelleux, dégénératif, tumeurs cérébrales
+- Associé à un AVC ou un traumatisme crânien
+
+</Card>
+
+<Card title="Bilan de l'hypotonie cérébelleuse">
+
+**Signes d'hypotonie :**
+- Hyperextensibilité (↑ amplitudes à la mobilisation passive, attention aux luxations !)
+- **ROT pendulaires** (à balancier, pas de freins → le mouvement s'épuise seul)
+- Hypotonie des muscles du tronc (redressement "garde à vous" incomplet et difficile à maintenir)
+
+**Tests :**
+- **Test du fléau du pied** : rotations imposées au fémur → le pied ne suit pas les rotations
+- **Test du ballant de la main** : flexions-extensions libres du poignet → la main bouge dans tous les plans sans frein
+- **Signes de Barré et Mingazzini** : chute lente du membre positionné (maintien impossible mais sans déficit moteur !)
+  - Barré : en DD, membre inf fléchi à 90° hanche + genou
+  - Mingazzini : en DV, membre inf, genou fléchi à 90°
+- **Manœuvre de Stewart-Holmes** : résistance à la flexion du coude → quand l'opérateur lâche, pas de frein → *attention que le patient ne se frappe pas le visage !*
+
+</Card>
+
+<Card title="Bilan de la coordination">
+
+**1. Dysmétrie dans l'espace :**
+- **Épreuve doigt-nez** : hypométrie ou hypermétrie (problème de trajectoire), oscillations volitionnelles, mouvement saccadé
+- **Épreuve des 2 index maintenus tendus** : oscillations, dysmétrie
+- **Adiadococinésie** (troubles des mouvements alternés rapides) :
+  - Épreuve des marionnettes
+  - Épreuve des moulinets
+- **Au membre inférieur** : épreuve du talon glissé sur la crête tibiale opposée (de bas en haut) → oscillations, saccades (toujours faire en bilatéral, partir du genou vers le pied)
+
+**2. Dyschronométrie (dysmétrie dans le temps) :**
+Retard au démarrage ET/OU à l'arrêt du mouvement → "Toucher 1 cible"
+
+**3. Asynergie du tronc :**
+En DD, MS croisés sur la poitrine, MI en abduction → impossible de redresser le buste sans décoller les talons (fléchir les hanches +++)
+
+</Card>
+
+<Card title="Bilan de l'équilibre statique — Marche cérébelleuse">
+
+**Équilibre statique debout :**
+- Polygone de sustentation augmenté
+- Danse des tendons (muscles tentent de rééquilibrer en ramenant le centre de masse vers l'avant)
+- Bras en balancier ?
+- Oscillations du tronc ± tête
+
+**Bilan de l'équilibre assis :**
+- Oscillations modérées du tronc → sévère → impossible
+- Avec/sans appui des mains
+
+**Marche cérébelleuse :**
+- Pseudo-ébrieuse ± bras en balancier
+- Trajectoire avec embardées (but respecté)
+- **Festonnante** = accélérée vers l'avant (tronc part en avant, entraîne une accélération de la marche)
+- Pose des pieds à plat (bruit)
+- Arrêt : brusque, retardé, risque de perte d'équilibre → chute !
+- ½ tour : décomposé
+- Marche difficile en ligne, en tandem, à reculons, latéralement
+
+**PAS de modification yeux ouverts / yeux fermés → Test de Romberg NÉGATIF !**
+
+</Card>
+
+<Card title="Bilan de la dyskinésie volitionnelle (tremblements)">
+
+- **Statique :** tête, tronc → tremblement d'attitude
+- **Dynamique** (tremblement d'intention ou d'action) : apparaît au début et/ou à la fin du mouvement et/ou pendant le mouvement, s'aggrave avec la rapidité → "Générateur de grande imprécision"
+- Voix cérébelleuse = "voix de Barbara" : alternance voix forte et plus basse, dysarthrie
+
+</Card>
+
+<Card title="Échelles d'évaluation spécifiques">
+
+**SARA (Scale for the Assessment and Rating of Ataxia) — 40 points :**
+8 épreuves : démarche, équilibre debout, équilibre assis, trouble de la parole, dysmétrie MS, tremblement MS, adiadococinésie MS, ataxie globale MI.
+*40 points = syndrome cérébelleux sévère*
+
+**ICARS (International Cooperative Ataxia Rating Scale) — 100 points :**
+4 parties : posture/marche, fonctions cinétiques, dysarthrie, troubles oculomoteurs.
+*Plus on va vers 100/100, plus le score est mauvais.*
+
+</Card>
+
+<Card title="Rééducation du syndrome cérébelleux">
+
+**Objectifs :**
+- Améliorer la synergie musculaire
+- Diminuer les oscillations
+- Faciliter la coordination des membres + l'équilibre
+- Restituer une autonomie fonctionnelle
+- Récupérer une marche sécuritaire
+- Prévenir les chutes
+
+**Principes :**
+- Précoce / laisser le temps au patient de comprendre l'exercice demandé
+- Utiliser des **résistances stabilisatrices** (pas déséquilibrantes !) et des **lestes**
+- Guider les trajectoires
+- D'abord à vitesse lente, puis normale, puis rapide
+
+<AlertBox type="danger">PAS d'étirements dans le syndrome cérébelleux ! Pas de jeux de ballons (lancers) → à proscrire. Risques de chutes très importants → penser aux pauses.</AlertBox>
+
+**Exercices de coordination des membres + du tonus :**
+- Résistance concentrique puis excentrique
+- Exercices libres avec cône Bobath
+- Trajectoires de Kabat (contre-résistance + trajectoire guidée) ★★★
+- Bracelets lestés aux chevilles et poignets
+- Pédalette mécanique ou motorisée
+- Vélo sans résistance et avec cales-pied
+
+**Exercices d'équilibre :**
+- Du maintien statique des positions vers le dynamique
+- Quadrupédie au sol → assis pieds en appui → debout entre barres parallèles
+- Rouleau Bobath et ballon de Klein
+- Réactions parachutes
+- Fentes, enjambement d'obstacles dans les barres
+- Marche dans les barres : avant, arrière, latéral
+- Plateau de Freeman
+
+**Marche :**
+- Réduire le polygone de sustentation progressivement
+- Améliorer le déroulé du pas
+- Réduire le balancier des bras
+- Lester les chevilles (stabilise, mais pas toute la séance → fatigue)
+- Marche dans l'eau en poussant une planche
+- Escaliers : prudence ++, jamais seul
+
+**Membres supérieurs :**
+- Débuter avec des objets volumineux, puis plus légers
+- Prises à pleine main puis de force, puis de finesse
+- Trajectoire guidée (tube autour d'un bâton)
+- Faire rouler un ballon lesté sur la table
+
+**Conseils domicile :**
+- Stop tapis au sol, eau au sol
+- Barres d'appui : WC, douche, salle de bains, couloir
+- Chaussures fermées (pas de lacets → velcro ou fermeture éclair)
+- Vêtements sans lacets
+- Surface antidérapante sous l'assiette
+- Grossir les manches des stylos et couverts
+
+<AlertBox type="trap">Aide technique : canne tripode lestée souvent recommandée. ÉVITER les déambulateurs avec roues (patient part en avant) et ceux trop légers (peut les lever lors d'un déséquilibre).</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — CAS CLINIQUE PARKINSON DÉBUTANT (Mme T, 62 ans)
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-parkinson-debut">
+
+<Card title="Cas clinique — Mme T, 62 ans — Parkinson stade III (débutant)">
+
+**Profil :** 62 ans, retraitée, Parkinson depuis 5 ans, stade Hoehn & Yahr III (atteinte bilatérale, instabilité posturale, autonome). Traitement : Azilect 1 mg, Ropinirole 8 mg LP, Modopar 62,5 × 4/j.
+
+<table>
+<thead><tr><th>Observation du cas clinique</th><th>Réflexion kiné</th><th>Travail en séance</th></tr></thead>
+<tbody>
+<tr>
+  <td>A arrêté les footings</td>
+  <td>Patiente jeune, kinésiophobie, sédentarité</td>
+  <td>Activité physique 3×45 min/sem (50-70% VO2max). Options : séances régulières / stage LSVT Big / auto-exercices. Éducation sur l'importance de l'AP</td>
+</tr>
+<tr>
+  <td>Croit qu'on ne peut pas faire de sport</td>
+  <td>Fausses croyances, sites internet non fiables</td>
+  <td>ETP : reconnaître les sources fiables (Centre Expert Parkinson, France Parkinson)</td>
+</tr>
+<tr>
+  <td>Douleurs en étaux aux jambes 15h30-16h30</td>
+  <td>Creux plasmatique du Modopar (phase OFF)</td>
+  <td>Adapter l'horaire des séances. Informer le médecin traitant</td>
+</tr>
+<tr>
+  <td>Dort mal / achats sur internet</td>
+  <td>Trouble du comportement → agoniste dopaminergique (Ropinirole)</td>
+  <td>Signaler au médecin traitant. ETP sommeil : éviter la chaleur la nuit</td>
+</tr>
+<tr>
+  <td>Cyphose + enroulement des épaules</td>
+  <td>Posture du skieur</td>
+  <td>Travail actif d'ouverture, assouplissements, respiration, étirements chaîne postérieure MI</td>
+</tr>
+<tr>
+  <td>Équilibre unipodal 20 secondes</td>
+  <td>À travailler quotidiennement si possible</td>
+  <td>Unipodal en se lavant les dents. Pull test, fentes, relevés du sol à chaque séance, musculation quadriceps (50 assis-debout)</td>
+</tr>
+<tr>
+  <td>Diminution hauteur et longueur du pas</td>
+  <td>Risque de chute ?</td>
+  <td>Parcours de marche (avant, arrière, en ligne), sauts, cerceaux, réduire le nombre d'enjambées/10m</td>
+</tr>
+<tr>
+  <td>Conduit sa voiture sur 10 km</td>
+  <td>NOUVELLE RÉGLEMENTATION</td>
+  <td>Informer : évaluation de la conduite par médecin agréé par la préfecture obligatoire</td>
+</tr>
+<tr>
+  <td>Club de bridge + cinéma (sédentaires)</td>
+  <td>Activités intellectuelles, mais pas de AP</td>
+  <td>Conserver une activité intellectuelle + ajouter l'AP. Proposer chorale, gymnastique volontaire en groupe</td>
+</tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Objectifs et diagnostic kinésithérapique — Mme T">
+
+**Diagnostic kinésithérapique :** Mme T, 62 ans, retraitée, Parkinson depuis 5 ans (stade III). Autonome. Douloureuse 4/10 au repos (EVA, DN4). Instabilité posturale (cyphose, enroulement épaules, flessum hanche/genou). Triade parkinsonienne (tremblements, rigidité, bradykinésie). Périmètre de marche réduit (300 m au TDM6). Anxiété (Hamilton 26/56) et kinésiophobie (Tampa 40/68). Déconditionnement global. Restriction d'activités quotidiennes et de loisirs.
+
+**Objectifs spécifiques :**
+1. Diminuer douleurs, kinésiophobie et prévenir la sédentarité
+2. Maintenir le niveau d'autonomie
+3. Permettre la reprise des activités (petits-enfants, bridge, cinéma)
+
+**Objectifs opérationnels :**
+1. Diminuer la douleur (EVA, zones non parkinsonniennes)
+2. Entretenir/améliorer les amplitudes articulaires
+3. Augmenter la force musculaire (quadriceps, érecteurs)
+4. Améliorer l'endurance
+5. Améliorer l'équilibre statique et dynamique
+6. Augmenter le périmètre de marche + améliorer les transferts + prévenir les chutes
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — CAS CLINIQUE PARKINSON ÉVOLUÉ (Mr M, 72 ans)
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-parkinson-evolue">
+
+<Card title="Cas clinique — Mr M, 72 ans — Parkinson évolué (13 ans)">
+
+**Profil :** 72 ans, Parkinson depuis 13 ans. Sédentaire, sort peu. Femme aidante (lever fauteuil + lit). Rollator intérieur. Antécédents : HTO, PTH droite. Traitement : Requip 12 mg LP, Mantadix 100, Sinomet 250 × 4/j, Gutron.
+
+<table>
+<thead><tr><th>Observation</th><th>Réflexion kiné</th><th>Travail en séance</th></tr></thead>
+<tbody>
+<tr>
+  <td>Sédentaire, TV, sort peu</td>
+  <td>Déconditionnement ++</td>
+  <td>AP progressive 3×45 min/sem. Vélo si possible (fin d'exercice dégressif → HTO !). Activités en extérieur (vitamine D). Proposer Scrabble, mots croisés</td>
+</tr>
+<tr>
+  <td>Séances préférer au cabinet</td>
+  <td>Maintien du lien social, sortir de chez lui</td>
+  <td>3 séances/sem minimum. Organiser PEC pendant les vacances. Programmer en phase ON</td>
+</tr>
+<tr>
+  <td>Sa femme l'aide pour les levers</td>
+  <td>Perte des mouvements automatiques. Elle est devenue "aidante"</td>
+  <td>Apprentissage des transferts par étapes conscientes + la faire répéter oralement. Musculation quadriceps + fessiers (50 levers de chaise). Éduquer l'épouse aux bonnes manœuvres. Lui donner le téléphone du Pôle MND "Allo j'aide un proche"</td>
+</tr>
+<tr>
+  <td>Rollator 2 roues + 2 patins</td>
+  <td>Bon outil pour l'intérieur</td>
+  <td>Régler à bonne hauteur. Apprendre demi-tours + changements de direction ± languette anti-freezing</td>
+</tr>
+<tr>
+  <td>Chutes sans pouvoir se relever</td>
+  <td>Cause ? Équilibre / freezing / HTO ?</td>
+  <td>Travailler les chutes (se regrouper, mains en avant). Relevés du sol à chaque séance. Si vertiges → médecin traitant</td>
+</tr>
+<tr>
+  <td>Monter à sa chambre difficile</td>
+  <td>—</td>
+  <td>Travailler montée/descente, équilibre unipodal. INSTALLER 1 ou 2 rampes impérativement (même pour 4 marches !)</td>
+</tr>
+<tr>
+  <td>Cyphose importante gênant pour manger</td>
+  <td>Antécolis associé ?</td>
+  <td>Autograndissements, postures au lit (baisser hauteur oreiller), respiration, dossier incliné en arrière. Si antécolis : contracté/relâché muscles antérieurs du cou</td>
+</tr>
+<tr>
+  <td>HTO + traitement</td>
+  <td>Vigilance pendant les exercices</td>
+  <td>Boire 1,5L d'eau/jour. Fin d'exercice en dégressif. Gutron = médicament pour l'HTO</td>
+</tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — CAS CLINIQUE STTB
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-sttb-cc">
+
+<Card title="Cas clinique STTB — Mr C., 43 ans, artisan décorateur">
+
+**Profil :** 43 ans, droitier, artisan décorateur d'intérieur (peinture plafonds, réfection sols, manutention lourde). Loisirs : bricolage, tennis amateur, poker en ligne, musculation par intermittence. Dort en décubitus latéral droit, tête sur le coude fléchi. STTB diagnostiqué + insuffisance artério-veineuse à l'écho-Doppler.
+
+**Plaintes :** paresthésies distales depuis 6 mois, contractures ceintures scapulaires irradiant au rachis cervical, mains blanches et froides le matin (surtout MS droit), aggravées par test de Roos.
+
+</Card>
+
+<Card title="Bilan diagnostique kinésithérapique — Mr C.">
+
+**Drapeaux rouges :** Vasculaire (phlébite), infectieux (porte d'entrée), tumoral (AEG), neurologique (paresthésies), traumatique (fracture)
+
+**Bilan morphostatique :**
+- Hypertrophie muscles antérieurs (grands/petits pectoraux, trapèzes, scalènes)
+- Enroulement des épaules + cyphose (perte de hauteur à mesurer avec fil à plomb)
+- Ventilation costale haute (respiration thoracique)
+
+**Bilans spécifiques :**
+- Tests de Roos (positif), Sanders, Wright, Adson
+- BNM territoire C8-T1 (déséquilibre rotateurs externes >> pectoraux forts)
+- DN4 > 4 (composante neuropathique)
+- Dynamomètre de préhension (comparaison côté sain)
+- QuickDASH + PSFS (loisirs : tennis, bricolage, péniche)
+- Inspection vasculaire : doigts blancs, photographies, bagues étalonnées pour l'œdème
+
+**Diagnostic kinésithérapique :**
+Mr C., 43 ans, droitier, artisan décorateur, présente un STTB du MS droit par surmenage professionnel. Hypertrophie globale des muscles antérieurs (grands/petits pectoraux, trapèzes, scalènes) entraînant un enroulement des épaules et une perte de hauteur. Paresthésies distales depuis 6 mois, contractures des ceintures scapulaires, mains blanches le matin (insuffisance artério-veineuse à l'écho-Doppler).
+
+</Card>
+
+<Card title="Proposition de soins — Mr C.">
+
+**Priorité 1 — Respiration :** rééducation ventilatoire, passer d'une ventilation costale haute à abdominale
+
+**Priorité 2 — Posture :** autograndissement, correction posturale
+
+**Priorité 3 — Mobilité cervicale et scapulaire**
+
+**Priorité 4 — Ouverture du plan antérieur :**
+- Étirements pectoraux (coin du mur)
+- En décubitus avec serviette entre les scapulas, lever les bras en inspiration
+
+**Priorité 5 — Renforcement plan postérieur :**
+- Adducteurs de la scapula, rhomboïdes, trapèze moyen
+- Élévation/abaissement épaules avec poids
+- En DV, soulever tête et thorax, épaules en arrière
+
+**Conseils hygiène de vie :**
+- Position de sommeil : ne pas dormir en décubitus latéral sur le bras, dormir en décubitus dorsal
+- Au travail : pauses régulières, élévation des trapèzes, mobilisations douces
+- Tennis : adapter progressivement à la reprise, éviter les services puissants en début
+- Péniche : adapter les ports de charge, techniques de soulèvement
+- Matin : commencer par les tâches qui ne demandent pas de précision (l'œdème se draine dans la journée)
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — CAS CLINIQUE SYNDROME CÉRÉBELLEUX
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-cerebelleux-cc">
+
+<Card title="Cas clinique — Mme C., 34 ans — Ataxie cérébelleuse post-AVC">
+
+**Profil :** 34 ans, droitière, divorcée, sans enfant, hôtesse d'accueil Salons d'Entreprise, en arrêt de travail. Sportive (CrossFit 2×/sem, ski). AVC cérébelleux ischémique (probable prise pilule depuis 15 ans). À J10 : syndrome cérébelleux en régression.
+
+**Signes persistants :**
+- MS : dysmétrie, adiadococinésie, maladresses en finesse
+- MI : polygone de sustentation important, marche irrégulière avec embardées, terrain accidenté impossible
+- Escaliers avec appréhension (2 mains sur la rampe, pose aléatoire des pieds)
+- Tremblement d'action main droite (tablette, prise de notes, clavier)
+- Équilibre statique acquis
+
+</Card>
+
+<Card title="Bilans emblématiques — Mme C. (priorisation)">
+
+**Bilans prioritaires (emblématiques) :**
+
+1. **SARA** : évaluation globale du syndrome cérébelleux (démarche, équilibre, coordination, parole)
+2. **Bilan de l'équilibre dynamique** : marche avec embardées, demi-tours, terrain varié, escaliers
+3. **Bilan de la coordination MS** : doigt-nez (dysmétrie), marionnettes/moulinets (adiadococinésie)
+4. **Bilan fonctionnel / AVQ (PSFS)** : toilette, coiffage, boutonnage, cuisine, clavier
+5. **Bilan de la chute** : analyse des chutes dans les escaliers
+
+**Bilans de contexte :**
+- Berg Balance Scale (équilibre)
+- TUG
+- Bilan morphostatique (tonus du tronc, hypotonie ?)
+
+</Card>
+
+<Card title="DK et objectifs — Mme C.">
+
+**DK :** Mme C., 34 ans, présente à J10 post-AVC cérébelleux ischémique un syndrome cérébelleux en régression. Elle présente une dysmétrie et adiadococinésie des MS, particulièrement la main droite (dominante), limitant la prise de finesse, le clavier et les AVQ. L'équilibre dynamique reste perturbé (embardées, polygone élargi), rendant impossible la marche en terrain accidenté et les escaliers sans aide. L'équilibre statique est acquis.
+
+**Objectifs spécifiques :**
+1. Améliorer la coordination et la précision des mouvements des MS pour l'autonomie dans les AVQ
+2. Sécuriser la marche et les escaliers pour le retour à domicile (studio au 2e étage sans ascenseur)
+3. Prévenir les chutes et les récidives de chutes
+
+**Objectifs opérationnels :**
+1. Diminuer les oscillations et améliorer la précision du geste fin (doigt-nez, prises de finesse)
+2. Améliorer l'équilibre dynamique : réduire le polygone, stabiliser les demi-tours
+3. Sécuriser la montée/descente des escaliers sans aide bilatérale
+
+</Card>
+
+<Card title="Séance type (30 min) — Mme C. à J2 de rééducation">
+
+**Contexte :** 2e séance, 2×/semaine. Équilibre statique acquis. Priorité : coordination MS + équilibre dynamique + escaliers.
+
+**1. Mise en route (5 min) — Équilibre statique debout entre barres parallèles :**
+- Bipodal, appui progressivement réduit sur les barres
+- Mouvements de la tête (giration des ceintures) → introduire des perturbations stabilisatrices annoncées puis inopinées
+- *Justification : consolider l'équilibre statique comme base pour le travail dynamique*
+
+**2. Coordination MS — Position assise (10 min) :**
+- Trajectoire guidée : tube autour d'un bâton (amener le tube d'un bout à l'autre)
+- Doigt-nez lentement, puis à vitesse normale → quantifier l'amplitude du tremblement d'intention
+- Prises d'objets volumineux → progressivement plus légers
+- Moulinets bilatéraux (adiadococinésie)
+- *Justification : dysmétrie + adiadococinésie + tremblement d'intention MS droit dominant → AVQ et clavier*
+
+**3. Équilibre dynamique — Marche entre barres parallèles (10 min) :**
+- Marche avant, réduire progressivement le polygone de sustentation
+- Demi-tours décomposés (1/4 de tour d'abord)
+- Introduction de poussées stabilisatrices sur le bassin (main du kiné → stabilisation)
+- Progression : barres → espace libre avec kiné à côté
+- *Justification : embardées, instabilité aux demi-tours, terrain accidenté*
+
+**4. Escaliers (5 min) :**
+- 2 mains sur la rampe → 1 main → surveillance
+- Travail du déroulé du pied à plat sur chaque marche
+- Levée des genoux suffisante (monte les genoux)
+- *Justification : studio au 2e étage sans ascenseur → priorité fonctionnelle*
+
+<AlertBox type="key">À chaque exercice : résistances stabilisatrices, lenteur initiale, guidage des trajectoires. PAS d'étirements. Pauses si fatigue. PAS de jeux de ballons !</AlertBox>
+
+</Card>
+
+<Card title="Conseils hygiène de vie et retour professionnel — Mme C.">
+
+**Domicile — sécurisation :**
+- Stop tapis au sol, eau au sol
+- Barres d'appui : salle de bains, douche, WC
+- Chaussures fermées avec velcro ou fermeture éclair (pas de lacets)
+- Surface antidérapante sous l'assiette
+- Grossir les manches des stylos et couverts
+
+**Retour aux études :**
+- Pour le clavier : commencer par des objets volumineux, progression vers la motricité fine
+- Clavier avec guide-doigts si nécessaire
+- Travailler la prise de notes à vitesse progressive
+
+**Escaliers domicile :**
+- TOUJOURS tenir la rampe avec les 2 mains dans un premier temps
+- Monter sur le côté si trop difficile
+- Ne jamais monter les escaliers seule dans les premières semaines
+
+**Reprise du sport :**
+- CrossFit contre-indiqué dans l'immédiat (risque de chute important, coordination MS/MI insuffisante)
+- Reprendre progressivement avec des activités moins risquées (natation, vélo stationnaire)
+- Krav maga : reporter à la récupération complète
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FLASHCARDS
+════════════════════════════════════════════════════════════════════ */}
+<Section id="flashcards">
+
+<FlashCard theme="Parkinson" q="Quels sont les 3 signes de la triade parkinsonienne classique + le 4e signe ajouté récemment ?">
+  1. **Tremblements de repos** (disparaissent à la contraction volontaire)<br/>
+  2. **Rigidité** (hypertonie plastique, "roue dentée")<br/>
+  3. **Akinésie/Bradykinésie** (lenteur et difficultés à initier le mouvement)<br/>
+  4. **Instabilité posturale** (4e signe, ajouté car très impactant fonctionnellement)
+</FlashCard>
+
+<FlashCard theme="Parkinson" q="Quelle est la règle du 300% et à quel principe correspond-elle ?">
+  Le patient parkinsonien a une **perception altérée de ses mouvements** : son cerveau lui dit que ses mouvements sont normaux alors qu'ils sont trop petits. Pour un mouvement d'amplitude normale, il doit avoir l'impression d'en faire **beaucoup trop (300%)**. C'est la base du principe LSVT Big.
+</FlashCard>
+
+<FlashCard theme="Parkinson" q="À quel moment programmer les séances de kiné pour un patient parkinsonien sous L-DOPA ?">
+  Toujours en **phase ON** = à pic d'efficacité du traitement dopaminergique. Demander au patient quand il est le mieux dans sa journée. Les séances en phase OFF sont peu efficaces et épuisantes.
+</FlashCard>
+
+<FlashCard theme="Parkinson" q="Quelle est la différence entre freezing et festination ?">
+  **Freezing :** blocage moteur brutal, sensation de pieds "collés au sol", incapacité transitoire à initier ou poursuivre la marche.<br/>
+  **Festination :** accélération involontaire de la marche avec diminution progressive de la longueur des pas. Les pieds se retrouvent en arrière du centre de gravité.
+</FlashCard>
+
+<FlashCard theme="Parkinson" ctx="Médicaments" q="Quel effet secondaire majeur doit alerter le kiné avec le Ropinirole (agoniste dopaminergique) ?">
+  Les **achats compulsifs** et autres comportements addictifs (jeux, hypersexualité). C'est un effet secondaire fréquent des agonistes dopaminergiques. Le kiné doit alerter le médecin traitant pour adapter la dose.
+</FlashCard>
+
+<FlashCard theme="Parkinson" q="Quelles sont les 3 options d'organisation des séances de kiné pour un patient Parkinson ?">
+  1. **2 séances/semaine** régulières au cabinet<br/>
+  2. **Stage intensif** : 4 séances/semaine × 6 semaines, puis pause + auto-exercices × 4-6 semaines, puis reprise<br/>
+  3. **LSVT Big** : 4 semaines × 4 séances/semaine (16 séances au total)
+</FlashCard>
+
+<FlashCard theme="Parkinson" q="Pourquoi le patient parkinsonien a-t-il des difficultés à se lever le matin ?">
+  Le matin, c'est la **phase OFF** : le traitement dopaminergique du soir s'est dissipé et la première prise du matin n'a pas encore fait effet. Les ganglions de la base, qui gèrent les automatismes, ne reçoivent pas assez de dopamine. Le patient ressent une **akinésie**, ses pieds sont comme collés au sol (freezing matinal).
+</FlashCard>
+
+<FlashCard theme="LSVT" q="Quelle est la durée du protocole LSVT Big et comment est-il organisé ?">
+  **4 semaines** de traitement intensif :<br/>
+  - 4 séances/semaine au cabinet (16 séances au total)<br/>
+  - Auto-exercices quotidiens à domicile<br/>
+  - Mouvements grands et à haute intensité (70-80%)<br/>
+  - Jamais en alterné : 8 répétitions d'un côté, puis l'autre
+</FlashCard>
+
+<FlashCard theme="LSVT" q="Quel exercice LSVT aide à enclencher le premier pas et améliore le regard droit devant ?">
+  La **fente avant** : debout, fente en avant (pas trop grande) avec bras en abduction, coudes en extension, mains en supination → revenir en levant le genou. Cet exercice aide à initier le premier pas et oblige le patient à regarder droit devant.
+</FlashCard>
+
+<FlashCard theme="Syndrome Cérébelleux" q="Quelle est la différence entre dysmétrie, dyschronométrie et adiadococinésie ?">
+  - **Dysmétrie dans l'espace** : problème de trajectoire (hypo ou hypermétrie) — épreuve doigt-nez<br/>
+  - **Dyschronométrie** (= dysmétrie dans le temps) : retard au démarrage ET/OU à l'arrêt du mouvement — "toucher une cible"<br/>
+  - **Adiadococinésie** : impossibilité d'effectuer des mouvements alternés rapides — épreuve des marionnettes/moulinets
+</FlashCard>
+
+<FlashCard theme="Syndrome Cérébelleux" q="Qu'évalue la manœuvre de Stewart-Holmes ?">
+  L'**hypotonie musculaire** cérébelleuse. On résiste à la flexion du coude du patient, puis on lâche brusquement → absence de frein → le membre revient violemment. *Attention que le patient ne se frappe pas le visage !*
+</FlashCard>
+
+<FlashCard theme="Syndrome Cérébelleux" q="Pourquoi le test de Romberg est-il négatif dans le syndrome cérébelleux ?">
+  Le Romberg évalue la contribution proprioceptive à l'équilibre : il est positif quand fermer les yeux dégrade l'équilibre (privation d'une entrée compensatrice). Dans le syndrome cérébelleux, **fermer les yeux ne change rien** car le problème est dans le cervelet (coordination), pas dans les afférences proprioceptives.
+</FlashCard>
+
+<FlashCard theme="Syndrome Cérébelleux" q="Qu'est-ce que la démarche festonnante ?">
+  Démarche cérébelleuse où le **tronc part vers l'avant**, entraînant une **accélération involontaire** de la marche. À distinguer de la festination parkinsonienne (même résultat, mécanisme différent). Se traite par poussées **stabilisatrices** (pas déséquilibrantes) sur le bassin.
+</FlashCard>
+
+<FlashCard theme="STTB" q="Quelles sont les 3 zones de compression du STTB ?">
+  1. Entre **1e côte et clavicule** (défilé costo-claviculaire)<br/>
+  2. Entre **scalène antérieur et moyen** (défilé inter-scalénique)<br/>
+  3. Dans le **tunnel du petit pectoral** (défilé sous-coracoïdien)
+</FlashCard>
+
+<FlashCard theme="STTB" q="Quel est le test de référence pour le STTB et comment le réalise-t-on ?">
+  **Test de Roos (chandelier dynamique)** : MS en position R3 (abduction 90°, rotation externe 90°, coudes fléchis) → ouvrir et fermer les mains pendant 3 minutes. Positif si : paresthésies, fatigue musculaire, incapacité à tenir la position.
+</FlashCard>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    QCM — Issues des annales
+════════════════════════════════════════════════════════════════════ */}
+<Section id="qcm">
+
+<QcmCard
+  n={1}
+  type="QCM"
+  tag="LSVT Big"
+  q="Concernant le programme LSVT Big, quelles propositions sont exactes ?"
+  opts={[
+    "A. Il n'existe pas d'étude scientifique pour justifier de son utilisation",
+    "B. C'est une aide pour l'amélioration des capacités motrices (vitesse de la marche, équilibre)",
+    "C. C'est plus efficace aux stades précoces ou intermédiaires de la maladie de Parkinson",
+    "D. C'est un traitement thérapeutique où les mouvements du corps sont très grands et intenses",
+    "E. Il a été créé en France"
+  ]}
+  ans={[1, 2, 3]}
+>
+  **B, C, D.** LSVT Big est scientifiquement prouvé (A faux), repose sur des mouvements très grands et intenses (D), améliore la marche et l'équilibre (B), est plus efficace aux stades précoces/intermédiaires (C). Il a été créé aux États-Unis, pas en France (E faux).
+</QcmCard>
+
+<QcmCard
+  n={2}
+  type="QCM"
+  tag="Parkinson — Rééducation générale"
+  q="En général pour un patient atteint de la maladie de Parkinson, il faut :"
+  opts={[
+    "A. Faire du renforcement musculaire des muscles abducteurs des hanches",
+    "B. Faire du renforcement musculaire des muscles extenseurs du corps",
+    "C. Faire des assouplissements/étirements de rachis entier",
+    "D. Faire des assouplissements/étirements des muscles fléchisseurs du corps",
+    "E. Faire du renforcement musculaire pour les muscles fléchisseurs du corps"
+  ]}
+  ans={[0, 1, 2, 3]}
+>
+  **A, B, C, D.** La posture du parkinsonien est en flexion : on renforce les extenseurs (B) et les abducteurs de hanche (A), on assouplit tout le rachis (C) et les fléchisseurs rétractés (D). On ne renforce PAS les fléchisseurs (E faux — ils sont déjà dominants).
+</QcmCard>
+
+<QcmCard
+  n={3}
+  type="QCM"
+  tag="Parkinson — Relevés du sol"
+  q="Concernant les relevés du sol pour un patient atteint de la maladie de Parkinson :"
+  opts={[
+    "A. La tâche et ses sous-tâches sont à travailler régulièrement",
+    "B. Ils sont à faire travailler aux patients non chuteurs",
+    "C. Ils sont à faire travailler seulement aux patients chuteurs",
+    "D. Ils sont à travailler avec le patient et l'aidant",
+    "E. Ils ne sont pas à travailler spécialement"
+  ]}
+  ans={[0, 1, 3]}
+>
+  **A, B, D.** Les relevés du sol sont à travailler à CHAQUE séance (A), y compris chez les non-chuteurs en prévention (B, donc C est faux), et avec l'aidant pour qu'il sache aussi comment aider (D). Ce n'est pas optionnel (E faux).
+</QcmCard>
+
+<QcmCard
+  n={4}
+  type="QCM"
+  tag="Parkinson — Freezing"
+  q="Les signaux pour limiter le 'freezing' pendant la période 'OFF' peuvent être :"
+  opts={[
+    "A. La stimulation auditive (la voix, le métronome, la musique)",
+    "B. La stimulation gustative",
+    "C. La stimulation olfactive",
+    "D. Repères internes (par exemple répéter 'les grands pas' en marchant)",
+    "E. La stimulation visuelle (laser, obstacles par terre, scotch)"
+  ]}
+  ans={[0, 3, 4]}
+>
+  **A, D, E.** Les signaux anti-freezing sont auditifs (A), internes/cognitifs (D) et visuels (E). Les stimulations gustative (B) et olfactive (C) n'ont pas d'efficacité démontrée sur le freezing.
+</QcmCard>
+
+<QcmCard
+  n={5}
+  type="QCM"
+  tag="Parkinson — Posture"
+  q="Concernant la posture du patient parkinsonien :"
+  opts={[
+    "A. Elle est toujours en inclinaison latérale avec scoliose",
+    "B. Elle se travaille par des exercices d'ouverture",
+    "C. Elle ne peut pas être améliorée",
+    "D. Elle peut être travaillée en auto-exercices à domicile",
+    "E. Elle est toujours en flexion du tronc"
+  ]}
+  ans={[1, 3]}
+>
+  **B, D.** La posture se travaille par des exercices d'ouverture (B) et peut être améliorée par des auto-exercices à domicile (D). Elle n'est pas toujours en inclinaison latérale (A — c'est le syndrome de Pise, non systématique). Elle peut être améliorée (C faux). Elle est en flexion du tronc typiquement, mais pas "toujours" (E — simplification excessive).
+</QcmCard>
+
+<QcmCard
+  n={6}
+  type="QCM"
+  tag="Parkinson — Marche"
+  q="Les troubles de la marche chez les personnes atteintes de la maladie de Parkinson peuvent être :"
+  opts={[
+    "A. Le freezing",
+    "B. Des grands pas",
+    "C. La festination",
+    "D. Des grands balancements des bras",
+    "E. Des difficultés avec les quarts et demi-tours"
+  ]}
+  ans={[0, 2, 4]}
+>
+  **A, C, E.** Le freezing (A), la festination (C) et les difficultés aux demi-tours (E) sont des troubles typiques. Les parkinsoniens font des PETITS pas (B faux) et ont une RÉDUCTION du ballant des bras (D faux).
+</QcmCard>
+
+<QcmCard
+  n={7}
+  type="QCM"
+  tag="Parkinson — Kiné"
+  q="Concernant la kinésithérapie chez une personne atteinte de la maladie de Parkinson :"
+  opts={[
+    "A. La kinésithérapie permet d'améliorer le tremblement",
+    "B. La kinésithérapie permet d'améliorer la posture",
+    "C. La kinésithérapie permet de diminuer le risque de chute",
+    "D. La kinésithérapie permet d'améliorer l'équilibre",
+    "E. Les exercices plutôt intenses sont plus efficaces que les exercices légers"
+  ]}
+  ans={[1, 2, 3, 4]}
+>
+  **B, C, D, E.** La kiné améliore la posture (B), l'équilibre (D) et réduit le risque de chute (C). Les exercices intenses sont plus efficaces (E — principe LSVT, 70-80% de l'effort). En revanche, le tremblement est peu ou pas amélioré par la kiné (A faux — il répond aux médicaments, pas à la rééducation).
+</QcmCard>
+
+<QcmCard
+  n={8}
+  type="QCM"
+  tag="Parkinson — Activité physique"
+  q="À son domicile, il est recommandé au patient parkinsonien de :"
+  opts={[
+    "A. Ne pas faire d'activité physique",
+    "B. Se reposer le plus possible",
+    "C. Ne refaire que les exercices qu'il choisit lui-même",
+    "D. Faire de l'activité physique — 150 minutes/semaine",
+    "E. Refaire un programme adapté recommandé par le kiné"
+  ]}
+  ans={[3, 4]}
+>
+  **D, E.** L'objectif est 150 min/sem d'AP (D), réparties sur plusieurs jours, et suivre un programme adapté recommandé par le kiné (E). Se reposer (B) ou ne rien faire (A) aggrave la maladie. Choisir seulement ce qui lui plaît sans guidance (C) n'est pas adapté.
+</QcmCard>
+
+<QcmCard
+  n={9}
+  type="QCM"
+  tag="Parkinson — Bilans validés"
+  q="Quels sont les échelles/tests valides chez les patients parkinsoniens ?"
+  opts={[
+    "A. TUG",
+    "B. UPDRS",
+    "C. Test de McMurray",
+    "D. L'échelle de Berg",
+    "E. Test de Gerber"
+  ]}
+  ans={[0, 1, 3]}
+>
+  **A, B, D.** TUG (A), UPDRS (B) et Berg Balance Scale (D) sont des outils validés pour le Parkinson. Le test de McMurray (C) est un test méniscal du genou. Le test de Gerber (E) est un test de l'épaule (souscapulaire). Ces deux derniers sont orthopédiques et non pertinents ici.
+</QcmCard>
+
+<QcmCard
+  n={10}
+  type="QCM"
+  tag="Syndrome Cérébelleux — Objectifs"
+  q="Quels sont les objectifs de rééducation d'un syndrome cérébelleux ?"
+  opts={[
+    "A. Faciliter l'équilibre du patient",
+    "B. Améliorer la marche du patient",
+    "C. Améliorer la synergie musculaire",
+    "D. Récupérer une autonomie fonctionnelle",
+    "E. Améliorer la coordination du patient",
+    "F. Diminuer l'amplitude des oscillations des mouvements"
+  ]}
+  ans={[0, 1, 2, 3, 4, 5]}
+>
+  **Toutes (A à F).** Les 6 propositions correspondent aux objectifs de rééducation du syndrome cérébelleux : améliorer la synergie musculaire (C), diminuer les oscillations (F), faciliter la coordination des membres + équilibre (A, E), récupérer une autonomie fonctionnelle (D), récupérer une marche sécuritaire (B).
+</QcmCard>
+
+<QcmCard
+  n={11}
+  type="QCS"
+  tag="Syndrome Cérébelleux — Termes"
+  q="La dyschronométrie et l'adiadococinésie sont :"
+  opts={[
+    "A. Des troubles de la coordination dans le temps et l'espace",
+    "B. Des troubles de la coordination dans l'espace",
+    "C. Des troubles de la coordination dans le temps",
+    "D. Des troubles de la marche",
+    "E. Des troubles observables en position de décubitus uniquement"
+  ]}
+  ans={[2]}
+>
+  **C.** La dyschronométrie (retard au démarrage et à l'arrêt) et l'adiadococinésie (impossibilité des mouvements alternés rapides) sont des **troubles de la coordination dans le temps**. La dysmétrie concerne l'espace. Ce ne sont pas principalement des troubles de la marche (D) et ils sont observables dans toutes les positions (E faux).
+</QcmCard>
+
+<QcmCard
+  n={12}
+  type="QCS"
+  tag="Syndrome Cérébelleux — Stewart-Holmes"
+  q="La manœuvre de Stewart-Holmes évalue :"
+  opts={[
+    "A. La marche cérébelleuse",
+    "B. L'équilibre du tronc",
+    "C. L'équilibre assis",
+    "D. L'hypertonie musculaire",
+    "E. L'hypotonie musculaire"
+  ]}
+  ans={[4]}
+>
+  **E.** La manœuvre de Stewart-Holmes évalue l'**hypotonie musculaire** cérébelleuse (absence de frein à la contraction). On résiste à la flexion du coude → on lâche brusquement → sans frein, le membre revient violemment. Ce n'est pas un test de l'équilibre ou de la marche.
+</QcmCard>
+
+<QcmCard
+  n={13}
+  type="QCM"
+  tag="Syndrome Cérébelleux — Moyens de rééducation"
+  q="Quels moyens pouvez-vous utiliser pour la rééducation d'un patient ayant un syndrome cérébelleux ?"
+  opts={[
+    "A. Des bracelets lestés pour les poignets et les chevilles",
+    "B. Les trajectoires guidées",
+    "C. Des plateaux de Freeman",
+    "D. Un trampoline",
+    "E. Des cannes tripodes",
+    "F. La méthode KABAT",
+    "G. Les résistances stabilisatrices"
+  ]}
+  ans={[0, 1, 2, 4, 5, 6]}
+>
+  **A, B, C, E, F, G.** Bracelets lestés (A), trajectoires guidées (B), plateaux de Freeman (C), cannes tripodes (E), Kabat (F — contre-résistance + trajectoires guidées) et résistances stabilisatrices (G) sont tous des outils valides. Le **trampoline (D) est à proscrire** : risque de chute majeur, surface instable avec hypotonie cérébelleuse.
+</QcmCard>
+
+<QcmCard
+  n={14}
+  type="QCS"
+  tag="Syndrome Cérébelleux — Marche festonnante"
+  q="La marche d'un patient ayant un syndrome cérébelleux est dite festonnante, cela signifie qu'elle est :"
+  opts={[
+    "A. Strictement en ligne droite",
+    "B. Réalisée un pied devant l'autre",
+    "C. Avec des temps de blocage",
+    "D. Avec un steppage",
+    "E. Accélérée vers l'avant",
+    "F. Avec un fauchage"
+  ]}
+  ans={[4]}
+>
+  **E.** La marche festonnante = le tronc part vers l'avant, entraînant une **accélération involontaire** vers l'avant. Ce n'est pas du tout une marche en ligne droite (A faux), ni avec blocages (C = freezing parkinsonien), ni avec steppage (D = paralysie du SPE), ni avec fauchage (F = syndrome pyramidal).
+</QcmCard>
+
+</Section>

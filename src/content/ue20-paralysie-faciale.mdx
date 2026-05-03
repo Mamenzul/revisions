@@ -1,0 +1,1080 @@
+---
+# ─── UE IDENTITY ───────────────────────────────────────────────────────────────
+title: "Paralysie Faciale — Périphérique & Centrale"
+color: "c2"
+
+# ─── NAV ────────────────────────────────────────────────────────────────────────
+coursNav:
+  - { id: "c-anatomie",      label: "Anatomie & muscles" }
+  - { id: "c-pfp",           label: "PF Périphérique" }
+  - { id: "c-pfc",           label: "PF Centrale" }
+  - { id: "c-bilan",         label: "Bilan kinésithérapie" }
+  - { id: "c-reeducation",   label: "Rééducation" }
+
+fichesNav:
+  - { id: "f-cas-clinique",  label: "Cas clinique (CC n°6)" }
+  - { id: "f-outils",        label: "Outils d'évaluation" }
+  - { id: "f-bdkine",        label: "BDK rapide" }
+---
+
+{/* ── IMPORTS ─────────────────────────────────────────────────── */}
+import Section   from '../components/Section.astro';
+import Card      from '../components/Card.astro';
+import AlertBox  from '../components/AlertBox.astro';
+import Grid2     from '../components/Grid2.astro';
+import Grid3     from '../components/Grid3.astro';
+import MiniCard  from '../components/MiniCard.astro';
+import Badge     from '../components/Badge.astro';
+import Grade     from '../components/Grade.astro';
+import Tree      from '../components/Tree.astro';
+import FlashCard from '../components/FlashCard.astro';
+import QcmCard   from '../components/QcmCard.astro';
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-anatomie
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-anatomie">
+
+<Card title="Muscles peauciers du visage — innervation VII">
+
+Tous les muscles peauciers du visage et du cou sont innervés par le **nerf facial (VII)**, sauf le releveur de la paupière supérieure (innervé par le nerf oculomoteur III).
+
+<Grid2>
+  <div>
+
+**Muscles constricteurs** (prioritaires en rééducation)
+- Orbiculaire des lèvres
+- Orbiculaire des paupières
+- Compresseurs des lèvres
+- Sourcilier
+- Myrtiforme
+
+</div>
+  <div>
+
+**Muscles dilatateurs** (à travailler après les constricteurs)
+- Zygomatiques (grand & petit)
+- Risorius
+- Élévateur de l'angle de la bouche
+- Abaisseur de l'angle de la bouche
+- Platysma
+
+</div>
+</Grid2>
+
+<AlertBox type="trap">Toujours rééduquer les **constricteurs avant les dilatateurs** : les dilatateurs sont plus forts et risquent de créer des spasmes et des syncinésies si travaillés en premier.</AlertBox>
+
+</Card>
+
+<Card title="Fonctions analytiques des principaux muscles">
+
+<table>
+<thead><tr><th>Muscle</th><th>Action principale</th><th>Signe de lésion</th></tr></thead>
+<tbody>
+<tr><td>Occipito-frontal</td><td>Plisse le front, élève le sourcil</td><td>Abolition des rides frontales</td></tr>
+<tr><td>Sourcilier (pyramidal)</td><td>Fronce les sourcils</td><td>Asymétrie du front</td></tr>
+<tr><td>Orbiculaire de l'œil</td><td>Fermeture palpébrale, ride de la patte d'oie</td><td>Lagophtalmie, signe de Charles Bell</td></tr>
+<tr><td>Zygomatiques</td><td>Attire la commissure labiale en haut et en dehors</td><td>Absence de sourire côté atteint</td></tr>
+<tr><td>Orbiculaire de la bouche</td><td>Rapproche et comprime les lèvres (cul de poule)</td><td>Fuite liquide, difficulté à siffler</td></tr>
+<tr><td>Risorius</td><td>Attire la commissure vers l'arrière et l'extérieur</td><td>Asymétrie du sourire</td></tr>
+<tr><td>Buccinateur</td><td>Allonge la fente buccale, plaque la joue</td><td>Stagnation alimentaire dans la joue</td></tr>
+<tr><td>Abaisseur de la lèvre inf.</td><td>Attire la lèvre inférieure vers le bas et l'extérieur</td><td>Asymétrie à la parole</td></tr>
+<tr><td>Mentonnier</td><td>Élève le menton et la lèvre inférieure</td><td>Ptose du menton</td></tr>
+<tr><td>Platysma</td><td>Abaisse la peau du menton et la commissure labiale</td><td>Signe du peaucier de Babinski</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Synergies musculaires importantes">
+
+<AlertBox type="info">Comprendre les synergies est essentiel pour anticiper les syncinésies et guider la rééducation analytique.</AlertBox>
+
+- **Sourcilier** — agonistes : pyramidal homolatéral, orbiculaire des paupières / antagoniste : frontal
+- **Orbiculaire des paupières** — agonistes : sourcilier, pyramidal, zygomatiques / antagonistes : releveur de la paupière sup. et frontal
+- **Zygomatiques** — agoniste : orbiculaire de l'œil (fibres inf.) / antagonistes : orbiculaire des lèvres et myrtiforme homolatéral
+- **Canin** — agonistes : transverse du nez, zygomatiques, releveur de la lèvre sup. / antagonistes : myrtiforme, orbiculaire des lèvres
+
+<AlertBox type="trap">Exemple de synergie pathologique : si je fronce à droite, les muscles de gauche (inhibés normalement par le cerveau) peuvent se contracter de façon anarchique chez le patient paralysé → grimace involontaire, très épuisant psychologiquement.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-pfp
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-pfp">
+
+<Card title="Paralysie faciale périphérique — Définition & étiologies">
+
+Atteinte du **nerf facial (VII) au niveau périphérique** (après le noyau du facial dans la protubérance). L'ensemble de l'hémiface est concerné (territoire supérieur ET inférieur), contrairement à la PF centrale.
+
+**Étiologies principales :**
+- **A frigore** (paralysie de Bell) : la plus fréquente, cause idiopathique/virale
+- **Zostérienne** (zona du ganglion géniculé, syndrome de Ramsay Hunt)
+- **Traumatique** : fracture de la base du crâne, enfoncement de l'os zygomatique
+- **Tumorale** : neurinome du facial, parotidite
+- **Iatrogène** : post-chirurgicale (parotide, oreille)
+- **Infectieuse** : otite, borréliose (maladie de Lyme)
+
+<AlertBox type="key">La PFP touche l'hémiface **complète** (front + partie inférieure), tandis que la PFC épargne le territoire facial supérieur.</AlertBox>
+
+</Card>
+
+<Card title="Sémiologie — Signes cliniques">
+
+**Au repos :**
+- Asymétrie de la face côté atteint
+- Hypotonie des muscles périciers
+- Effacement des rides frontales et du sourcil
+- Effacement du sillon nasogénien
+- Chute de la commissure labiale
+- Lagophtalmie (œil ouvert, risque de dessèchement cornéen)
+
+**Signes spécifiques :**
+
+<table>
+<thead><tr><th>Signe</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>**Charles Bell**</td><td>Impossible de fermer la paupière côté atteint ; l'œil se porte en haut et en dehors (position de repos)</td></tr>
+<tr><td>**Souques**</td><td>Lors de la fermeture forcée des paupières : occlusion moins nette et cils paraissant plus longs côté paralysé</td></tr>
+<tr><td>**Peaucier de Babinski**</td><td>Lors de l'abaissement de la lèvre inférieure, le relief du platysma est visible côté sain uniquement</td></tr>
+</tbody>
+</table>
+
+**Au mouvement :**
+- Le front ne se plisse pas côté atteint
+- La commissure labiale ne s'élève pas au sourire
+- Impossibilité de siffler, de gonfler les joues
+- Déviation de la bouche vers le côté sain
+
+**Conséquences fonctionnelles :**
+- Dysarthrie (troubles de la parole)
+- Difficultés de mastication et de déglutition
+- Fuite du bol alimentaire/liquidien
+- Risque oculaire (conjonctivite, kératite, ulcération cornéenne)
+
+</Card>
+
+<Card title="Atteintes associées du nerf facial (VII)">
+
+Le nerf facial assure également des fonctions **sensitives, sensorielles et végétatives** :
+
+<Grid3>
+  <div>
+    <Badge color="blue">Sensitif</Badge>
+
+- Pavillon de l'oreille
+- Région rétro-auriculaire
+- Conduit auditif externe
+- Zone de Ramsay Hunt
+</div>
+  <div>
+    <Badge color="amber">Sensoriel</Badge>
+
+- Goût des 2/3 antérieurs de la langue (chorde du tympan)
+- Gustométrie à évaluer
+</div>
+  <div>
+    <Badge color="teal">Végétatif</Badge>
+
+- Sécrétion lacrymale
+- Sécrétion salivaire (glandes sous-maxillaire et sublinguale)
+- Fonction vasomotrice
+</div>
+</Grid3>
+
+</Card>
+
+<Card title="Syncinésies">
+
+Les syncinésies sont des **mouvements involontaires anarchiques** survenant lors d'un mouvement volontaire. Elles apparaissent lors de la réinnervation (fibres nerveuses repoussant vers de mauvais muscles cibles).
+
+<Grid2>
+  <div>
+
+**Syncinésie bouche-œil**
+Contraction involontaire de l'orbiculaire de l'œil lors d'un sourire volontaire (petits et grands zygomatiques + risorius).
+→ Fermeture oculaire parasite au sourire.
+
+  </div>
+  <div>
+
+**Syncinésie œil-bouche**
+Fermeture volontaire de l'œil entraîne une contraction involontaire des muscles buccaux.
+→ Mouvement de la bouche lors du clignement.
+
+  </div>
+</Grid2>
+
+**Cotation des syncinésies (testing analytique) :**
+- **0** : absence de syncinésie
+- **+1** : inhibition volontaire possible devant un miroir
+- **+2** : inhibition par maintien digital ou contraction de l'antagoniste
+- **+3** : syncinésie irrépressible, contraction complète du muscle
+
+<AlertBox type="info">Le **SAQ (Synkinesis Assessment Questionnaire)** évalue la perception du patient : Score = (somme des notes) ÷ 45 × 100. Plus le score est élevé, plus les syncinésies sont sévères.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-pfc
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-pfc">
+
+<Card title="Paralysie faciale centrale — Définition & étiologies">
+
+Trouble de la motricité de la face après **lésion cérébrale** touchant l'aire pyramidale des centres moteurs corticaux ou la voie cortico-nucléaire.
+
+**Étiologies :**
+- AVC (ischémique ou hémorragique)
+- Traumatisme crânien
+- Tumeur cérébrale
+
+<AlertBox type="key">Dans la PFC, le **territoire facial supérieur est épargné** (le front et les sourcils restent mobiles), car les noyaux du facial supérieur reçoivent une innervation bilatérale depuis le cortex.</AlertBox>
+
+</Card>
+
+<Card title="Caractéristiques de la PFC">
+
+<Grid2>
+  <div>
+
+**Description clinique :**
+- Atteinte de l'hémiface **controlatérale** à la lésion cérébrale
+- Déficit prédominant sur la **partie inférieure** du visage
+- Existence fréquente d'une **dissociation automatico-volontaire** (mouvements émotionnels préservés mais mouvements volontaires déficitaires, ou l'inverse)
+- **Pas de risque d'hémispasme** (contrairement à la PFP)
+- Pas de syncinésies
+
+</div>
+  <div>
+
+**Troubles associés fréquents :**
+- Déviation linguale
+- Déficit de l'hémipharynx / hémilarynx
+- Trouble de la déglutition
+- Trouble de la sensibilité de l'hémiface
+- Hémiplégie ipsilatérale
+- Apraxie bucco-faciale
+
+Dans les AVC droits : héminégligence, anosognosie, troubles dysexécutifs, troubles visuo-spatiaux.
+
+Dans les AVC gauches : aphasie.
+
+  </div>
+</Grid2>
+
+<AlertBox type="trap">Ne pas confondre avec la PFP : dans la PFC le front se plisse normalement ! La lésion est **centrale** (cerveau) et non sur le nerf lui-même.</AlertBox>
+
+</Card>
+
+<Card title="Répercussions fonctionnelles de la PFC">
+
+Comme pour la PFP :
+- **Communication / esthétique** : réduction de l'expressivité et des mimiques faciales
+- **Troubles de la parole** : dysarthrie
+- **Troubles de la déglutition** : difficultés de contention buccale antérieure, gêne sur le temps oral
+
+La rééducation vise à **restaurer la commande** (et non à traiter une lésion nerveuse directe).
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-bilan
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-bilan">
+
+<Card title="Organisation du bilan kinésithérapique">
+
+Le bilan se déroule en deux temps lors de la première consultation (prévoir **1 heure**) :
+1. **Bilans** : subjectif, objectif et palpatoire
+2. **Mise en place du traitement**
+
+<Tree>
+Bilan kinésithérapique PF
+├── Bilan subjectif (anamnèse)
+│   ├── Plaintes du patient
+│   ├── Répercussions fonctionnelles (parole, alimentation, social)
+│   └── Évaluation psychologique
+├── Bilan objectif
+│   ├── Examen morpho-statique (visage au repos)
+│   ├── Évaluation de la sévérité (HB, Sunnybrook)
+│   ├── Bilan cutané trophique
+│   ├── Bilan de la douleur
+│   ├── Testing musculaire (Lacôte / Chevalier)
+│   ├── Bilan des syncinésies
+│   ├── Bilan de la sensibilité (V1, V2, VII)
+│   └── Bilan fonctionnel (déglutition, parole, mastication)
+└── Bilan palpatoire (tonus intra et extra-buccal)
+</Tree>
+
+</Card>
+
+<Card title="Examen morpho-statique">
+
+Observation du visage **au repos** puis **en mouvement**, de face et de profil, idéalement avec photographies.
+
+**Au repos — signes à rechercher :**
+- Symétrie générale de la face
+- Signe de **Charles Bell** (lagophtalmie + déviation oculaire)
+- Signe de **Souques** (cils plus longs côté paralysé à la fermeture forcée)
+- Effacement des rides frontales côté atteint
+- Effacement du sillon nasogénien
+- Chute de la commissure labiale
+- Signe du **peaucier de Babinski**
+
+**Au mouvement — évaluer :**
+- Plissement du front
+- Fermeture oculaire
+- Sourire (élévation de la commissure)
+- Sifflement, gonflement des joues
+- Protraction labiale
+
+</Card>
+
+<Card title="Échelles de sévérité">
+
+<Grid2>
+  <div>
+
+**House & Brackmann (HB)** — référence internationale
+
+<table>
+<thead><tr><th>Grade</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>I</td><td>Normale, pas de paralysie</td></tr>
+<tr><td>II</td><td>Dysfonction légère — légère asymétrie, fermeture oculaire sans difficulté, syncinésies discrètes possibles</td></tr>
+<tr><td>III</td><td>Dysfonction modérée — mobilité diminuée, asymétrie non défigurante, fermeture oculaire complète avec effort</td></tr>
+<tr><td>IV</td><td>Dysfonction modérée à sévère — asymétrie importante, fermeture oculaire incomplète même avec effort</td></tr>
+<tr><td>V</td><td>Dysfonction sévère — mobilité à peine perceptible, pas de syncinésie possible</td></tr>
+<tr><td>VI</td><td>Paralysie complète — asymétrie évidente, aucun mouvement</td></tr>
+</tbody>
+</table>
+
+  </div>
+  <div>
+
+**Sunnybrook Facial Grading System (SFG / FGS)**
+
+Évalue la symétrie de la face paralysée vs côté sain, au repos et en mouvement.
+
+**Score FGS Global (sur 100) :**
+
+> (Score mouvement volontaire × 4) − (Score repos × 5) − (Score syncinésies)
+
+Plus le score est élevé, meilleure est la fonction faciale.
+
+Évalue 3 domaines :
+- Symétrie au repos
+- Symétrie des mouvements volontaires (5 expressions)
+- Syncinésies associées
+
+</div>
+</Grid2>
+
+</Card>
+
+<Card title="Évaluation du tonus selon AM Chevalier">
+
+Cotation sur une échelle de −2 à +2 :
+
+<table>
+<thead><tr><th>Critère</th><th>Cotation habituelle en PFP</th></tr></thead>
+<tbody>
+<tr><td>Abolition des rides frontales</td><td>0</td></tr>
+<tr><td>Abaissement de la pointe du sourcil</td><td>−1</td></tr>
+<tr><td>Déviation nasale</td><td>−1</td></tr>
+<tr><td>Abolition du sillon nasogénien</td><td>−2</td></tr>
+<tr><td>Abolition du sillon naso-labial</td><td>−2</td></tr>
+<tr><td>Déviation et affaissement de la commissure labiale</td><td>−1</td></tr>
+<tr><td>Lèvre supérieure avalée</td><td>−2</td></tr>
+<tr><td>Lèvre inférieure avalée</td><td>−2</td></tr>
+<tr><td>Joue affaissée</td><td>−2</td></tr>
+</tbody>
+</table>
+
+Légende : −2 forte hypotonie / −1 légère hypotonie / 0 normalité / +1 hypertonie modérée / +2 forte hypertonie
+
+</Card>
+
+<Card title="Testing musculaire — Cotation de Lacôte">
+
+<table>
+<thead><tr><th>Cotation</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>**0**</td><td>Aucune mobilité du grain de peau visible à l'œil nu ou à la lumière rasante</td></tr>
+<tr><td>**1**</td><td>Mobilité du grain de peau perceptible lors de la commande du mouvement</td></tr>
+<tr><td>**2**</td><td>Capable de faire le mouvement 5 fois en amplitude incomplète et asynchrone par rapport au côté sain</td></tr>
+<tr><td>**3**</td><td>Capable de faire le mouvement 8 à 10 fois en amplitude complète mais asynchrone par rapport au côté sain</td></tr>
+<tr><td>**4**</td><td>Mouvement synchrone et symétrique, intégré dans la mimique volontaire</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">Pour la PFC, utiliser la **cotation de Held et Pierrot-Desseilligny** (0 à 5), qui évalue la commande motrice de l'hémiplégique, avec précision de la sélectivité du mouvement et des éventuelles syncinésies.</AlertBox>
+
+</Card>
+
+<Card title="Bilan de la sensibilité">
+
+**Nerf trijumeau (V) — pic/touche et chaud/froid :**
+- **V2 (maxillaire)** : hypoesthésie possible par atteinte du nerf infra-orbitaire → paupière inférieure, joue, aile du nez, lèvre supérieure, arcade dentaire supérieure
+- **V1 (ophtalmique)** : à évaluer
+
+**Nerf facial (VII) :**
+- Gustométrie (2/3 antérieurs de la langue)
+- Zone de Ramsay Hunt (pavillon de l'oreille et région rétro-auriculaire)
+- Sécrétions lacrymales et salivaires
+
+<AlertBox type="danger">En cas d'atteinte du nerf infra-orbitaire, surveiller l'évolution vers une névralgie du trijumeau.</AlertBox>
+
+</Card>
+
+<Card title="Bilan fonctionnel">
+
+**Déglutition — signes d'alerte à surveiller :**
+- Peur de passer à table
+- Toux pendant les repas
+- Bave / fuite labiale
+- Stockage des aliments dans les joues
+- Durée anormale du repas
+- Douleur à la déglutition
+- Déshydratation, perte de poids
+
+→ Si nécessaire, orienter vers un **orthophoniste**.
+
+**Parole / mastication :**
+- Difficultés d'articulation (consonnes labiales : P, B, M, F, V)
+- Difficulté à mastiquer côté atteint
+- Gêne à l'élocution
+
+**Évaluation psychologique :**
+- Impact sur l'estime de soi
+- Difficultés à se regarder dans un miroir
+- Pessimisme sur la récupération
+→ Envisager un soutien psychologique si nécessaire.
+
+</Card>
+
+<Card title="Qualité de vie — Échelles spécifiques">
+
+<Grid2>
+  <div>
+
+**Échelles non spécifiques :**
+- SF-36 (santé générale)
+- DAS-59 (ressenti quotidien)
+
+</div>
+  <div>
+
+**Échelles spécifiques pathologies faciales :**
+- **FDI** (Facial Disability Index) — 2 parties : fonction physique + fonction psychique (version française : IHF — Indice de Handicap Facial)
+- **FaCE Scale** — confort facial, fonction orale, confort des yeux, contrôle lacrymal, fonction sociale
+
+</div>
+</Grid2>
+
+**PSFS (Patient Specific Functional Scale)** : le patient cote de 0 à 10 sa capacité à réaliser des activités choisies par lui-même. Exemples fréquents : sourire, siffler, boire de l'eau, manger, sorties sociales.
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-reeducation
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-reeducation">
+
+<Card title="Principes généraux de la rééducation">
+
+<AlertBox type="key">Le patient doit être **acteur de sa rééducation**. L'autorééducation à domicile est indispensable.</AlertBox>
+
+- Séances **pluriquotidiennes et courtes** (10 à 15 min)
+- Respect de la **fatigue** du patient
+- Rééducation des **constricteurs** préalable à celle des dilatateurs
+- Travail **analytique, muscle par muscle**
+- Contrôle visuel systématique devant un **miroir**
+- Surveillance constante de la face saine pour éviter les syncinésies et l'hypercompensation
+
+**Fréquence :** 1 à 2 fois par semaine en cabinet (parfois quotidienne en phase initiale), sur plusieurs mois.
+
+<Grid2>
+  <div>
+
+**Phase 1** (inflammation active, 1 sem – 3 mois)
+- Diminuer l'œdème (lever toute cause compressive du nerf)
+- Prévenir les rétractions et les syncinésies
+- Éducation thérapeutique
+
+</div>
+  <div>
+
+**Phase 2** (après diminution de l'inflammation)
+- Potentialiser la récupération nerveuse
+- Travail musculaire progressif
+- Biofeedback et imagerie motrice
+
+</div>
+</Grid2>
+
+</Card>
+
+<Card title="Massage">
+
+Le massage est **bilatéral** et concerne tous les muscles de la face.
+
+**Massage drainant** (vers les oreilles et le cou) :
+- But : retrouver l'élasticité des tissus, diminuer les compressions nerveuses dues à l'œdème
+
+**Massage stimulant sensitif et moteur** :
+- Exo-buccal et **endo-buccal**
+- Technique endo-buccale : pouce à l'intérieur de la joue, index et majeur à l'extérieur
+- Appuyé, dans le sens de la fibre musculaire
+- Étirement lent sans relâchement brusque
+- Points-gâchette si contracture (peut être douloureux en phase de réinnervation)
+
+**Zones clés :**
+- Racine du nez : latéralement aux narines
+- Menton : en dessous des lèvres
+- Milieu de joue : massage en endo- et exo-buccal simultanément
+
+Associer un massage du **rachis cervical et du cuir chevelu** pour favoriser la décontraction générale.
+
+</Card>
+
+<Card title="Travail musculaire (réveil moteur)">
+
+**Progression analytique :**
+
+<Tree>
+Travail musculaire
+├── Passif (le MK mobilise)
+├── Passif assisté (le patient démarre, le MK finit et maintient)
+├── Actif assisté (le patient fait le mouvement, le MK maintient)
+├── Actif (sans aide)
+└── Contre résistance
+</Tree>
+
+**Outils complémentaires :**
+- **Miroir** : feedback visuel indispensable
+- **Imagerie motrice** : visualisation du mouvement sans le réaliser
+- **Biofeedback** (webcam + logiciel) : reconstruction du visage sans paralysie, feedback "positif"
+
+**Exercices type pour l'autorééducation :**
+- Plisser le front / froncer les sourcils
+- Fermer les yeux / cligner d'un œil puis de l'autre
+- Froncer le nez / montrer les dents
+- Siffler / faire le cul de poule
+- Sourire bouche ouverte puis fermée
+- Gonfler puis creuser les joues
+- Bouche en carré / faire la moue
+
+Consignes : 5 répétitions de chaque mouvement, repos entre chaque série, 10 minutes au total.
+
+<AlertBox type="trap">**Attention aux syncinésies et à l'hypercompensation du côté sain** : la partie du visage qui ne travaille pas doit rester au repos.</AlertBox>
+
+</Card>
+
+<Card title="Mime Therapy">
+
+<Grade level="c" /> Efficacité pour améliorer les résultats fonctionnels.
+
+Combinaison de :
+- Massage, exercices de respiration et de **relaxation** (détente générale du corps → détente du visage)
+- Exercices de **coordination** bilatérale du visage → réduction des syncinésies
+- **Exercices de parole** (phonèmes A, E, I, O, U)
+- **Exercices axés sur les expressions faciales**
+
+</Card>
+
+<Card title="Biofeedback et imagerie mentale">
+
+But : **renforcer le contrôle cortical** des mouvements faciaux pour développer les voies efférentes.
+
+**Protocole (5 mouvements, 15 min/jour devant webcam) :**
+- Sourire bouche fermée
+- Sourire bouche ouverte
+- Protraction labiale (cul de poule)
+- Plisser le nez
+- Plisser les yeux
+
+**Logiciels utilisables :**
+- Logiciel de reconstruction du visage sans paralysie → effet miroir "positif"
+- Photoshop (imagerie mentale)
+
+**Feedback sensitif :** le patient se touche le visage pendant les exercices pour renforcer l'information sensorielle.
+
+</Card>
+
+<Card title="Thermothérapie & stimulation sensitive">
+
+**Thermothérapie :**
+- Entretient la vascularisation, les échanges cellulaires et détend les muscles
+- Coussins chauffants, lampes infrarouges, parafangothérapie
+- Durée : environ **10 minutes**, plutôt **en fin de séance** après l'effort
+
+**Stimulation sensitive :**
+- Massage sensitif
+- **Désensibilisation** : stimulation progressive avec différentes textures (coton, pois, pic)
+
+</Card>
+
+<Card title="Particularités de la rééducation en PFC">
+
+<AlertBox type="info">La démarche passif → actif est **inadaptée** en PFC : il faut viser la **reprogrammation de la commande** par stimulation.</AlertBox>
+
+**Spécificités :**
+- Utilisation de la **dissociation automatico-volontaire** : passer par un geste automatique (rire spontané, expression émotionnelle) et chercher progressivement l'action volontaire
+- Recherche de production **volontaire** du mouvement, en jouant progressivement sur l'amplitude et la vitesse d'exécution
+- Travail de la **symétrie et synchronisation** gauche/droite, ainsi que l'enchaînement praxique
+- Recherche d'une **généralisation** des acquis
+- **Miroir** pour feedback visuel
+- Travail **postural**
+- Prise en charge des **troubles associés** (déglutition, parole, apraxie)
+
+**Pronostic :** progrès souvent visibles, mais fréquemment légère séquelle sur la mobilisation de l'hémilèvre supérieure. Difficulté de généralisation malgré de bonnes possibilités motrices.
+
+</Card>
+
+<Card title="Éducation thérapeutique — Protection oculaire">
+
+<AlertBox type="danger">La lagophtalmie expose l'œil aux poussières, au dessèchement cornéen, et aux risques de conjonctivite, kératite et ulcération cornéenne.</AlertBox>
+
+**Conseils au patient :**
+- **Larmes artificielles** en journée
+- Port de **lunettes** (protection contre poussières et courants d'air)
+- **Pansement occlusif nocturne** (compresse + sparadrap) tant que la paupière ne se ferme pas complètement
+- Éviter les courants d'air et protéger l'hémiface lors des sorties (temps frais)
+- Signaler toute anomalie au médecin
+- Surveillance ophtalmologique régulière
+
+**Autorééducation à domicile :**
+- Exercices de motricité face au miroir
+- Auto-massages (exo-buccal)
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-cas-clinique
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-cas-clinique">
+
+<Card title="Anamnèse — CC n°6">
+
+<table>
+<thead><tr><th>Paramètre</th><th>Données</th></tr></thead>
+<tbody>
+<tr><td>Âge / sexe</td><td>Homme, 31 ans</td></tr>
+<tr><td>Situation familiale</td><td>Marié, 2 enfants en bas âge</td></tr>
+<tr><td>Profession</td><td>Artisan plombier à son compte (conduit)</td></tr>
+<tr><td>Activité physique</td><td>Sportif : course à pied, montagne, hapkido</td></tr>
+<tr><td>Lieu de vie</td><td>Maison de plain-pied, grand jardin</td></tr>
+<tr><td>Antécédents</td><td>RAS</td></tr>
+<tr><td>Histoire de la maladie</td><td>Traumatisme facial avec enfoncement de l'os zygomatique (coup de pied au visage) → Hémiparésie de la face (nerf VII)</td></tr>
+<tr><td>Prescription</td><td>Bilan de la paralysie faciale + rééducation des muscles peauciers du visage</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Bilan cutané trophique">
+
+- Hématome important : os zygomatique → partie inférieure du sourcil à gauche
+- Œdème péri-orbitaire et zygomatique
+- Rougeur : face latérale joue gauche + région péri-orbitaire gauche
+- Température cutanée légèrement augmentée côté gauche
+- Peau détendue, aspect tombant côté gauche
+- Cicatrice de 1 mm (joue ou bouche)
+
+</Card>
+
+<Card title="Bilan de la douleur">
+
+<Grid3>
+  <MiniCard val="2/10" label="EVA repos" />
+  <MiniCard val="4/10" label="EVA mouvement" />
+  <MiniCard val=">4" label="Score DN4" />
+</Grid3>
+
+- Localisation : région péri-orbitaire et face latérale joue gauche
+- Réveil nocturne présent
+- DN4 positif : brûlure, engourdissement, picotements, fourmillements, décharges électriques
+- **Douleur mixte : inflammatoire + neuropathique**
+- Patient sous antalgiques de palier I
+
+</Card>
+
+<Card title="Testing musculaire (Cotation de Lacôte)">
+
+<table>
+<thead><tr><th>Muscle</th><th>Cotation</th><th>Action testée</th></tr></thead>
+<tbody>
+<tr><td>Occipito-frontal</td><td>4</td><td>Élévation du sourcil</td></tr>
+<tr><td>Orbiculaire de l'œil</td><td>3</td><td>Occlusion palpébrale</td></tr>
+<tr><td>Risorius</td><td>3</td><td>Commission vers l'arrière et l'extérieur</td></tr>
+<tr><td>Procérus</td><td>3</td><td>Rides horizontales nasales</td></tr>
+<tr><td>Abaisseur de la lèvre inf.</td><td>3</td><td>Lèvre inférieure vers le bas</td></tr>
+<tr><td>Sourcilier</td><td>2</td><td>Remonte la paupière sup.</td></tr>
+<tr><td>Élévateur de la lèvre sup.</td><td>2</td><td>Relève et avance la lèvre sup.</td></tr>
+<tr><td>Élévateur de l'angle de la bouche</td><td>2</td><td>Élève la commissure (moquerie)</td></tr>
+<tr><td>Petit et grand zygomatique</td><td>2</td><td>Commissure en haut et en dehors</td></tr>
+<tr><td>Orbiculaire de la bouche</td><td>2</td><td>Rapproche et comprime les lèvres</td></tr>
+<tr><td>Buccinateur</td><td>2</td><td>Allonge la fente buccale</td></tr>
+<tr><td>Mentonnier</td><td>2</td><td>Élève le menton et la lèvre inf.</td></tr>
+<tr><td>Platysma</td><td>2</td><td>Abaisse la peau du menton</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">Les muscles de la **partie inférieure** de l'hémiface sont les plus touchés (cotés à 2), confirmant une atteinte prédominante inférieure.</AlertBox>
+
+</Card>
+
+<Card title="PSFS — Activités spécifiques du patient">
+
+<table>
+<thead><tr><th>Activité</th><th>Score (/10)</th></tr></thead>
+<tbody>
+<tr><td>Sourire</td><td>4/10</td></tr>
+<tr><td>Siffler</td><td>0/10</td></tr>
+<tr><td>Boire de l'eau</td><td>4/10</td></tr>
+<tr><td>Manger</td><td>4/10</td></tr>
+<tr><td>Sortir avec ses amis</td><td>5/10</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Bilan Diagnostic Kinésithérapique (BDK)">
+
+<Grid3>
+  <div>
+    <Badge color="red">Déficiences</Badge>
+
+- Douleur mixte (inflammatoire + neuropathique)
+- Perte de tonus et force musculaire de l'hémiface (partie inférieure ++)
+- Paralysie faciale **Grade IV** (House & Brackmann)
+- Œdème et hématome
+- Perte de sensibilité V2 et VII
+</div>
+  <div>
+    <Badge color="amber">Incapacités</Badge>
+
+- Diminution de la mobilité des muscles de l'hémiface
+- Diminution de la communication non verbale
+- Difficultés à parler
+- Difficultés à manger et à boire
+</div>
+  <div>
+    <Badge color="blue">Restrictions de participation</Badge>
+
+- Perte de l'estime de soi
+- Diminution des interactions sociales
+- Arrêt de travail
+- Difficultés de communication non verbale
+</div>
+</Grid3>
+
+</Card>
+
+<Card title="Objectifs thérapeutiques">
+
+<table>
+<thead><tr><th>Objectifs spécifiques du patient</th><th>Objectifs opérationnels MK</th></tr></thead>
+<tbody>
+<tr><td>Manger et boire normalement</td><td>Diminuer la douleur</td></tr>
+<tr><td>Communiquer (parole, mimiques)</td><td>Diminuer l'œdème et l'hématome</td></tr>
+<tr><td>Retrouver son visage d'avant</td><td>Stimuler le tonus musculaire</td></tr>
+<tr><td>Diminuer la douleur</td><td>Réveiller les muscles peauciers</td></tr>
+<tr><td></td><td>Stimuler la sensibilité</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">Un **EMG** serait nécessaire pour évaluer le degré de compression ou de lésion nerveuse et orienter le pronostic.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-outils
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-outils">
+
+<Card title="Récapitulatif des outils d'évaluation">
+
+<table>
+<thead><tr><th>Outil</th><th>Ce qu'il évalue</th><th>Type</th></tr></thead>
+<tbody>
+<tr><td>House & Brackmann (HB)</td><td>Sévérité globale de la PF (Grade I à VI)</td><td>Clinique</td></tr>
+<tr><td>Sunnybrook FGS</td><td>Symétrie au repos + mouvements + syncinésies (sur 100)</td><td>Clinique</td></tr>
+<tr><td>Cotation Lacôte</td><td>Force/amplitude musculaire face (0 à 4)</td><td>Testing musculaire</td></tr>
+<tr><td>AM Chevalier</td><td>Tonus musculaire facial (−2 à +2)</td><td>Testing tonus</td></tr>
+<tr><td>Held & Pierrot-Desseilligny</td><td>Commande motrice en PFC (0 à 5)</td><td>Testing (PFC)</td></tr>
+<tr><td>Système de Nottingham</td><td>Distances entre points de repère faciaux au repos et à l'effort</td><td>Mesure objective</td></tr>
+<tr><td>SAQ</td><td>Perception patient des syncinésies (sur 100)</td><td>Auto-questionnaire</td></tr>
+<tr><td>DN4</td><td>Douleur neuropathique (score > 4 = douleur neuropathique)</td><td>Douleur</td></tr>
+<tr><td>EVA</td><td>Intensité douloureuse</td><td>Douleur</td></tr>
+<tr><td>FDI / IHF</td><td>Handicap facial (fonctions physique et psychique)</td><td>Qualité de vie</td></tr>
+<tr><td>FaCE Scale</td><td>Confort facial, oral, oculaire, lacrymal, social</td><td>Qualité de vie</td></tr>
+<tr><td>PSFS</td><td>Capacité fonctionnelle sur activités choisies par le patient (0 à 10)</td><td>Fonctionnel</td></tr>
+<tr><td>SF-36 / DAS-59</td><td>Qualité de vie générale</td><td>Qualité de vie</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Échelle de Freyss — Schéma de cotation">
+
+Cotation de 0 à 3 par zones faciales :
+
+<table>
+<thead><tr><th>Score</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>0</td><td>Aucune contraction ni palpable, asymétrie maximale</td></tr>
+<tr><td>1</td><td>Contraction visible ou palpable sans mouvement, asymétrie importante</td></tr>
+<tr><td>2</td><td>Mouvement faible, incomplet, sans force, asymétrie modérée</td></tr>
+<tr><td>3</td><td>Contraction puissante contre résistance digitale, symétrie normale du mouvement</td></tr>
+</tbody>
+</table>
+
+Zones évaluées : Zone 1 (front + sourcils), Zone 2 (yeux + nez + joues sup.), Zone 3 (joues + lèvres + menton + cou).
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-bdkine
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-bdkine">
+
+<Card title="Fiche BDK rapide — PF Périphérique">
+
+<AlertBox type="key">Paralysie faciale périphérique traumatique (enfoncement zygomatique) — Homme 31 ans — Grade IV HB</AlertBox>
+
+**Déficiences :** douleur mixte, hypotonie hémiface gauche (partie inférieure ++), œdème/hématome, hypoesthésie V2 + VII, testing 2-3/4 sur la majorité des muscles.
+
+**Incapacités :** mobilité réduite de l'hémiface, communication non verbale altérée, difficultés de parole, alimentation et boisson compromises.
+
+**Restrictions de participation :** arrêt de travail, isolement social, atteinte de l'estime de soi.
+
+**Objectifs :**
+1. Diminuer l'œdème et la douleur (phase inflammatoire)
+2. Réveiller et renforcer les muscles peauciers (phase de récupération)
+3. Stimuler la sensibilité
+4. Restaurer les fonctions (alimentation, parole, mimiques)
+5. Prévenir les syncinésies et l'hypercompensation du côté sain
+
+**Moyens :**
+- Massage drainant + massage sensitif exo/endo-buccal
+- Travail musculaire analytique progressif (passif → contre résistance)
+- Biofeedback + imagerie motrice
+- Miroir + autocorrection
+- Thermothérapie en fin de séance
+- Éducation thérapeutique (protection oculaire, autorééducation)
+- Coordination avec ophtalmologue, orthophoniste, psychologue
+
+<AlertBox type="trap">Ne pas travailler les zygomatiques (dilatateurs) avant que les orbiculaires (constricteurs) soient suffisamment récupérés → risque de syncinésies et d'hypertonicité déformante.</AlertBox>
+
+</Card>
+
+<Card title="Comparaison PF Périphérique vs PF Centrale">
+
+<table>
+<thead><tr><th>Critère</th><th>PF Périphérique</th><th>PF Centrale</th></tr></thead>
+<tbody>
+<tr><td>Lésion</td><td>Nerf VII (après le noyau)</td><td>Cortex / voie cortico-nucléaire</td></tr>
+<tr><td>Territoire atteint</td><td>Hémiface complète (sup + inf)</td><td>Partie inférieure uniquement (front épargné)</td></tr>
+<tr><td>Côté atteint</td><td>Ipsilatéral à la lésion nerveuse</td><td>Controlatéral à la lésion cérébrale</td></tr>
+<tr><td>Dissociation automatico-volontaire</td><td>Absente</td><td>Fréquente</td></tr>
+<tr><td>Syncinésies</td><td>Possible (réinnervation)</td><td>Absentes</td></tr>
+<tr><td>Hémispasme</td><td>Risque possible</td><td>Pas de risque</td></tr>
+<tr><td>Étiologies fréquentes</td><td>A frigore, traumatisme, zona</td><td>AVC, traumatisme crânien, tumeur</td></tr>
+<tr><td>Approche rééducative clé</td><td>Réveil musculaire passif → actif</td><td>Reprogrammation de la commande, dissociation A/V</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FLASHCARDS
+════════════════════════════════════════════════════════════════════ */}
+<Section id="flashcards">
+
+<FlashCard theme="Anatomie" q="Quel est le nerf innervant tous les muscles peauciers du visage ? Quelle est l'exception ?">
+  Le **nerf facial (VII)**. Exception : le releveur de la paupière supérieure, innervé par le nerf oculomoteur commun (III).
+</FlashCard>
+
+<FlashCard theme="Anatomie" q="Pourquoi rééduque-t-on les constricteurs avant les dilatateurs ?">
+  Les dilatateurs (zygomatiques, risorius…) sont plus **forts** et plus proches du tronc du nerf. S'ils récupèrent en premier, ils créent des **syncinésies** et parasitent la récupération des orbiculaires (constricteurs).
+</FlashCard>
+
+<FlashCard theme="PF Périphérique" q="Décrire le signe de Charles Bell.">
+  Lors de la tentative de fermeture des paupières côté atteint : la paupière ne se ferme pas (lagophtalmie) et l'œil se porte en **haut et en dehors** (position de repos du globe oculaire).
+</FlashCard>
+
+<FlashCard theme="PF Périphérique" q="Quels sont les 3 grands risques oculaires de la lagophtalmie ?">
+  1. **Conjonctivite** (accumulation de poussières)
+  2. **Kératite** (dessèchement cornéen)
+  3. **Ulcération cornéenne** (en l'absence de protection)
+</FlashCard>
+
+<FlashCard theme="PF Périphérique" q="Définir une syncinésie. Donner un exemple clinique.">
+  Mouvement involontaire anarchique survenant lors d'un mouvement volontaire, dû à une réinnervation aberrante.
+
+  Exemple : **syncinésie bouche-œil** → fermeture involontaire de l'œil lors du sourire volontaire.
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Quelle est la formule du Score FGS Global (Sunnybrook) ?">
+  **(Score mouvement volontaire × 4) − (Score repos × 5) − (Score syncinésies)**
+
+  Score sur 100 : plus il est élevé, meilleure est la fonction.
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Quels sont les 6 grades de la classification House & Brackmann ?">
+  - **I** : Normal
+  - **II** : Dysfonction légère
+  - **III** : Dysfonction modérée
+  - **IV** : Dysfonction modérée à sévère (fermeture oculaire incomplète même avec effort)
+  - **V** : Dysfonction sévère (mobilité à peine perceptible)
+  - **VI** : Paralysie complète
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Qu'évalue le DN4 et quel seuil signe une douleur neuropathique ?">
+  Le DN4 évalue la composante **neuropathique** de la douleur (brûlures, engourdissements, picotements, fourmillements, décharges électriques). Un score **> 4/10** signe une douleur neuropathique.
+</FlashCard>
+
+<FlashCard theme="PF Centrale" q="Pourquoi le front est-il épargné dans la PF centrale ?">
+  Le noyau du facial **supérieur** reçoit une **innervation bilatérale** (depuis les deux hémisphères). Une lésion unilatérale du cortex ne suffit donc pas à priver totalement ce noyau de commande → le front reste mobile.
+</FlashCard>
+
+<FlashCard theme="PF Centrale" q="Qu'est-ce que la dissociation automatico-volontaire en PFC ?">
+  Dissociation entre les mouvements **automatiques** (ex : rire spontané — préservé) et les mouvements **volontaires** (ex : sourire sur commande — déficitaire), ou l'inverse. Utilisée en rééducation : partir du geste automatique pour accéder progressivement au contrôle volontaire.
+</FlashCard>
+
+<FlashCard theme="Rééducation" q="Quels sont les 4 principes généraux de rééducation de la PFP ?">
+  1. Patient **acteur** de sa rééducation (autorééducation indispensable)
+  2. Séances **courtes et pluriquotidiennes**, respect de la fatigue
+  3. Rééducation des **constricteurs avant les dilatateurs**
+  4. Travail **analytique, muscle par muscle**, avec contrôle au miroir
+</FlashCard>
+
+<FlashCard theme="Rééducation" q="Décrire la technique de massage endo-buccal.">
+  Le **pouce** est positionné à l'intérieur de la joue, l'**index et le majeur** massent l'extérieur. On masse de part et d'autre du muscle pour lui redonner sa souplesse, éviter la rétraction et stimuler la sensitivité.
+</FlashCard>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    QCM
+════════════════════════════════════════════════════════════════════ */}
+<Section id="qcm">
+
+<QcmCard
+  n={1}
+  type="QCS"
+  tag="Anatomie"
+  q="Dans la paralysie faciale centrale, quelle zone du visage est typiquement épargnée ?"
+  opts={[
+    "A. La commissure labiale",
+    "B. La joue et le buccinateur",
+    "C. Le front et les sourcils (territoire facial supérieur)",
+    "D. L'orbiculaire de la bouche"
+  ]}
+  ans={[2]}
+>
+  Le noyau du facial supérieur (front, sourcils) reçoit une innervation **bilatérale** depuis le cortex. Une lésion unilatérale centrale ne désafférente donc pas complètement ce noyau → le territoire supérieur est épargné.
+</QcmCard>
+
+<QcmCard
+  n={2}
+  type="QCS"
+  tag="Bilan"
+  q="Le signe de Charles Bell correspond à :"
+  opts={[
+    "A. Des cils paraissant plus longs côté paralysé lors de la fermeture forcée des paupières",
+    "B. L'absence de relief du peaucier côté paralysé lors de l'abaissement de la lèvre inférieure",
+    "C. L'impossibilité de fermer la paupière côté atteint avec déviation oculaire en haut et en dehors",
+    "D. Une déviation de la bouche vers le côté atteint lors du sourire"
+  ]}
+  ans={[2]}
+>
+  Le signe de **Charles Bell** : lagophtalmie (impossible de fermer la paupière) avec déviation du globe oculaire en haut et en dehors. Le signe de Souques correspond aux cils plus longs (réponse A). Le signe de Babinski du peaucier correspond à la réponse B.
+</QcmCard>
+
+<QcmCard
+  n={3}
+  type="QCM"
+  tag="Rééducation"
+  q="Parmi ces propositions, lesquelles font partie des principes de rééducation de la PFP ? (plusieurs réponses)"
+  opts={[
+    "A. Rééduquer les dilatateurs avant les constricteurs pour gagner du temps",
+    "B. Utiliser le miroir comme feedback visuel",
+    "C. Respecter la fatigue du patient et faire des séances courtes",
+    "D. Travailler un muscle à la fois de façon analytique",
+    "E. Rééduquer systématiquement en passif uniquement"
+  ]}
+  ans={[1, 2, 3]}
+>
+  **B, C et D** sont correctes. A est faux : les constricteurs doivent être travaillés **avant** les dilatateurs (plus forts, risque de syncinésies). E est faux : la progression est passif → actif assisté → actif → contre résistance selon la récupération.
+</QcmCard>
+
+<QcmCard
+  n={4}
+  type="QCS"
+  tag="Bilan"
+  q="Un patient présente un score DN4 de 5/10. Que cela signifie-t-il ?"
+  opts={[
+    "A. Douleur uniquement inflammatoire",
+    "B. Douleur d'origine mécanique",
+    "C. Douleur neuropathique (seuil > 4)",
+    "D. Absence de douleur significative"
+  ]}
+  ans={[2]}
+>
+  Un score DN4 **supérieur à 4** signe une **douleur neuropathique**. Dans le cas clinique, le patient présente brûlures, engourdissements, picotements, fourmillements et sensations de décharges électriques → DN4 > 4 → douleur neuropathique confirmée.
+</QcmCard>
+
+<QcmCard
+  n={5}
+  type="QCS"
+  tag="Syncinésies"
+  q="Une syncinésie oeil-bouche correspond à :"
+  opts={[
+    "A. Une contraction involontaire de l'orbiculaire de l'œil lors du sourire",
+    "B. Une fermeture involontaire de l'œil lors de la déglutition",
+    "C. Une contraction involontaire des muscles buccaux lors de la fermeture volontaire de l'œil",
+    "D. Un mouvement volontaire synchronisé de l'œil et de la bouche"
+  ]}
+  ans={[2]}
+>
+  La **syncinésie œil-bouche** : la fermeture **volontaire** de l'œil entraîne une contraction **involontaire** des muscles buccaux. À l'inverse, la syncinésie bouche-œil correspond à une fermeture oculaire involontaire lors du sourire (réponse A).
+</QcmCard>
+
+<QcmCard
+  n={6}
+  type="QCS"
+  tag="Cas clinique"
+  q="Dans le cas clinique CC n°6, le patient présente une PFP classée Grade IV selon House & Brackmann. Quel signe clinique est caractéristique de ce grade ?"
+  opts={[
+    "A. Aucune mobilité visible",
+    "B. Légère asymétrie avec fermeture oculaire sans difficulté",
+    "C. Fermeture oculaire incomplète même avec effort et asymétrie importante",
+    "D. Mobilité normale, symétrie conservée"
+  ]}
+  ans={[2]}
+>
+  Le **Grade IV HB** correspond à une dysfonction modérée à sévère avec : asymétrie importante et/ou défigurante, **fermeture oculaire incomplète même avec effort**, syncinésies ou spasmes sévères.
+</QcmCard>
+
+</Section>
