@@ -1,5 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const modules = import.meta.glob('../content/ue*.mdx', { eager: true });
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const ues = Object.entries(modules)
+  .map(([path, mod]: [string, any]) => {
+    const slug = path.split('/').pop()!.replace('.mdx', '');
+    const fm = mod.frontmatter ?? {};
+
+    const parts = (fm.title as string ?? '').split(' — ');
+    let label: string, name: string;
+    if (parts.length >= 2) {
+      label = parts[0].replace(/^(UE)(\d+)$/, '$1 $2');
+      name = parts.slice(1).join(' — ');
+    } else {
+      label = `UE ${slug.replace('ue', '')}`;
+      name = (fm.title as string ?? slug).replace(/^UE\s*\d*\s*/, '').trim();
+    }
+
+    const navItems = [...(fm.coursNav ?? []), ...(fm.fichesNav ?? [])];
+    const desc = navItems.slice(0, 3).map((n: any) => n.label).join(', ');
+
+    return { slug, label, name, desc, color: fm.color ?? 'c1' };
+  })
+  .sort((a, b) => {
+    const na = parseInt(a.slug.replace('ue', '')) || 999;
+    const nb = parseInt(b.slug.replace('ue', '')) || 999;
+    return na - nb;
+  });
 ---
 <Layout title="Révisions Master IFMK">
   <div id="home">
@@ -8,18 +37,13 @@ import Layout from '../layouts/Layout.astro';
       <p>Sélectionnez une UE pour commencer</p>
     </div>
     <div class="ue-grid">
-      <a href="/revisions/ue23" class="ue-card ue-card--23">
-        <div class="ue-icon">📖</div>
-        <div class="ue-label">UE 23</div>
-        <div class="ue-name">Gérontologie & PTG</div>
-        <div class="ue-desc">Fragilité, chutes, sarcopénie, PTG — Cours, flashcards, QCM</div>
-      </a>
-      <a href="/revisions/ue18" class="ue-card ue-card--18">
-        <div class="ue-icon">🏥</div>
-        <div class="ue-label">UE 18</div>
-        <div class="ue-name">Gériatrie — Révisions</div>
-        <div class="ue-desc">Chutes, désadaptation, dénutrition, oncologie, soins palliatifs</div>
-      </a>
+      {ues.map(({ slug, label, name, desc, color }) => (
+        <a href={`${base}/${slug}`} class="ue-card" style={`--accent: var(--${color})`}>
+          <div class="ue-label">{label}</div>
+          <div class="ue-name">{name}</div>
+          <div class="ue-desc">{desc}</div>
+        </a>
+      ))}
     </div>
   </div>
 </Layout>
@@ -71,11 +95,11 @@ import Layout from '../layouts/Layout.astro';
     color: var(--tx);
     transition: border-color .2s, transform .15s;
   }
-  .ue-card:hover { transform: translateY(-4px); }
-  .ue-card--23:hover { border-color: var(--c1); }
-  .ue-card--18:hover { border-color: var(--c2); }
+  .ue-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
 
-  .ue-icon { font-size: 40px; }
   .ue-label {
     font-size: 11px;
     font-weight: 700;
@@ -83,9 +107,16 @@ import Layout from '../layouts/Layout.astro';
     color: var(--mu);
     text-transform: uppercase;
   }
-  .ue-name { font-size: 17px; font-weight: 700; text-align: center; }
-  .ue-desc { font-size: 12px; color: var(--mu); text-align: center; line-height: 1.5; }
-
-  .ue-card--23 .ue-name { color: var(--c1); }
-  .ue-card--18 .ue-name { color: var(--c2); }
+  .ue-name {
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--accent);
+  }
+  .ue-desc {
+    font-size: 12px;
+    color: var(--mu);
+    text-align: center;
+    line-height: 1.5;
+  }
 </style>

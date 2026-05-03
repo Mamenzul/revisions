@@ -1,0 +1,1463 @@
+---
+# ─── UE IDENTITY ───────────────────────────────────────────────────────────────
+title: "UE Rééducation Vestibulaire"
+color: "c2"
+
+# ─── NAV ────────────────────────────────────────────────────────────────────────
+coursNav:
+  - { id: "c-physio", label: "Physiologie & Lois" }
+  - { id: "c-compensation", label: "Compensation & Plasticité" }
+  - { id: "c-bilan", label: "Bilan Thérapeutique" }
+  - { id: "c-oculomotricite", label: "Oculomotricité & VNS" }
+  - { id: "c-reeducation", label: "Techniques de Rééducation" }
+  - { id: "c-pathologies", label: "Pathologies" }
+  - { id: "c-vppb", label: "VPPB — Diagnostic & Traitement" }
+
+fichesNav:
+  - { id: "f-synthese-bilan", label: "Fiche Bilan MK" }
+  - { id: "f-synthese-patho", label: "Fiche Pathologies" }
+  - { id: "f-vppb-recap", label: "Fiche VPPB" }
+  - { id: "f-urgences", label: "Drapeaux Rouges" }
+---
+
+{/* ── IMPORTS ─────────────────────────────────────── */}
+import Section   from '../components/Section.astro';
+import Card      from '../components/Card.astro';
+import AlertBox  from '../components/AlertBox.astro';
+import Grid2     from '../components/Grid2.astro';
+import Grid3     from '../components/Grid3.astro';
+import MiniCard  from '../components/MiniCard.astro';
+import Badge     from '../components/Badge.astro';
+import Grade     from '../components/Grade.astro';
+import Tree      from '../components/Tree.astro';
+import FlashCard from '../components/FlashCard.astro';
+import QcmCard   from '../components/QcmCard.astro';
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-physio
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-physio">
+
+<Card title="Le système vestibulaire — Rappels anatomiques">
+
+Le système de l'équilibre repose sur **3 capteurs périphériques** intégrés par le SNC :
+
+<Grid3>
+  <div><Badge color="blue">Vestibule</Badge> Accélérations angulaires (canaux) et linéaires (otolithes)</div>
+  <div><Badge color="green">Vision</Badge> Référence allocentrique, contrôle du regard</div>
+  <div><Badge color="amber">Somesthésie</Badge> Proprioception des membres inférieurs et du rachis</div>
+</Grid3>
+
+**Les 6 organes sensoriels de l'oreille interne :**
+
+<Grid2>
+  <div>
+    <Badge color="teal">Système otolithique (macules)</Badge>
+
+    - **Macule utriculaire** → plan horizontal → accélérations linéaires horizontales
+    - **Macule sacculaire** → plan vertical → accélérations linéaires verticales
+    - Stabilisent la tête et le regard +++
+  </div>
+  <div>
+    <Badge color="blue">Système canalaire (3 canaux / oreille)</Badge>
+
+    - **Canal Postérieur (CSP)** — vertical
+    - **Canal Antérieur (CA)** — vertical
+    - **Canal Horizontal (CH)** — horizontal
+    - Détectent les accélérations **angulaires**
+  </div>
+</Grid2>
+
+<AlertBox type="info">Le Réflexe Vestibulo-Oculaire (RVO) est fondamental : il stabilise le regard en déplaçant les yeux à l'inverse du mouvement de tête. Pas d'équilibre sans stabilisation du regard.</AlertBox>
+
+</Card>
+
+<Card title="Les Lois d'Ewald">
+
+**Première loi d'Ewald :**
+Le sens de déplacement de l'endolymphe dans les canaux donne la **phase lente** du nystagmus. La secousse lente est dirigée dans le sens du courant endolymphatique. Par convention, le nystagmus est défini par le sens de sa **phase rapide**.
+
+**Deuxième loi d'Ewald :**
+
+<Grid2>
+  <div>
+    <Badge color="green">Canaux Horizontaux</Badge>
+
+    - Courant **ampullipète** → excitateur
+    - Courant **ampullifuge** → inhibiteur
+    - L'excitation ampullipète est supérieure à l'excitation ampullifuge
+  </div>
+  <div>
+    <Badge color="amber">Canaux Verticaux</Badge>
+
+    - Courant **ampullipète** → inhibiteur
+    - Courant **ampullifuge** → excitateur
+    - Inverse des canaux horizontaux !
+  </div>
+</Grid2>
+
+<AlertBox type="trap">Piège classique : La 2ème loi d'Ewald est INVERSÉE entre canaux horizontaux et verticaux. Pour les verticaux : ampullifuge = excitateur.</AlertBox>
+
+**Exemple clinique (canaux verticaux) :** lors d'une flexion de tête vers l'avant, fuite liquidienne vers l'arrière → phase lente vers le haut → NTG (nystagmus) vertical inférieur. Au retour en extension → nystagmus vertical supérieur.
+
+</Card>
+
+<Card title="Définition et types de nystagmus">
+
+**Nystagmus physiologique :** Les yeux bougent pour recentrer le regard lors d'un mouvement. C'est NORMAL.
+
+**Le vertige vrai :**
+- Sensation rotatoire **erronée** objectivée par un **nystagmus pathologique**
+- Problème **périphérique** !
+- **Règle absolue : pas de vertige rotatoire sans nystagmus**
+
+<AlertBox type="key">Si le patient décrit son trouble sans le mot "vertige" (étourdissement, ébriété, tangage, instabilité, dizziness...) → problème central ou pathologies mixtes → PAS de nystagmus.</AlertBox>
+
+**Nystagmus pathologique :**
+- Tous les vertiges présentent un NTG pathologique
+- Mais tous les NTG pathologiques ne sont pas liés à un vertige
+- Une asymétrie de fonctionnement vestibulaire introduit un **biais entraînant une dérive de la référence égocentrée vers le côté déficitaire**
+
+**Tableau des nystagmus au fauteuil rotatoire :**
+
+<table>
+<thead><tr><th>Rotation Fauteuil</th><th>Phase lente</th><th>Nystagmus</th><th>Arrêt brusque</th><th>Phase lente</th><th>Nystagmus</th></tr></thead>
+<tbody>
+<tr><td>Sens Horaire (vers Droite)</td><td>Glissement à gauche</td><td>**Droit**</td><td>Arrêt brusque</td><td>Glissement à droite</td><td>**Gauche**</td></tr>
+<tr><td>Sens Anti-Horaire (vers Gauche)</td><td>Glissement à droite</td><td>**Gauche**</td><td>Arrêt brusque</td><td>Glissement à gauche</td><td>**Droit**</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-compensation
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-compensation">
+
+<Card title="Modèles de compensation vestibulaire">
+
+**1er modèle : Labyrinthectomie unilatérale**
+
+On observe deux syndromes :
+
+<Grid2>
+  <div>
+    <Badge color="red">Syndrome oculomoteur et postural STATIQUE</Badge>
+
+    - Symptôme : le vertige
+    - 3 signes : nystagmus côté sain, déviation tête et corps côté lésé, OTR (manifestation otolithique déficitaire)
+  </div>
+  <div>
+    <Badge color="amber">Syndrome oculomoteur et postural DYNAMIQUE</Badge>
+
+    - Baisse asymétrique du gain du RVO (plus marquée côté lésé)
+    - Difficulté à stabiliser regard et posture au mouvement
+    - Perception erronée de la position dans l'espace
+  </div>
+</Grid2>
+
+**2ème modèle : Labyrinthectomie bilatérale**
+
+Le SNC doit tout reconstruire avec les systèmes restants (vision + proprioception = substitution). À basse vitesse le patient gère, mais pas à haute vitesse.
+
+On observe :
+- Symptômes au mouvement, majorés dans l'obscurité ou yeux fermés → **instabilité** + **oscillopsies**
+- Destruction partielle → stratégie d'**adaptation**
+- Destruction totale → stratégie de **substitution sensorielle**
+
+<AlertBox type="info">Chez l'humain, cela peut être dû à des antibiotiques ototoxiques (aminoglycosides : Gentalline, Gentamicine...).</AlertBox>
+
+</Card>
+
+<Card title="Stratégies compensatoires spontanées">
+
+Le SNC développe plusieurs stratégies face à un déficit vestibulaire :
+
+<table>
+<thead><tr><th>Stratégie</th><th>Mécanisme</th></tr></thead>
+<tbody>
+<tr><td>**Restauration fonctionnelle**</td><td>Retour à la fonction initiale</td></tr>
+<tr><td>**Adaptation / Recalibration / Plasticité**</td><td>Le SNC modifie ses réponses neuronales</td></tr>
+<tr><td>**Substitution sensorielle**</td><td>Utiliser tous les capteurs en bon état pour compenser le lésé</td></tr>
+<tr><td>**Habituation**</td><td>Ne plus répondre à une stimulation déclenchant normalement une réaction automatique</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">→ Mise à jour des modèles internes. Il faut encourager à bouger en extérieur ! Le SNC est capable de multiples stratégies de substitution comportementale et cognitive.</AlertBox>
+
+</Card>
+
+<Card title="Implications pour la rééducation vestibulaire">
+
+Les réorganisations cérébrales après un déficit vestibulaire dépendent de :
+
+<Grid2>
+  <div>
+    <Badge color="green">Use it or lose it</Badge>
+    L'activité neuronale est indispensable à la récupération. Chaque programme de rééducation induit des réorganisations cérébrales différentes.
+  </div>
+  <div>
+    <Badge color="blue">Earlier is better</Badge>
+    La précocité de la prise en charge après la lésion est déterminante. On a environ **3 mois** pour récupérer.
+  </div>
+</Grid2>
+
+<AlertBox type="trap">Plus on attend → moins la rééducation sera efficace → il faut les faire bouger +++ dès le début.</AlertBox>
+
+Le déficit vestibulaire induit des déficits cognitifs, comportementaux, et augmente l'anxiété et le stress : **la rééducation doit tenir compte de ces facteurs psychologiques.**
+
+**Les principes de la kinésithérapie vestibulaire :**
+- **Précocité** de la prise en charge afin d'éviter la restriction sensorielle
+- **Pas de standard** de rééducation → traitement individualisé
+- **Adaptation du traitement** en fonction de l'observation vidéoscopique de début de séance
+- **Pas de sollicitation contradictoire** dans une même séance (fixation ET absence de fixation, RVO ET ROC dans la même séance → contre-productif)
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-bilan
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-bilan">
+
+<Card title="Structure du bilan vestibulaire MK">
+
+Le bilan neurosensoriel vestibulaire comprend 8 étapes :
+
+<table>
+<thead><tr><th>Étape</th><th>Contenu</th></tr></thead>
+<tbody>
+<tr><td>**A — Interrogatoire**</td><td>Date, nature, circonstances, durée, fréquence, signes associés</td></tr>
+<tr><td>**B — Capteurs sensoriels périphériques**</td><td>Vision, proprioception, cognitif (hors vestibule)</td></tr>
+<tr><td>**C — Oculomotricité**</td><td>Voies oculogyres centrales (saccades, poursuites, fixation...)</td></tr>
+<tr><td>**D — VNS**</td><td>Nystagmus spontané, positionnel, épreuves cinétiques, HST, HIT</td></tr>
+<tr><td>**E — Épreuves vestibulo-spinales**</td><td>Romberg, Fukuda, marche aveugle (yeux fermés)</td></tr>
+<tr><td>**F — Épreuves rotatoires haute vitesse**</td><td>Fauteuil rotatoire sous logiciel dédié (DVNS)</td></tr>
+<tr><td>**G — Questionnaires**</td><td>DHI, EEV, EVA (gêne fonctionnelle, qualité de vie)</td></tr>
+<tr><td>**H — Posturographie**</td><td>Test d'organisation sensorielle, CTSIB, Equitest SOT</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">On ne fait pas tous les tests à tous les patients. C'est l'interrogatoire et l'examen clinique qui conditionnent le bilan.</AlertBox>
+
+<AlertBox type="danger">Ces bilans (pré-, intermédiaire, post-thérapeutiques) engagent la responsabilité du kinésithérapeute. Le MK voit souvent le patient vestibulaire à J90 de son problème — sans diagnostic ORL préalable. C'est alors au MK de faire le tri.</AlertBox>
+
+</Card>
+
+<Card title="A — Interrogatoire : les 7 items clés">
+
+<table>
+<thead><tr><th>Item</th><th>Ce qu'on cherche</th></tr></thead>
+<tbody>
+<tr><td>**Date de début & évolution**</td><td>Aiguë ou chronique ? Antécédents analogues ?</td></tr>
+<tr><td>**Nature du trouble**</td><td>Vertige rotatoire vrai, déséquilibre, instabilité, ébriété, oscillopsies, mal des transports → demander "décrivez sans le mot vertige"</td></tr>
+<tr><td>**Circonstances**</td><td>Spontané, positionnel, lié à l'effort, au stress, aux grands espaces, à la fatigue ?</td></tr>
+<tr><td>**Durée du vertige lui-même**</td><td>Secondes (VPPB) → heures (Ménière) → jours (névrite). Ne pas confondre avec la durée de l'impact !</td></tr>
+<tr><td>**Fréquence des crises**</td><td>Inaugurale, itérative ? Calendrier des crises recommandé</td></tr>
+<tr><td>**Signes associés**</td><td>Cochléaires, neuro-végétatifs, céphalées (⚠️ central), migraines, cervicalgies, paresthésies, contexte viral/infectieux/traumatique</td></tr>
+<tr><td>**Traitements en cours**</td><td>Bêtabloquants, Cordarone (abolissent les ROT), antibiotiques ototoxiques</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="trap">Un vertigineux n'a normalement pas mal à la tête. Des céphalées → possible atteinte centrale à éliminer.</AlertBox>
+
+</Card>
+
+<Card title="B — Bilan des capteurs sensoriels périphériques">
+
+<Grid3>
+  <div>
+    <Badge color="blue">Visuel</Badge>
+
+    - Cataracte, glaucome, DMLA, cécité, amputation champ visuel
+    - Trouble convergence, paralysie oculomotrice, strabisme
+    - On conserve les corrections visuelles lors des exercices
+  </div>
+  <div>
+    <Badge color="amber">Cochléo-vestibulaire</Badge>
+
+    - Hypo/hyperacousie, appareillage
+    - Acouphènes, cophose
+    - Aréflexie connue, agénésie vestibulaire
+  </div>
+  <div>
+    <Badge color="green">Somato-sensoriel</Badge>
+
+    - Troubles de la proprioception
+    - Sensibilité profonde, neuropathies MI
+    - Abolition des ROT
+    - Troubles sensori-moteurs
+  </div>
+</Grid3>
+
+</Card>
+
+<Card title="C — Examen de l'oculomotricité (voies centrales)">
+
+Ces examens interrogent **uniquement les voies centrales**. Toute perturbation signe une atteinte centrale.
+
+<table>
+<thead><tr><th>Test</th><th>Ce qu'on évalue</th><th>Signe pathologique</th></tr></thead>
+<tbody>
+<tr><td>**Saccades**</td><td>Mouvements oculaires volontaires</td><td>Dysmétrie, hyper/hypométrie → central</td></tr>
+<tr><td>**Poursuite binoculaire et monoculaire**</td><td>Suivi d'un objet</td><td>Poursuite saccadée → central</td></tr>
+<tr><td>**Fixation oculaire**</td><td>Stabilité du regard excentré</td><td>Nystagmus du regard excentré (gaze nystagmus) → central</td></tr>
+<tr><td>**Conjugaison des yeux**</td><td>Corrélation des 2 yeux</td><td>Ophtalmoplégie internucléaire (pathognomonique SEP)</td></tr>
+<tr><td>**Skew déviation**</td><td>Cover test, désalignement vertical</td><td>Blanc de l'œil visible d'un côté → central</td></tr>
+<tr><td>**IFO (Indice de Fixation Oculaire)**</td><td>Inhibition centrale par fixation</td><td>Fixation ne diminue pas le NTG → central. Si fixation l'inhibe → périphérique</td></tr>
+<tr><td>**Vergence**</td><td>Convergence</td><td>Trouble de convergence (problème orthoptique)</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">HINTS à pratiquer face à un syndrome vestibulaire aigu : Head Impulse + Nystagmus + Test of Skew. Sensibilité 100%, Spécificité 96%. Plus sensible que l'IRM en phase aiguë pour le diagnostic d'AVC.</AlertBox>
+
+**Recherche de syndromes centraux :**
+- Syndrome cérébelleux (dysmétrie, hypermétrie, adiadococinésie)
+- Syndrome extra-pyramidal (roue dentée, tremblements de repos)
+- Syndrome de Claude Bernard-Horner (ptosis, myosis, enophtalmie)
+- Syndrome de Wallenberg (vertige inaugural violent, vomissements, marche impossible)
+
+</Card>
+
+<Card title="D — Examen sous Vidéonystagmoscopie (VNS)">
+
+**1 — Recherche de nystagmus spontané**
+
+Le patient est assis, masque posé, tête immobile. Attendre l'amortissement de toute stimulation antérieure.
+
+**Caractéristiques d'un nystagmus PÉRIPHÉRIQUE :**
+- Inhibé par la fixation
+- Unidirectionnel
+- Renforcé dans le regard latéral du côté de la saccade
+
+**Loi d'Alexander :** le nystagmus est renforcé quand le patient regarde du côté de la phase rapide.
+
+<Grid3>
+  <div>
+    <Badge color="green">Degré 1</Badge>
+    NTG présent uniquement dans le regard orienté dans le sens de la saccade
+  </div>
+  <div>
+    <Badge color="amber">Degré 2</Badge>
+    Idem + présent dans le regard médian
+  </div>
+  <div>
+    <Badge color="red">Degré 3</Badge>
+    Idem + présent même dans le regard du côté de la phase lente
+  </div>
+</Grid3>
+
+<AlertBox type="info">Les patients nous sont adressés souvent en degré 2 ou 3. L'objectif : qu'il n'y ait plus du tout de nystagmus à la fin.</AlertBox>
+
+**Exemple :** Problème à l'oreille droite → nystagmus GAUCHE (phase rapide à gauche). Renforcé en regardant à gauche, diminué ou aboli en regardant à droite.
+
+---
+
+**2 — Recherche de nystagmus de position (VPPB)**
+
+Si l'interrogatoire évoque des vertiges en se levant, en se couchant, en se tournant dans son lit → rechercher directement un nystagmus de position.
+
+Caractéristiques du nystagmus de VPPB :
+- Torsionnel géotropique (tourne vers la terre / oreille basse)
+- **Temps de latence** (l'endolymphe est visqueuse, se déplace lentement)
+- **Paroxystique** (monte puis descend)
+- **Fatigable**
+- **S'inverse à la verticalisation**
+- Reproductible
+
+<AlertBox type="trap">Tout nystagmus observé ne justifie pas la pratique d'une manœuvre !</AlertBox>
+
+---
+
+**3 — Épreuve de Rotation Impulsionnelle (ERI)**
+
+Quasiment plus utilisée. Principe : rotation à 180° droite puis gauche, comptage des nystagmus pré et post-rotatoires. On cherche la symétrie (±1-2 secousses). En pratique, remplacée par l'épreuve rotatoire sinusoïdale à moyenne fréquence (0,25 Hz).
+
+---
+
+**4 — Head Shaking Test (HST)**
+
+Mouvements de tête passifs, horizontaux, aller-retour, 10s, 2Hz (90°/s). On observe le nystagmus post-dynamique. Permet d'objectiver une asymétrie de l'intégrateur du tronc cérébral.
+
+---
+
+**5 — HIT (Head Impulse Test)**
+
+Mouvement passif de tête, rapide (100-300°/s), faible amplitude, patient fixe une cible. On cherche des **over-saccades** (saccades de refixation). Test positif → altération du RVO du côté où on tourne.
+
+<AlertBox type="key">Si déficit DROIT : en tournant la tête à droite, l'œil "embarque" avec la tête → saccade de rattrapage vers la cible = over-saccade → déficit droit confirmé.</AlertBox>
+
+</Card>
+
+<Card title="E — Épreuves vestibulo-spinales">
+
+<table>
+<thead><tr><th>Test</th><th>Protocole</th><th>Interprétation</th></tr></thead>
+<tbody>
+<tr><td>**Romberg simple**</td><td>Debout, pieds joints, yeux fermés</td><td>Mesure le poids de l'entrée visuelle. Peut être sensibilisé avec mouvements de tête</td></tr>
+<tr><td>**Fukuda**</td><td>Yeux fermés, bras tendus, 45 pas sur place</td><td>Dévie du côté déficitaire (périphérique). Peut être doublé d'une tâche cognitive</td></tr>
+<tr><td>**Marche aveugle Babinski-Weil**</td><td>3 pas avant + 3 pas arrière × 3, yeux fermés</td><td>Déviation (spin) du côté déficitaire</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">Importance de la cohérence des tests : syndrome périphérique → déviation du même côté (harmonieux). Syndrome central → résultats disharmonieux. Valeur seuil : 30° de déviation ou déviation de tous les tests du même côté.</AlertBox>
+
+</Card>
+
+<Card title="G — Questionnaires & H — Posturographie">
+
+**Questionnaires :**
+- **DHI (Dizziness Handicap Inventory)** : 25 situations des AVQ, oui/non → /100
+- **EEV (European Evaluation of Vertigo)** : retentissement fonctionnel
+- **EVA** : difficile à appliquer (peu de douleur chez ces patients)
+
+**CTSIB (Clinical Test of Sensory Interaction and Balance) :**
+Test d'organisation sensorielle, faible coût, validé internationalement, praticable en cabinet. Identifie la **stratégie sensorielle** du patient.
+
+3 évaluations sur sol stable + 3 sur sol instable (mousse) :
+- Yeux ouverts
+- Yeux fermés
+- Vision asservie (dôme = le décor ne bouge pas quand le patient se déséquilibre)
+
+**EQUITEST Sensory Organization Test (SOT) :**
+Plateforme posturographique (machine onéreuse). 6 conditions :
+
+<table>
+<thead><tr><th>Condition</th><th>Sol</th><th>Visuel</th><th>Ce qu'on isole</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Stable</td><td>Yeux ouverts</td><td>Référence</td></tr>
+<tr><td>2</td><td>Stable</td><td>Yeux fermés</td><td>Élimine vision</td></tr>
+<tr><td>3</td><td>Stable</td><td>Asservie</td><td>Élimine vision utile</td></tr>
+<tr><td>4</td><td>Instable</td><td>Yeux ouverts</td><td>Élimine proprio</td></tr>
+<tr><td>5</td><td>Instable</td><td>Yeux fermés</td><td>**Isole le vestibule +++**</td></tr>
+<tr><td>6</td><td>Instable</td><td>Asservie</td><td>**Isole le vestibule +++**</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">Les conditions 5 et 6 ciblent +++ l'appareil vestibulaire car vision ET proprioception sont perturbées.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-oculomotricite
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-oculomotricite">
+
+<Card title="Fauteuil rotatoire — Principes">
+
+Le fauteuil rotatoire est à la fois un outil de **bilan** et de **rééducation**. On travaille sous DVNS (logiciel dédié).
+
+**Lors d'un lancer du fauteuil :**
+- À droite → déplacement endolymphatique à gauche → nystagmus à gauche
+- À gauche → déplacement endolymphatique à gauche → nystagmus à droite à l'arrêt
+
+**Plans verticaux :**
+- 45° vers la droite + extension 60° → verticalise le plan RALP (Antérieur Droit + Postérieur Gauche)
+- 45° vers la gauche + extension 60° → verticalise le plan LARP (Antérieur Gauche + Postérieur Droit)
+
+**Protocole à vitesse élevée — Travail en FIXATION :**
+1. Patient yeux fermés, on lance le fauteuil
+2. On arrête, on demande au patient d'ouvrir les yeux et de fixer une cible
+3. On chronomètre le temps jusqu'à ce que la cible lui paraisse stable
+4. Répéter des séries de 3 tours → accoutumance progressive
+5. Arrêter quand les temps sont symétriques sur 3, 4, 5, 7 tours
+
+<AlertBox type="trap">Pas besoin de lancer plusieurs fois le fauteuil — 1 lancer puissant suffit. Bien amortir à la fin pour ne pas que le patient se cogne.</AlertBox>
+
+**Travail en VECTION (yeux fermés, sans fixation) :**
+On s'intéresse au vécu subjectif du vertige, aux réponses corticales, sans inhibition par la fixation. Phase d'échappement → si les résultats remontent = arrêt de la séance (dépassement du seuil de tolérance sensorielle).
+
+**Protocole à basse vitesse (fauteuil baguette) :**
+Rotations totalement aléatoires à très basse vitesse, patient fixe l'extrémité d'une baguette périmétrique. But : inhiber le nystagmus créé par le mouvement du fauteuil pour diminuer son NTG (même d'origine centrale) et mieux le supporter.
+
+</Card>
+
+<Card title="Générateur optocinétique — Flux optiques">
+
+**ROC (Réflexe Optocinétique) = NOC (Nystagmus Optocinétique)**
+
+Déclenché par un panorama mobile à vitesse constante (ex: regarder défiler le paysage depuis un train). Le NOC à finalité visuelle stabilise l'image sur la rétine périphérique.
+
+**En rééducation, le générateur optocinétique permet :**
+- Traitement par interaction visio-vestibulaire par fixation d'une cible
+- Normaliser l'asymétrie de réponses des RVO
+- Réduire le biais d'un déficit périphérique unilatéral
+- Modifier le gain du RVO
+
+**Flux optiques radiaux (3D) :** mouvement vers le haut, vers le bas, gauche, droite → but = que le patient patho soit sensible aux mouvements, avoir la sensation d'avancer.
+
+</Card>
+
+<Card title="Outils complémentaires de rééducation">
+
+**Rééducation vestibulo-oculo-cervicale (protocole Cawthorne & Cooksey) :**
+Lutte contre les oscillopsies en réharmonisant les mouvements conjugués de la tête et des yeux. Exercices progressifs (cibles exocentriques → égocentriques → fixation alternée → mouvements tête) en position assise puis debout.
+
+**La barre oculomotrice :** Obsolète depuis la réalité virtuelle. Permettait un travail oculomoteur ou oculo-cervical quantifiable.
+
+**Pointeur laser :** Sur casque ou piloté manuellement pour travail oculo-cervical.
+
+**Tracking en Réalité Virtuelle :**
+- Travail actif dans tous les plans de l'espace
+- Amplitudes bien supérieures à l'AVD sur écran
+- Met en jeu RVO et RVS simultanément
+- Le patient travaille aussi son équilibre
+
+**vHIT (Video Head Impulse Test) :**
+Test à très haute vitesse pour évaluer les canaux en regardant combien de temps il faut à l'œil pour retrouver sa position (faible amplitude mais vitesse +++).
+
+- Permet de confirmer la compensation à haute vitesse par la **covertisation** (covert saccades générées après l'arrêt du mouvement)
+- Diminution latence des overt, apparition des covert, diminution latence des covert et anticipation
+- En rééducation : produire des covert saccades (cachées pendant le mouvement) → corriger erreurs de position du regard
+
+**Acuité Visuelle Dynamique :**
+- Capteur sur la tête, on bouge la tête et on lit une lettre apparaissant quelques millisecondes sur l'écran
+- Si le regard est stabilisé, on la voit ; sinon non
+- Outil de quantification et de rééducation des oscillopsies, de la coordination tête-œil, et de suivi d'évolution
+
+**Rééducation de l'équilibre et de la posture :**
+Dernier stade. Exercices sur supports instables (mousses, trampolines, plateaux suspendus, parcours d'obstacles). Pods lumineux, plateformes posturographiques, réalité virtuelle.
+
+**Techniques spécifiques VR (réalité virtuelle) :**
+- Vision asservie (oblige à utiliser le système vestibulaire)
+- Environnements mobiles (métro, escalator, train, ascenseur)
+- Environnements virtuels + déplacement et interaction du sujet (supermarché = mémoire et orientation spatiale)
+
+</Card>
+
+<Card title="Mesure de la prépondérance directionnelle nystagmique">
+
+Test simple : regarder à droite puis à gauche. La machine mesure le nystagmus dans chaque direction. Une prépondérance d'un côté = asymétrie des nystagmus.
+
+**But de la rééducation :** diminuer cette prépondérance.
+
+**Fin de rééducation :**
+- Plus d'asymétrie ET patient se sent bien → fin OK
+- Discordance entre asymétrie et ressenti → problème de stratégie ? Ou compensation du nystagmus par d'autres voies ?
+
+**VPL (Vitesse de Phase Lente) :** indicateur objectif des progrès de la compensation centrale. Si VPL < 2°/s → la prépondérance n'est plus significative.
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-reeducation
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-reeducation">
+
+<Card title="Récapitulatif des priorités de la Kinésithérapie Vestibulaire selon les pathologies">
+
+<table>
+<thead><tr><th>Pathologie</th><th>Priorité KV</th><th>Technique principale</th></tr></thead>
+<tbody>
+<tr><td>Déficit Périphérique Aigu (DPA)</td><td>Obtenir une compensation centrale</td><td>Symétriser les réponses vestibulaires (VNS avant/après), puis mise en conflit visuel/proprioceptif</td></tr>
+<tr><td>Maladie de Ménière</td><td>Connaître l'état pressionnel du labyrinthe fluctuant</td><td>Fauteuil baguette après crise ; travail fixation symétrique hors crise</td></tr>
+<tr><td>Aréflexie bilatérale</td><td>Maximiser les systèmes de substitution</td><td>"Béquilles" visuelles et proprioceptives</td></tr>
+<tr><td>Atteinte centrale</td><td>Tenir compte de la levée d'inhibition</td><td>Fauteuil baguette basse vitesse (sédatif), optocinétique en dernier</td></tr>
+<tr><td>Migraine vestibulaire</td><td>Médication + rééducation</td><td>Exposition progressive aux flux optiques, rééducation cervicale si besoin</td></tr>
+<tr><td>PPPD</td><td>Habituation aux environnements visuels complexes</td><td>Exposition, restabilisation posturale antéro-postérieure</td></tr>
+<tr><td>Désorganisations neurosensorielles</td><td>Identifier le type de conflit sensoriel</td><td>Rééducation multisensorielle personnalisée</td></tr>
+<tr><td>VPPB</td><td>Déterminer le canal et le vidanger complètement</td><td>Manœuvres libératoires adaptées</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">Critères d'une rééducation bien conduite : amélioration de la prépondérance nystagmique (RVO), amélioration vestibulo-spinale, correction de la stratégie sensorielle, amélioration de la gêne fonctionnelle (questionnaires). Une prépondérance qui ne se réduit jamais → nouvel avis ORL.</AlertBox>
+
+</Card>
+
+<Card title="Désorganisations Neurosensorielles (DNS)">
+
+**Définition :** Conflits sensoriels non résolus, erreurs de stratégies, sous-utilisations ou préférences sensorielles rendant le patient incapable de choisir instantanément la stratégie la plus appropriée.
+
+**3 types :**
+
+<Grid3>
+  <div>
+    <Badge color="red">Cinétoses par conflit sensoriel</Badge>
+
+    - Discordance visio-vestibulaire (mal des transports, CVI)
+    - Discordance intra-vestibulaire
+    - Conflit visio-somesthésique (vertige des hauteurs)
+  </div>
+  <div>
+    <Badge color="amber">Défauts d'intégration sensorielle</Badge>
+
+    - Presbyastasie (déséquilibre du sujet âgé à explorations normales)
+    - Altération intégration vestibulaire sans altération du capteur
+    - Stratégie substitutive inadaptée persistante
+    - Syndrome de l'autoroute
+  </div>
+  <div>
+    <Badge color="blue">Prédominances sensorielles</Badge>
+
+    - Stratégie unique et invariante (dépendance visuelle)
+    - PPPD (Persistent Perceptual Postural Dizziness)
+    - Lié à l'apprentissage et à l'activité professionnelle
+  </div>
+</Grid3>
+
+**PPPD :** Nouvelle terminologie regroupant dépendances visuelles, syndromes de défilement, visual vertigo. Un dysfonctionnement central de perception plus généralisé existe, avec altération du traitement sensoriel dépassant les infos vestibulaires/visuelles.
+
+**Traitement selon le conflit :**
+
+<Tree>
+Type de conflit
+├── Visio-somesthésique → Générateur optocinétique ou VR (recréer flux visuel en position statique)
+├── Visio-vestibulaire → Support instable + environnement visuel stable ou asservi VR
+└── Intra-vestibulaire → Fauteuil rotatoire lente vitesse + mouvements de tête sur axe différent
+</Tree>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-pathologies
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-pathologies">
+
+<Card title="Classification internationale des troubles vestibulaires (ICVD)">
+
+3 syndromes vestibulaires spécifiques (périphériques ou centraux) :
+
+<Grid3>
+  <div><Badge color="red">Syndrome vestibulaire AIGU</Badge> Apparition brutale, unique</div>
+  <div><Badge color="amber">Syndrome vestibulaire ÉPISODIQUE</Badge> Crises répétées</div>
+  <div><Badge color="blue">Syndrome vestibulaire CHRONIQUE</Badge> Instabilité permanente</div>
+</Grid3>
+
+**Fréquence de prise en charge MK (dans l'ordre) :** VPPB > maladies fonctionnelles > vertiges centraux > migraines > maladie de Ménière > névrite > autres.
+
+</Card>
+
+<Card title="Atteintes périphériques unilatérales — DPA et Névrite">
+
+**Déficit Périphérique Aigu (DPA) :**
+
+<table>
+<thead><tr><th>Aspect</th><th>Contenu</th></tr></thead>
+<tbody>
+<tr><td>**Définition**</td><td>Syndrome vestibulaire d'apparition brutale ; étiologie virale, infectieuse, traumatique ou vasculaire</td></tr>
+<tr><td>**Physiopathologie**</td><td>Interruption brutale et unilatérale des influx vestibulaires vers les noyaux homolatéraux</td></tr>
+<tr><td>**Clinique**</td><td>Grand vertige rotatoire, fortes nausées/vomissements, PAS de signe auditif/neurologique</td></tr>
+<tr><td>**Explorations**</td><td>Audition inchangée, IRM normale, hypo/aréflexie unilatérale à l'épreuve calorique</td></tr>
+<tr><td>**Évolution court terme**</td><td>Disparition vertige en quelques jours, amendement déséquilibre sous 3 mois</td></tr>
+<tr><td>**Évolution long terme**</td><td>Récupération labyrinthique quelques jours à 2 ans OU compensation centrale</td></tr>
+<tr><td>**Objectif KV**</td><td>Obtenir une compensation centrale au déficit vestibulaire périphérique pour stabiliser le regard</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Maladie de Ménière">
+
+<Grid2>
+  <div>
+    **Épidémiologie :**
+    - Décrite par Prosper Ménière en 1861
+    - Tout âge, adulte d'âge moyen, les 2 sexes
+    - Évolution par crises, asymptomatique entre crises
+    - Habituellement unilatérale, se bilatéralise dans 10-30% des cas
+  </div>
+  <div>
+    **TRIADE de Ménière :**
+    1. Aura de crise avec acouphènes et sensation de plénitude d'oreille
+    2. Crise vertigineuse de plusieurs heures
+    3. Surdité neurosensorielle fluctuante
+  </div>
+</Grid2>
+
+**Physiopathologie (hydrops) :**
+Distension du labyrinthe membraneux → ↗ pression endolymphatique → distension de l'ampoule → traction de la cupule → infléchissement excitateur → **nystagmus ipsilatéral à l'oreille atteinte** lors de la crise.
+
+**Évolution :** Séquelles progressives : hypoacousie graves, hyporéflexie vestibulaire, acouphènes permanents, instabilité.
+
+**Traitements :**
+
+<table>
+<thead><tr><th>Type</th><th>Traitement</th><th>Niveau de preuve</th></tr></thead>
+<tbody>
+<tr><td>Hygiène de vie</td><td>Régime hyposodé, pas d'excitants, absence SAOS, activité physique</td><td>Grade B</td></tr>
+<tr><td>Médicaments</td><td>Bétahistine, Diurétiques</td><td>Grade C</td></tr>
+<tr><td>Injections</td><td>Corticoïdes transtympaniques (non ototoxique)</td><td>Grade B</td></tr>
+<tr><td>Injections destructrices</td><td>Gentamicine (faibles doses répétées)</td><td>Grade A</td></tr>
+<tr><td>Chirurgie</td><td>Sac endolymphatique (formes bilatérales)</td><td>Grade B</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="danger">La rééducation vestibulaire du patient souffrant de maladie de Ménière n'est PAS recommandée en période critique (Accord professionnel ORL 2015).</AlertBox>
+
+**Rééducation KV :**
+- Juste après crise : fauteuil baguette (très basse vitesse, fixation)
+- Hors crise avec hyperréflectivité : travail en fixation symétrique jusqu'à réharmonisation
+- Hors crise avec déficit : travail asymétrique au fauteuil pour abaisser le temps de réponse de l'oreille saine
+- Stimulation optocinétique en dernière intention (après stabilisation de la réflectivité)
+
+</Card>
+
+<Card title="Aréflexie Vestibulaire Bilatérale">
+
+**Définition :** Désafférentation sensorielle bilatérale progressive, dominée par l'ototoxicité des aminoglycosides (Gentamicine, Gentalline...).
+
+**Physiopathologie :** L'antibiotique pénètre les compartiments liquidiens du labyrinthe → destruction des stéréocils des crêtes ampullaires et macules otolithiques → absence de déséquilibre central (atteinte bilatérale et progressive) → **PAS de vertige**.
+
+**Clinique :**
+- Instabilité et ébriété majorées dans l'obscurité et yeux fermés
+- Oscillopsies (DIE — Dynamic Illegible E)
+- HIT positif avec overt saccades visibles au début
+
+**Rééducation :** Substitution sensorielle. Développer au maximum les performances des systèmes de substitution : "béquilles" visuelles et proprioceptives.
+
+</Card>
+
+<Card title="Pathologies centrales — Types de nystagmus">
+
+<table>
+<thead><tr><th>Structure lésée</th><th>Type de nystagmus central</th></tr></thead>
+<tbody>
+<tr><td>Pédoncule ou bulbe</td><td>Vertical supérieur</td></tr>
+<tr><td>Protubérance</td><td>Horizontal</td></tr>
+<tr><td>Bulbe</td><td>Rotatoire</td></tr>
+<tr><td>Charnière cervico-occipitale</td><td>Vertical inférieur</td></tr>
+</tbody>
+</table>
+
+**Pathologies centrales principales :**
+- SEP (nystagmus disconjugué, ophtalmoplégie internucléaire pathognomonique)
+- Pathologies neuro-dégénératives (Parkinson, CANVAS, Friedreich, Alzheimer)
+- Pathologies vasculaires (AVC, Syndrome de Wallenberg, AIT, migraine vestibulaire)
+- PPPD, Vertiges toxiques, Tumeurs cérébrales, TC et commotions cérébrales
+
+**Syndrome de Wallenberg :** infarctus latéro-bulbaire. Vertige intense + nystagmus rotatoire opposé à la lésion + hoquets + céphalées + vomissements. Sujet athéromateux et hypertendu.
+
+<AlertBox type="danger">Face à un vertige aigu avec signes de troubles centraux → URGENCES. On ne touche pas.</AlertBox>
+
+**Techniques de rééducation vestibulaire centrale spécifiques :**
+- Suppression du RVO et mémoire du RVO → hyperfonction vestibulaire centrale (VM, PPPD)
+- Anti-saccade et saccade guidée par la mémoire → dysfonctionnement de la fixation centrale (SEP, AVC cérébelleux)
+
+</Card>
+
+<Card title="Tableau récapitulatif — Vertiges périphériques">
+
+<table>
+<thead><tr><th>Grande crise unique</th><th>Crises paroxystiques répétées + signes auditifs</th><th>Instabilités chroniques + signes auditifs</th><th>Vertiges brefs, positionnels</th></tr></thead>
+<tbody>
+<tr><td>Névrite vestibulaire, Traumatisme du rocher, Labyrinthite aiguë</td><td>Maladie de Ménière, Syphilis labyrinthique, Labyrinthite subaiguë</td><td>Cholestéatome, Neurinome de l'acoustique, Tumeurs, Vestibulotoxicité</td><td>VPPB, Fistule périlymphatique, Tumeurs fosse postérieure</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-vppb
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-vppb">
+
+<Card title="VPPB — Généralités">
+
+**VPPB = Vertige Positionnel Paroxystique Bénin**
+
+Mécanisme : otoconies (cristaux de carbonate de calcium) libres dans les canaux semi-circulaires → déplacement lors des mouvements de tête → stimulation inadaptée de la cupule.
+
+**Étiologies :** Post-traumatique | Vasculaire | Dégénératif | **Idiopathique (+++)**
+
+<Grid3>
+  <MiniCard val="75-80%" label="Canal Postérieur" />
+  <MiniCard val="15-25%" label="Canal Horizontal" />
+  <MiniCard val="< 5%" label="Canal Antérieur" />
+</Grid3>
+
+**Durée de résolution naturelle :**
+- Sujet mobile : 6-8 semaines
+- Sujet immobilisé : jusqu'à 1 an
+
+<AlertBox type="danger">Enjeu gériatrique : personne âgée peu mobile = VPPB silencieux mais CHUTES. Dépistage systématique chez tout patient chuteur !</AlertBox>
+
+**Le modèle du sable mouillé :** Si secoué trop fort → se délite et se disperse. **Objectif : dégager l'amalgame en UNE seule manœuvre maîtrisée.**
+
+<AlertBox type="trap">Ne pas prescrire Brandt-Daroff → disperse l'amalgame → instabilité résiduelle. Ne pas multiplier les manœuvres (attendre quelques jours). Ne pas traiter sans diagnostic confirmé.</AlertBox>
+
+</Card>
+
+<Card title="VPPB du Canal Postérieur (CSP) — 75-80%">
+
+**Tableau clinique très typique :**
+- Paroxystique | Bref (20-30 sec) | Épuisable | Reproductible (mais s'affaiblit)
+
+**Nystagmus caractéristique :**
+- **Torsionnel roulant vers l'oreille basse** (géotropique)
+- Paroxysme au milieu du mouvement
+- S'inverse au retour assis
+
+**Diagnostic : Manœuvre de Dix-Hallpike**
+
+1. Patient assis
+2. Tête tournée 45° vers le côté testé
+3. Basculer en décubitus dorsal avec hyperextension 30°
+4. Observer le nystagmus
+5. Relever et observer l'inversion
+
+**Résultat :** NX horaire en couché → antihoraire en se relevant = **VPPB CSP du côté testé**
+
+**Traitement : Manœuvre d'Epley (≥ 30 sec par position)**
+
+1. Assis, tête tournée 45° côté atteint
+2. Décubitus dorsal avec hyperextension 30°
+3. Rotation de la tête 90° vers le côté sain
+4. Rotation du corps 90° → tête au sol (côté sain)
+5. Relever progressivement (attention à la rétropulsion !)
+6. **PAUSE OBLIGATOIRE 5-10 min** → les cristaux doivent se stabiliser dans l'utricule
+
+<AlertBox type="key">Restrictions 24-48h : Pas de mouvements brusques, ne pas se coucher sur le côté atteint, position semi-assise pour dormir.</AlertBox>
+
+**Alternative : Manœuvre de Sémont**
+
+</Card>
+
+<Card title="VPPB du Canal Horizontal (CH) — 15-25%">
+
+<AlertBox type="danger">Patient à risque de VOMISSEMENT → Diagnostic rapide + Traitement sans tarder.</AlertBox>
+
+**Deux formes :**
+
+<table>
+<thead><tr><th>Critère</th><th>Canalolithiase</th><th>Cupulolithiase</th></tr></thead>
+<tbody>
+<tr><td>**Latence**</td><td>Avec latence (quelques sec)</td><td>Pas de latence</td></tr>
+<tr><td>**Durée**</td><td>< 1 min</td><td>> 1 min</td></tr>
+<tr><td>**Persistance**</td><td>Épuisable</td><td>Persistant</td></tr>
+<tr><td>**Nystagmus au SRT**</td><td>Géotropique (vers la terre)</td><td>Agéotropique (vers le plafond)</td></tr>
+</tbody>
+</table>
+
+**Tests diagnostiques :**
+
+**Bow and Lean Test :**
+
+<table>
+<thead><tr><th>Position</th><th>Canalolithiase géotropique</th><th>Cupulolithiase agéotropique</th></tr></thead>
+<tbody>
+<tr><td>**BOW** (flexion)</td><td>NX vers oreille MALADE</td><td>NX vers oreille SAINE (persistant)</td></tr>
+<tr><td>**LEAN** (extension)</td><td>NX vers oreille SAINE</td><td>NX vers oreille MALADE (persistant)</td></tr>
+</tbody>
+</table>
+
+**Supine Roll Test (SRT) :** Observer intensité + null point (côté du nystagmus le plus fort = côté malade pour géotropique).
+
+**Manœuvres de traitement :**
+
+<table>
+<thead><tr><th>Manœuvre</th><th>Indication</th><th>Principe</th></tr></thead>
+<tbody>
+<tr><td>**BBQ Lempert**</td><td>Canalolithiase géotropique</td><td>Accélération angulaire (4 rotations de 90°)</td></tr>
+<tr><td>**Gufoni 3A**</td><td>Cupulolithiase agéotropique</td><td>Accélération linéaire</td></tr>
+<tr><td>**Gufoni 3G**</td><td>Canalolithiase géotropique</td><td>Accélération linéaire</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="VPPB du Canal Antérieur (CA) — < 5%">
+
+<AlertBox type="danger">Diagnostic différentiel central CRUCIAL ! Le nystagmus vertical inférieur est SOUVENT d'origine centrale (SNC, Arnold Chiari, médicaments). Le VPPB CA est probablement PLUS RARE que les causes centrales de nystagmus vertical inférieur.</AlertBox>
+
+**Tableau clinique atypique :**
+- Plus d'ébriété que de vertige franc
+- ⭐ **Soulagé en position allongée** (contrairement aux autres VPPB !)
+- NX vertical inférieur (bat vers le bas) + composante rotatoire
+
+**Tests diagnostiques :**
+
+**SHH (Straight Head Hanging) :** Patient en décubitus dorsal, hyperextension 30°, tête droite. Observer NX vertical inférieur épuisable, s'inversant au retour assis.
+
+**Dix-Hallpike oreille saine en bas :**
+
+<AlertBox type="trap">LATÉRALISATION INVERSÉE ! Dix-Hallpike positif à droite → VPPB CA GAUCHE (oreille la plus haute). Dix-Hallpike positif à gauche → VPPB CA DROIT.</AlertBox>
+
+**Manœuvres de traitement :**
+
+<table>
+<thead><tr><th>Manœuvre</th><th>Test diagnostique utilisé</th></tr></thead>
+<tbody>
+<tr><td>Yacovino</td><td>SHH (ne nécessite pas l'identification du côté)</td></tr>
+<tr><td>Kim</td><td>Dix-Hallpike</td></tr>
+<tr><td>Epley inversée</td><td>Alternative pour Dix-Hallpike</td></tr>
+<tr><td>Li</td><td>Alternative pour SHH (4 min face contre table)</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">Conversion canalaire possible : les canaux verticaux sont connectés par le crus commun. Un changement du nystagmus = redéfinir le diagnostic immédiatement.</AlertBox>
+
+</Card>
+
+<Card title="Checklist de sécurité VPPB">
+
+**Avant la manœuvre :**
+- Confirmer le diagnostic avec le test approprié
+- Vérifier l'absence de nystagmus spontané
+- Adapter à la fragilité cervicale du patient
+
+**Après la manœuvre :**
+- Pause obligatoire 5-10 minutes
+- Expliquer les restrictions 24-48h
+- Relever progressivement et prudemment
+
+**Signes d'alerte :**
+- Patient souffre beaucoup mais signes pauvres → pathologie expansive → IRM urgence
+- Nystagmus change direction/forme/fréquence/durée → conversion inter-canalaire → redéfinir diagnostic
+
+**Synthèse diagnostique rapide :**
+
+<table>
+<thead><tr><th>Canal</th><th>Test Diagnostique</th><th>Nystagmus</th><th>Traitement</th></tr></thead>
+<tbody>
+<tr><td>**CSP**</td><td>Dix-Hallpike</td><td>Torsionnel géotropique</td><td>Epley ou Sémont</td></tr>
+<tr><td>**CH géo**</td><td>Bow-Lean / SRT</td><td>Horizontal vers oreille basse</td><td>BBQ Lempert / Gufoni 3G</td></tr>
+<tr><td>**CH agéo**</td><td>Bow-Lean / SRT</td><td>Horizontal vers oreille haute</td><td>Gufoni 3A / Zuma</td></tr>
+<tr><td>**CA**</td><td>SHH ou Dix-H inversé</td><td>Vertical inférieur + rotatoire</td><td>Yacovino / Kim / Epley-inv</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-synthese-bilan
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-synthese-bilan">
+
+<Card title="Fiche Bilan MK Vestibulaire — Synthèse">
+
+<table>
+<thead><tr><th>Étape</th><th>Ce qu'on cherche</th><th>Outils / Tests</th></tr></thead>
+<tbody>
+<tr><td>**A — Interrogatoire**</td><td>Nature, durée, fréquence, circonstances, signes associés, traitements</td><td>Questions dirigées, calendrier des crises</td></tr>
+<tr><td>**B — Capteurs**</td><td>Vision, proprioception, ouïe</td><td>Examen clinique, antécédents</td></tr>
+<tr><td>**C — Oculomotricité**</td><td>Voies centrales (paires crâniennes)</td><td>Saccades, poursuite, fixation, conjugaison, skew, IFO, vergence</td></tr>
+<tr><td>**D — VNS**</td><td>Nystagmus spontané, positionnel, épreuves cinétiques</td><td>Masque VNS, HST, HIT, ERI / épreuve sinusoïdale</td></tr>
+<tr><td>**E — Vestibulo-spinaux**</td><td>Déviation posturo-motrice</td><td>Romberg, Fukuda, Babinski-Weil</td></tr>
+<tr><td>**F — Rotatoires haute vitesse**</td><td>Gain RVO, prépondérance directionnelle</td><td>Fauteuil + DVNS, fixation + vection</td></tr>
+<tr><td>**G — Questionnaires**</td><td>Gêne fonctionnelle, qualité de vie</td><td>DHI (/100), EEV, EVA</td></tr>
+<tr><td>**H — Posturographie**</td><td>Organisation sensorielle</td><td>CTSIB (6 conditions), Equitest SOT</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">Le bilan engage la responsabilité du MK. Il faut savoir identifier un problème d'origine centrale et renvoyer en urgence si nécessaire.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-synthese-patho
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-synthese-patho">
+
+<Card title="Fiche Pathologies — Synthèse et Priorités KV">
+
+<table>
+<thead><tr><th>Pathologie</th><th>Type</th><th>Présentation clé</th><th>Priorité KV</th></tr></thead>
+<tbody>
+<tr><td>DPA / Névrite</td><td>Périphérique aigu</td><td>Grand vertige unique, pas de signe auditif, hyporéflexie unilatérale</td><td>Compensation centrale, stabiliser le regard</td></tr>
+<tr><td>Ménière</td><td>Périphérique épisodique</td><td>Triade : acouphènes + vertige heures + surdité fluctuante</td><td>Connaître état pressionnel, fauteuil baguette</td></tr>
+<tr><td>Aréflexie bilatérale</td><td>Périphérique chronique</td><td>Instabilité + oscillopsies + PAS de vertige</td><td>Substitution sensorielle maximale</td></tr>
+<tr><td>VPPB</td><td>Périphérique positionnel</td><td>Vertige bref positionnel, nystagmus épuisable</td><td>Vidanger le canal incriminé</td></tr>
+<tr><td>SEP</td><td>Central</td><td>Nystagmus disconjugué, ophtalmoplégie internucléaire</td><td>Suppression RVO, anti-saccade</td></tr>
+<tr><td>Wallenberg</td><td>Central vasculaire</td><td>Vertige intense + hoquets + nystagmus rotatoire + contexte HTA/athérome</td><td>URGENCES D'ABORD</td></tr>
+<tr><td>Migraine vestibulaire</td><td>Central fonctionnel</td><td>Vertiges + signes neuros d'aura + ATCD migraineux</td><td>Anti-migraineux + expo flux optiques</td></tr>
+<tr><td>PPPD</td><td>DNS / Central fonctionnel</td><td>Dépendance visuelle, instabilité chronique, dizziness</td><td>Habituation aux environnements visuels complexes</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-vppb-recap
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-vppb-recap">
+
+<Card title="Fiche VPPB — Arbre décisionnel">
+
+<Tree>
+Vertige positionnel
+├── Canal Postérieur (75-80%) → Dix-Hallpike +
+│   ├── NX torsionnel géotropique + épuisable → VPPB CSP confirmé
+│   └── Traitement : EPLEY (≥30s/position) → PAUSE 5-10 min obligatoire
+│
+├── Canal Horizontal (15-25%) → Roll Test / Bow and Lean
+│   ├── Géotropique (épuisable < 1 min, latence)
+│   │   └── Traitement : BBQ Lempert ou Gufoni 3G
+│   └── Agéotropique (persistant > 1 min, sans latence)
+│       └── Traitement : Gufoni 3A ou Zuma
+│
+└── Canal Antérieur (< 5%) → SHH ou Dix-Hallpike inversé
+    ├── ⚠️ ÉLIMINER CAUSE CENTRALE D'ABORD (NX vertical inférieur ++)
+    ├── NX vertical inférieur + épuisable → VPPB CA
+    └── Traitement : Yacovino (SHH) ou Kim (Dix-Hallpike)
+</Tree>
+
+<AlertBox type="trap">Latéralisation inversée pour le CA : Dix-Hallpike + à DROITE → VPPB CA GAUCHE (c'est l'oreille la plus HAUTE qui est atteinte).</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-urgences
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-urgences">
+
+<Card title="Drapeaux Rouges — Signes d'Alerte Centrale">
+
+<AlertBox type="danger">Face à ces signes → URGENCES. On ne touche pas au patient vestibulaire !</AlertBox>
+
+<table>
+<thead><tr><th>Signe</th><th>Signification</th></tr></thead>
+<tbody>
+<tr><td>Nystagmus vertical PUR ou multidirectionnel</td><td>Atteinte centrale probable</td></tr>
+<tr><td>Nystagmus disconjugué (les 2 yeux différents)</td><td>Ophtalmoplégie internucléaire → SEP</td></tr>
+<tr><td>Poursuite saccadée</td><td>Atteinte des voies centrales</td></tr>
+<tr><td>Skew déviation (désalignement vertical des yeux)</td><td>Atteinte centrale</td></tr>
+<tr><td>IFO perturbé (fixation n'inhibe pas le NTG)</td><td>Atteinte centrale</td></tr>
+<tr><td>Céphalées associées au vertige</td><td>Éliminer pathologie expansive</td></tr>
+<tr><td>Syndrome cérébelleux (dysmétrie, adiadococinésie)</td><td>Atteinte cérébelleuse</td></tr>
+<tr><td>Syndrome de Wallenberg (hoquets, dysphonie, CBH)</td><td>Infarctus latéro-bulbaire</td></tr>
+<tr><td>HINTS positif (HIT négatif + NTG vertical ou chg dir + Skew)</td><td>AVC probable</td></tr>
+<tr><td>Patient souffre beaucoup mais signes PAUVRES</td><td>Pathologie expansive → IRM urgence</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">HINTS : Head Impulse + Nystagmus + Test of Skew. En syndrome vestibulaire aigu, plus sensible que l'IRM pour le diagnostic d'AVC en phase aiguë (Sensibilité 100%, Spécificité 96%).</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FLASHCARDS
+════════════════════════════════════════════════════════════════════ */}
+<Section id="flashcards">
+
+<FlashCard theme="Physiologie" q="Quelles sont les 3 composantes du système de l'équilibre ?">
+  1. **Vestibule** (canaux + otolithes) — 2. **Vision** — 3. **Somesthésie** (proprioception)
+</FlashCard>
+
+<FlashCard theme="Physiologie" q="Quelle est la différence entre macule utriculaire et sacculaire ?">
+  - Macule **utriculaire** → plan horizontal → accélérations linéaires **horizontales**
+  - Macule **sacculaire** → plan vertical → accélérations linéaires **verticales**
+  Les deux stabilisent la tête et le regard +++
+</FlashCard>
+
+<FlashCard theme="Physiologie" q="Énoncer la 1ère loi d'Ewald.">
+  Le sens de déplacement de l'endolymphe dans les canaux donne la **phase lente** du nystagmus. La secousse lente est dirigée dans le sens du courant endolymphatique. Par convention, le nystagmus est défini par sa **phase rapide**.
+</FlashCard>
+
+<FlashCard theme="Physiologie" q="Comment s'applique la 2ème loi d'Ewald pour les canaux horizontaux vs verticaux ?">
+  - Canaux **horizontaux** : ampullipète = excitateur | ampullifuge = inhibiteur
+  - Canaux **verticaux** : ampullipète = inhibiteur | ampullifuge = excitateur (INVERSÉ !)
+</FlashCard>
+
+<FlashCard theme="Physiologie" q="Définir le vertige vrai.">
+  Sensation rotatoire **erronée** de la scène visuelle, objectivée par la présence d'un **nystagmus pathologique**. C'est un problème **périphérique**. **Règle absolue : pas de vertige rotatoire sans nystagmus.**
+</FlashCard>
+
+<FlashCard theme="Physiologie" q="Quelle est la loi d'Alexander ?">
+  Le nystagmus est **renforcé** quand le patient regarde du **côté de la phase rapide**.
+  Ex : NTG gauche → renforcé en regardant à gauche, diminué en regardant à droite.
+</FlashCard>
+
+<FlashCard theme="Physiologie" ctx="Nystagmus spontané" q="Quels sont les 3 degrés du nystagmus spontané ?">
+  - **Degré 1** : présent uniquement dans le regard du côté de la saccade
+  - **Degré 2** : Degré 1 + présent dans le regard médian
+  - **Degré 3** : Degré 2 + présent même dans le regard opposé (côté phase lente)
+</FlashCard>
+
+<FlashCard theme="Compensation" q="Quelles sont les 4 stratégies compensatoires spontanées du SNC face à un déficit vestibulaire ?">
+  1. **Restauration fonctionnelle** (retour à la fonction initiale)
+  2. **Adaptation/Plasticité** (modification des réponses neuronales)
+  3. **Substitution sensorielle** (utiliser les capteurs en bon état)
+  4. **Habituation** (ne plus répondre à la stimulation déclenchante)
+</FlashCard>
+
+<FlashCard theme="Compensation" q="Quels sont les 2 principes clés qui déterminent la récupération vestibulaire cérébrale ?">
+  1. **"Use it or lose it"** : l'activité neuronale est indispensable
+  2. **"Earlier is better"** : précocité de la prise en charge. On a environ **3 mois** pour récupérer.
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Quels sont les 7 items de l'interrogatoire vestibulaire ?">
+  1. Date de début & évolution
+  2. Nature du trouble (sans le mot vertige)
+  3. Circonstances de survenue
+  4. Durée du vertige LUI-MÊME
+  5. Fréquence des crises
+  6. Signes associés (cochléaires, neuro-végétatifs, céphalées...)
+  7. Traitements en cours (attention ototoxiques et bêtabloquants)
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Quelles caractéristiques différencient un nystagmus périphérique d'un nystagmus central ?">
+  **Périphérique** : inhibé par la fixation, unidirectionnel, renforcé dans le regard du côté de la saccade (loi d'Alexander)
+  **Central** : non inhibé par la fixation, peut être multidirectionnel, vertical pur, associé à une atteinte des voies oculogyres
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Qu'est-ce que le HINTS et quelles sont ses performances diagnostiques ?">
+  **H**ead Impulse + **N**ystagmus + **T**est of **S**kew
+  - Sensibilité **100%**, Spécificité **96%** pour différencier périphérique/central en syndrome vestibulaire aigu
+  - Plus sensible que l'IRM en phase aiguë pour le diagnostic d'AVC
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Quel est le principe de l'IFO et comment différencie-t-il central/périphérique ?">
+  Indice de Fixation Oculaire : mesure l'inhibition du nystagmus par la fixation.
+  - Fixation **inhibe** le nystagmus → **périphérique**
+  - Fixation n'inhibe **pas** le nystagmus (ou aggrave) → **central**
+</FlashCard>
+
+<FlashCard theme="Bilan" ctx="Posturographie" q="Dans l'Equitest SOT, quelles conditions isolent spécifiquement le vestibule ?">
+  Les conditions **5** (sol instable + yeux fermés) et **6** (sol instable + vision asservie) — Elles éliminent à la fois la proprioception ET la vision utile, forçant le recours au vestibule.
+</FlashCard>
+
+<FlashCard theme="Bilan" q="Qu'est-ce que le CTSIB et comment le pratiquer ?">
+  Clinical Test of Sensory Interaction and Balance. Test d'organisation sensorielle validé, praticable en cabinet avec mousse et dôme. 3 conditions × 2 surfaces (stable/instable) :
+  - Yeux ouverts
+  - Yeux fermés
+  - Vision asservie (dôme)
+  Dès croisement des bras ou écart → chute comptabilisée.
+</FlashCard>
+
+<FlashCard theme="Rééducation" q="Quels sont les 4 principes de la kinésithérapie vestibulaire ?">
+  1. **Précocité** de la prise en charge
+  2. **Pas de standard** de rééducation (individualisé)
+  3. **Adaptation** en fonction de l'observation vidéoscopique
+  4. **Pas de sollicitation contradictoire** dans une même séance (fixation ≠ sans fixation)
+</FlashCard>
+
+<FlashCard theme="Rééducation" q="Quelle est la différence entre travail en fixation et en vection au fauteuil ?">
+  - **Fixation** (yeux ouverts sur cible) : inhibe le nystagmus → travail cortical et adaptation, chronométrer le temps d'inhibition → accoutumance
+  - **Vection** (yeux fermés) : s'intéresse au vécu subjectif du vertige, réponses corticales non inhibées → travail plus profond
+</FlashCard>
+
+<FlashCard theme="Rééducation" q="Comment fonctionne le fauteuil baguette et pour quel type de patient ?">
+  Rotations totalement aléatoires à très basse vitesse (10-20°/s), patient fixe l'extrémité d'une baguette périmétrique. But : inhiber le NTG créé par le fauteuil même d'origine centrale. Pour les patients centraux incapables de centrer et fixer une cible → effet sédatif sur une exacerbation vestibulaire.
+</FlashCard>
+
+<FlashCard theme="Pathologies" q="Quelle est la triade de Ménière ?">
+  1. **Acouphènes** + sensation de plénitude d'oreille (aura)
+  2. **Crise vertigineuse** de plusieurs heures
+  3. **Surdité neurosensorielle fluctuante**
+</FlashCard>
+
+<FlashCard theme="Pathologies" q="Pourquoi n'y a-t-il pas de vertige dans l'aréflexie vestibulaire bilatérale ?">
+  L'atteinte est **bilatérale et progressive** → pas de déséquilibre central des informations sensorielles (les deux côtés se perdent simultanément) → pas de nystagmus asymétrique → pas de vertige. On observe : instabilité, oscillopsies, majoration à l'obscurité.
+</FlashCard>
+
+<FlashCard theme="Pathologies" q="Quels nystagmus centraux correspondent à chaque structure lésée ?">
+  - **Pédoncule ou bulbe** → vertical supérieur
+  - **Protubérance** → horizontal
+  - **Bulbe** → rotatoire
+  - **Charnière cervico-occipitale** → vertical inférieur
+</FlashCard>
+
+<FlashCard theme="Pathologies" q="Qu'est-ce que le PPPD et comment le traiter ?">
+  **Persistent Perceptual Postural Dizziness** : nouvelle terminologie regroupant dépendances visuelles, syndrome de défilement, visual vertigo. Dysfonctionnement central de perception généralisé.
+  Traitement : **Habituation** par exposition aux environnements visuels complexes + travail de restabilisation posturale antéro-postérieure (statique et dynamique).
+</FlashCard>
+
+<FlashCard theme="VPPB" q="Quelles sont les caractéristiques typiques du nystagmus de VPPB ?">
+  - Torsionnel géotropique (vers l'oreille basse pour le CSP)
+  - Temps de latence (endolymphe visqueuse)
+  - Paroxystique (monte puis descend)
+  - **Fatigable** (diminue à chaque répétition)
+  - S'inverse à la verticalisation
+  - Reproductible
+</FlashCard>
+
+<FlashCard theme="VPPB" q="Comment se fait la manœuvre d'Epley pour un VPPB du CSP gauche ?">
+  1. Assis, tête tournée 45° vers le côté **gauche** (atteint)
+  2. Basculer en DD avec hyperextension 30° (≥30 sec)
+  3. Rotation de la tête 90° vers le côté **droit** (sain) (≥30 sec)
+  4. Rotation du corps 90° → tête orientée vers le bas côté sain (≥30 sec)
+  5. Relever progressivement en position assise
+  6. **PAUSE 5-10 min OBLIGATOIRE**
+</FlashCard>
+
+<FlashCard theme="VPPB" q="Comment différencier canalolithiase et cupulolithiase du canal horizontal au Bow and Lean Test ?">
+  - **Canalolithiase géotropique** : BOW → NX vers oreille MALADE | LEAN → NX vers oreille SAINE (épuisable, < 1 min)
+  - **Cupulolithiase agéotropique** : BOW → NX vers oreille SAINE | LEAN → NX vers oreille MALADE (persistant, > 1 min, sans latence)
+</FlashCard>
+
+<FlashCard theme="VPPB" ctx="VPPB Canal Antérieur" q="Pourquoi le VPPB du canal antérieur est-il un diagnostic différentiel difficile ?">
+  Le nystagmus vertical inférieur est la plupart du temps d'**origine centrale** (SNC, Arnold Chiari, médicaments). Le VPPB CA (< 5% des VPPB) est probablement plus rare que les causes centrales de ce nystagmus. Il faut toujours éliminer une cause centrale en priorité.
+  Signe distinctif : SOULAGÉ en position allongée (contrairement aux autres VPPB).
+</FlashCard>
+
+<FlashCard theme="VPPB" q="Pourquoi ne faut-il pas prescrire les exercices de Brandt-Daroff ?">
+  Ils dispersent l'amalgame de cristaux sans le vidanger complètement → instabilité résiduelle. Objectif : dégager l'amalgame en UNE seule manœuvre maîtrisée (modèle du sable mouillé).
+</FlashCard>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    QCM
+════════════════════════════════════════════════════════════════════ */}
+<Section id="qcm">
+
+<QcmCard
+  n={1}
+  type="QCS"
+  tag="Physiologie"
+  q="Selon la 2ème loi d'Ewald, quel type de courant est EXCITATEUR dans les canaux horizontaux ?"
+  opts={[
+    "A. Courant ampullifuge",
+    "B. Courant ampullipète",
+    "C. Les deux sont également excitateurs",
+    "D. Ni l'un ni l'autre, c'est la vitesse qui compte"
+  ]}
+  ans={[1]}
+>
+  Dans les canaux horizontaux, le courant **ampullipète** (vers l'ampoule) est excitateur et le courant ampullifuge est inhibiteur. C'est l'INVERSE pour les canaux verticaux. L'excitation ampullipète est supérieure à l'excitation ampullifuge (asymétrie excitatrice).
+</QcmCard>
+
+<QcmCard
+  n={2}
+  type="QCS"
+  tag="Physiologie"
+  q="Par convention, le nystagmus est défini par :"
+  opts={[
+    "A. Le sens de la phase lente",
+    "B. Le sens du courant endolymphatique",
+    "C. Le sens de la phase rapide",
+    "D. La direction du regard excentré"
+  ]}
+  ans={[2]}
+>
+  Par convention, le nystagmus est défini par le sens de sa **phase rapide**. La phase lente correspond au sens du courant endolymphatique (1ère loi d'Ewald).
+</QcmCard>
+
+<QcmCard
+  n={3}
+  type="QCM"
+  tag="Bilan"
+  q="Parmi les signes suivants, lesquels sont en faveur d'une atteinte CENTRALE ?"
+  opts={[
+    "A. Nystagmus inhibé par la fixation",
+    "B. Poursuite oculaire saccadée",
+    "C. Nystagmus unidirectionnel renforcé dans le regard du côté de la saccade",
+    "D. Skew déviation (désalignement vertical des yeux)",
+    "E. Nystagmus vertical pur"
+  ]}
+  ans={[1, 3, 4]}
+>
+  **B, D et E** sont des signes de centralité. A (inhibé par fixation) et C (unidirectionnel loi d'Alexander) sont des caractéristiques d'un nystagmus PÉRIPHÉRIQUE.
+</QcmCard>
+
+<QcmCard
+  n={4}
+  type="QCS"
+  tag="Bilan"
+  q="Un patient présente un nystagmus spontané présent dans le regard médian ET dans le regard latéral côté phase rapide, mais absent dans le regard opposé. Quel est le degré de ce nystagmus ?"
+  opts={[
+    "A. Degré 1",
+    "B. Degré 2",
+    "C. Degré 3",
+    "D. Nystagmus physiologique"
+  ]}
+  ans={[1]}
+>
+  **Degré 2** : présent dans le regard orienté dans le sens de la saccade ET dans le regard médian, mais absent dans le regard du côté de la phase lente. Le degré 3 serait présent même dans le regard opposé à la phase rapide.
+</QcmCard>
+
+<QcmCard
+  n={5}
+  type="QCS"
+  tag="Bilan"
+  ctx="Patient de 65 ans, vertiges en se levant et en se couchant depuis 3 jours."
+  q="Quel est le premier examen à réaliser sous VNS pour ce patient ?"
+  opts={[
+    "A. Recherche d'un nystagmus spontané",
+    "B. Directement une manœuvre de Dix-Hallpike",
+    "C. Un Head Shaking Test",
+    "D. Un Head Impulse Test"
+  ]}
+  ans={[0]}
+>
+  L'interrogatoire évoque clairement un VPPB, mais on peut quand même aller directement chercher un **nystagmus de position** (Dix-Hallpike) sans passer par toutes les étapes. Cependant, il faut d'abord s'assurer qu'il n'y a pas de nystagmus spontané avant de pratiquer une manœuvre. La réponse A est la première étape systématique du protocole VNS.
+</QcmCard>
+
+<QcmCard
+  n={6}
+  type="QCS"
+  tag="VPPB"
+  q="Un patient présente un nystagmus torsionnel géotropique lors d'un Dix-Hallpike côté droit, épuisable en 25 secondes. Quel est le diagnostic et le traitement ?"
+  opts={[
+    "A. VPPB canal postérieur GAUCHE → Epley gauche",
+    "B. VPPB canal postérieur DROIT → Epley droit",
+    "C. VPPB canal horizontal DROIT → BBQ Lempert",
+    "D. VPPB canal antérieur GAUCHE → Yacovino"
+  ]}
+  ans={[1]}
+>
+  Dix-Hallpike positif à DROITE avec nystagmus torsionnel géotropique épuisable → **VPPB CSP DROIT**. Le traitement est la manœuvre d'Epley du côté DROIT. Pour le canal antérieur, c'est l'inverse (Dix-H + à droite = CA gauche).
+</QcmCard>
+
+<QcmCard
+  n={7}
+  type="QCS"
+  tag="VPPB"
+  q="Au Bow and Lean Test, le nystagmus est agéotropique (vers le plafond) en flexion (BOW) et géotropique (vers la terre) en extension (LEAN). De quel type de VPPB s'agit-il ?"
+  opts={[
+    "A. Canalolithiase géotropique du canal horizontal",
+    "B. Cupulolithiase agéotropique du canal horizontal",
+    "C. VPPB du canal postérieur",
+    "D. VPPB du canal antérieur"
+  ]}
+  ans={[1]}
+>
+  En BOW (flexion), NX agéotropique (vers oreille SAINE) + persistant sans latence → **Cupulolithiase agéotropique** du canal horizontal. Le traitement est la manœuvre de Gufoni 3A ou Zuma.
+</QcmCard>
+
+<QcmCard
+  n={8}
+  type="QCM"
+  tag="VPPB"
+  q="Parmi les propositions suivantes concernant le VPPB du canal antérieur, lesquelles sont exactes ?"
+  opts={[
+    "A. C'est le plus fréquent des VPPB",
+    "B. Le nystagmus caractéristique est vertical inférieur",
+    "C. La douleur est soulagée en position allongée",
+    "D. Un Dix-Hallpike positif à droite signe un VPPB CA gauche",
+    "E. La manœuvre de Brandt-Daroff est le traitement de référence"
+  ]}
+  ans={[1, 2, 3]}
+>
+  **B, C et D** sont exactes. A est fausse (le CA est le moins fréquent, < 5%). E est fausse et contre-indiquée (disperse l'amalgame). La latéralisation inversée du CA est un piège classique : Dix-Hallpike + à droite → c'est l'oreille la plus haute (gauche) qui est atteinte.
+</QcmCard>
+
+<QcmCard
+  n={9}
+  type="QCS"
+  tag="Pathologies"
+  q="Un patient de 45 ans présente une triade associant des acouphènes, une sensation de plénitude d'oreille, une crise de vertige de 3 heures et une surdité fluctuante. C'est la première crise. Quel est votre premier geste ?"
+  opts={[
+    "A. Pratiquer immédiatement une manœuvre d'Epley",
+    "B. Ne pas poser le diagnostic de Ménière définitivement car c'est la première crise",
+    "C. Réaliser un fauteuil rotatoire haute vitesse",
+    "D. Prescrire des exercices de Brandt-Daroff"
+  ]}
+  ans={[1]}
+>
+  Le diagnostic de **maladie de Ménière n'est jamais posé en première intention** dès la première crise, même si les éléments de la triade sont présents. Il faut plusieurs épisodes documentés. De plus, la rééducation vestibulaire n'est pas recommandée en période critique (conférence de consensus ORL 2015).
+</QcmCard>
+
+<QcmCard
+  n={10}
+  type="QCM"
+  tag="Pathologies"
+  q="Quelle(s) caractéristique(s) s'applique(nt) à l'aréflexie vestibulaire bilatérale ?"
+  opts={[
+    "A. Présence d'un vertige rotatoire intense",
+    "B. Absence de vertige (atteinte bilatérale progressive)",
+    "C. Oscillopsies",
+    "D. Instabilité majorée dans l'obscurité et yeux fermés",
+    "E. Traitement par manœuvres libératoires"
+  ]}
+  ans={[1, 2, 3]}
+>
+  **B, C et D** sont exactes. Pas de vertige car atteinte bilatérale progressive (pas d'asymétrie). Le traitement repose sur la **substitution sensorielle** (béquilles visuelles et proprioceptives), non sur des manœuvres libératoires qui sont réservées aux VPPB.
+</QcmCard>
+
+<QcmCard
+  n={11}
+  type="QCM"
+  tag="Rééducation"
+  q="Quels sont les principes de base de la kinésithérapie vestibulaire ?"
+  opts={[
+    "A. Précocité de la prise en charge",
+    "B. Standardisation des protocoles pour tous les patients",
+    "C. Pas de sollicitations contradictoires dans une même séance",
+    "D. Adaptation du traitement après observation vidéoscopique de début de séance",
+    "E. Associer toujours fixation et vection dans la même séance pour potentialiser les effets"
+  ]}
+  ans={[0, 2, 3]}
+>
+  **A, C et D** sont correctes. B est fausse : il n'y a **pas de standard** de rééducation, le traitement est individualisé. E est fausse et contradictoire avec C : il ne faut pas associer fixation ET absence de fixation (RVO ET ROC) dans la même séance.
+</QcmCard>
+
+<QcmCard
+  n={12}
+  type="QCS"
+  tag="Bilan"
+  q="La mesure de la VPL (Vitesse de Phase Lente) est un indicateur objectif de la compensation centrale. En dessous de quelle valeur la prépondérance n'est plus considérée comme significative ?"
+  opts={[
+    "A. < 5°/s",
+    "B. < 2°/s",
+    "C. < 10°/s",
+    "D. < 0,5°/s"
+  ]}
+  ans={[1]}
+>
+  La **VPL < 2°/s** indique que la prépondérance directionnelle nystagmique n'est plus significative. C'est l'indicateur objectif des progrès de la compensation centrale.
+</QcmCard>
+
+<QcmCard
+  n={13}
+  type="QCS"
+  tag="Rééducation"
+  q="Dans quelle situation clinique est-on amené à utiliser le fauteuil baguette à basse vitesse ?"
+  opts={[
+    "A. Chez un patient avec VPPB du canal postérieur",
+    "B. Chez un patient central incapable de fixer une cible, pour diminuer l'intensité d'un NTG central",
+    "C. Pour rééduquer l'aréflexie bilatérale",
+    "D. En phase aiguë d'une névrite vestibulaire, dans les premières 24h"
+  ]}
+  ans={[1]}
+>
+  Le **fauteuil baguette** est indiqué pour les patients centraux incapables de fixer une cible. La rotation à très basse vitesse (10-20°/s) + fixation de la baguette permet de diminuer l'intensité d'un nystagmus central et d'avoir un effet sédatif sur une exacerbation vestibulaire. Ce n'est pas indiqué pour les VPPB, l'aréflexie bilatérale ou en phase hyperaiguë.
+</QcmCard>
+
+<QcmCard
+  n={14}
+  type="QCS"
+  tag="Bilan"
+  ctx="Syndrome de Wallenberg"
+  q="Quel est le type de nystagmus attendu dans un syndrome de Wallenberg (infarctus latéro-bulbaire) ?"
+  opts={[
+    "A. Vertical supérieur",
+    "B. Horizontalpur",
+    "C. Rotatoire opposé à la lésion",
+    "D. Vertical inférieur"
+  ]}
+  ans={[2]}
+>
+  Dans le syndrome de Wallenberg (infarctus latéro-bulbaire, structure = bulbe), le nystagmus est **rotatoire**, et il est **opposé à la lésion**. Le patient présente également des hoquets, des vomissements, un syndrome de Claude Bernard-Horner et des troubles de la déglutition. C'est une urgence neurologique.
+</QcmCard>
+
+<QcmCard
+  n={15}
+  type="QCM"
+  tag="VPPB"
+  q="Quelles sont les erreurs à éviter absolument dans la prise en charge d'un VPPB ?"
+  opts={[
+    "A. Faire une pause de 5-10 min après la manœuvre d'Epley",
+    "B. Prescrire des exercices de Brandt-Daroff",
+    "C. Répéter plusieurs manœuvres en cas d'échec le même jour",
+    "D. Confirmer le diagnostic avant de traiter",
+    "E. Ne pas adapter aux conversions inter-canalaires"
+  ]}
+  ans={[1, 2, 4]}
+>
+  **B, C et E** sont des erreurs. La pause post-manœuvre (A) est obligatoire. Confirmer le diagnostic avant de traiter (D) est une bonne pratique. Il ne faut jamais prescrire Brandt-Daroff (disperse l'amalgame), jamais multiplier les manœuvres (attendre quelques jours), et toujours adapter si le nystagmus change (conversion inter-canalaire).
+</QcmCard>
+
+</Section>
