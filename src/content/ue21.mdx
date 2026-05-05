@@ -1,0 +1,1260 @@
+---
+# ─── UE IDENTITY ───────────────────────────────────────────────────────────────
+title: "UE21 — Kinésithérapie Respiratoire & Spécialisée"
+color: "c2"
+
+# ─── NAV ────────────────────────────────────────────────────────────────────────
+coursNav:
+  - { id: "c-asthme", label: "Asthme" }
+  - { id: "c-rea", label: "Réanimation" }
+  - { id: "c-thoraco", label: "Chirurgie thoraco-abdominale" }
+  - { id: "c-brulures1", label: "Brûlures — Généralités" }
+  - { id: "c-brulures2", label: "Brûlures — Rééducation" }
+  - { id: "c-deglutition", label: "Déglutition & AVC" }
+
+fichesNav:
+  - { id: "f-asthme", label: "Fiche Asthme" }
+  - { id: "f-rea", label: "Fiche Réanimation" }
+  - { id: "f-brulures", label: "Fiche Brûlures" }
+  - { id: "f-deglutition", label: "Fiche Déglutition" }
+---
+
+import Section   from '../components/Section.astro';
+import Card      from '../components/Card.astro';
+import AlertBox  from '../components/AlertBox.astro';
+import Grid2     from '../components/Grid2.astro';
+import Grid3     from '../components/Grid3.astro';
+import MiniCard  from '../components/MiniCard.astro';
+import Badge     from '../components/Badge.astro';
+import Grade     from '../components/Grade.astro';
+import Tree      from '../components/Tree.astro';
+import FlashCard from '../components/FlashCard.astro';
+import QcmCard   from '../components/QcmCard.astro';
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-asthme
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-asthme">
+
+<Card title="Physiopathologie de l'asthme">
+
+L'asthme est une **pathologie inflammatoire chronique** des voies aériennes (vision GINA 2024). Ce n'est pas uniquement un spasme musculaire aigu : c'est un état associant **inflammation + hyperréactivité + remodelage bronchique**.
+
+**3 facteurs de l'obstruction bronchique :**
+- Bronchospasme (contraction des muscles lisses)
+- Œdème de la muqueuse
+- Hypersécrétion de mucus adhérent (perturbe le rapport V/Q)
+
+**Coefficient de Tiffeneau = VEMS / CVF × 100**
+- Ratio < 0,70 confirme l'obstruction
+- Réversibilité : augmentation du VEMS > 12% ET > 200 mL après bronchodilatateur
+
+<AlertBox type="key">La sévérité est une étiquette **rétrospective** basée sur la quantité de traitement nécessaire pour obtenir le contrôle — pas sur l'intensité des symptômes.</AlertBox>
+
+**Cercle vicieux du déconditionnement :**
+
+<Tree>
+Dyspnée
+├── Kinésiophobie (peur du mouvement)
+│   └── Réduction de l'activité physique
+│       └── Amyotrophie des fibres type I
+│           └── Seuil d'effort ↓
+│               └── Dyspnée aggravée → renforce l'évitement
+└── Bronchoconstriction induite à l'exercice (BIE)
+    └── Touche 50-90% des patients asthmatiques
+</Tree>
+
+**Hypo vs hyper-percepteurs :**
+- **Hypo-percepteurs** : risque d'asthme aigu grave (obstruction sévère non perçue)
+- **Hyper-percepteurs** : surconsommation de bronchodilatateurs, anxiété invalidante
+
+</Card>
+
+<Card title="Bilan initial et évaluation fonctionnelle">
+
+**Tests de terrain :**
+
+<table>
+<thead><tr><th>Test</th><th>Description</th><th>Usage</th></tr></thead>
+<tbody>
+<tr><td>TDM6 (Test de Marche 6 min)</td><td>Distance maximale à marche rapide</td><td>Corrélé qualité de vie et autonomie</td></tr>
+<tr><td>TS6 (Test Stepper 6 min)</td><td>Nombre de cycles montées/descentes</td><td>Validé asthme sévère</td></tr>
+<tr><td>EFCR (Épreuve d'Effort Cardio-Respiratoire)</td><td>Mesure VO2max</td><td>Détermine l'origine de la limitation (cardio/respi/muscu) et fixe FC cible</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">La spirométrie doit être mesurée à l'initiation du traitement, à 3-6 mois puis périodiquement. Une variabilité excessive **confirme** l'asthme.</AlertBox>
+
+**Marqueurs de la fonction pulmonaire :**
+1. **VEMS / FEV1** : Volume Expiratoire Maximal Seconde — marqueur clé de l'obstruction
+2. **DEP / PEF** : Débit Expiratoire de Pointe — suivi quotidien, identification des déclencheurs
+3. **Réversibilité** : critère diagnostique majeur = VEMS ≥ 12% ET ≥ 200 mL après bronchodilatateur
+
+</Card>
+
+<Card title="Kinésithérapie respiratoire dans l'asthme">
+
+**Désencombrement bronchique** (techniques actives, jamais passives) :
+
+<AlertBox type="danger">Le **clapping** est **PROSCRIT** dans l'asthme : inefficace et peut induire un bronchospasme réflexe.</AlertBox>
+
+<Grid2>
+  <div>
+    <Badge color="green">Techniques recommandées</Badge>
+
+    - **AFE (Accélération du Flux Expiratoire)** : expiration lente et profonde accompagnée, mobilise les sécrétions distales → proximales
+    - **Drainage autogène** : différents volumes pulmonaires et vitesses pour déplacer le mucus sans collapsus bronchique
+    - **Freinage expiratoire (lèvres pincées / PEP)** : crée une pression positive intrinsèque qui stabilise les parois bronchiques
+  </div>
+  <div>
+    <Badge color="red">Contre-indiqué</Badge>
+
+    - Clapping / percussions manuelles
+    - Techniques passives
+    - Mouvements itératifs rapides
+
+    <Badge color="amber">Méthodes complémentaires</Badge>
+
+    - **Buteyko** : exercices de "sous-respiration", ↑ CO2, effet Bohr
+    - **Papworth** : respiration diaphragmatique + nasale + relaxation
+  </div>
+</Grid2>
+
+**Rééducation diaphragmatique :**
+1. Renforcer le diaphragme (respiration abdominale contrôlée)
+2. Améliorer la mobilité thoracique (intercostaux, grand pectoral, muscles spinaux)
+3. Optimiser la coordination thoraco-abdominale (expansion 360°)
+
+</Card>
+
+<Card title="Réentraînement à l'effort et prévention du BIE">
+
+<AlertBox type="key">L'idée qu'un asthmatique doit éviter le sport est **obsolète**. L'activité physique est une composante essentielle du traitement de fond.</AlertBox>
+
+**Protocole recommandé :**
+- **Intensité** : modérée à élevée, calée sur le seuil ventilatoire (EFCR). Pour les formes sévères : fractionné (intervalles courts haute intensité) → moins de chute du VEMS (4,5%) vs continu modéré (14,8%)
+- **Fréquence** : 3 à 5 séances/semaine, 30 à 60 minutes
+- **Modalités** : marche rapide, cycloergomètre, natation (piscine non chlorée si possible), cyclisme, aviron
+
+**Protocole Bouclier — Prévention BIE :**
+
+<Grid3>
+  <div><Badge color="blue">1. Échauffement</Badge> 15 min minimum pour induire une période réfractaire (4-6h de protection bronchique)</div>
+  <div><Badge color="blue">2. Pré-médication</Badge> Inhalation CSI-formotérol ou SABA 10-15 min avant l'effort</div>
+  <div><Badge color="amber">3. Tolérance</Badge> SABA trop fréquent → tolérance. Privilégier la voie CSI-formotérol (Voie 1 GINA)</div>
+</Grid3>
+
+**Environnement :** éviter grands froids, pics de pollution/pollens, maintenir une bonne hydratation.
+
+</Card>
+
+<Card title="Pharmacologie et rôle du kinésithérapeute">
+
+**GINA 2024 — 2 voies de traitement :**
+
+<Grid2>
+  <div>
+    <Badge color="green">Voie 1 — MART (privilégiée par GINA)</Badge>
+
+    1 seul inhalateur (CSI-formotérol) utilisé comme **traitement de fond quotidien ET traitement de crise**.
+    → Réduit le risque d'exacerbation sévère jusqu'à **65%**
+  </div>
+  <div>
+    <Badge color="amber">Voie 2 — Méthode classique</Badge>
+
+    1 inhalateur CSI quotidien + 1 inhalateur SABA séparé pour les crises.
+    → Risque : mauvaise observance du traitement de fond
+  </div>
+</Grid2>
+
+<AlertBox type="danger">**SABA seul** : GINA ne recommande plus le SABA seul. L'utilisation excessive (> 3 inhalateurs/an) augmente gravement le risque d'exacerbation et de mortalité.</AlertBox>
+
+**Problème d'inhalation :** 80% des patients utilisent mal leur inhalateur → le médicament frappe la gorge, pas les bronches → inflammation persiste.
+
+**Protocole des 4C (2-3 min en séance) :**
+1. **Choisir** : évaluer l'adéquation physique patient/dispositif (dextérité, capacité inspiratoire, multiplicité)
+2. **Contrôler** : auditer la technique actuelle sans biais (méthode "Montrez-moi exactement")
+3. **Corriger** : posture → vidange pulmonaire → flux ciblé → apnée de sédimentation (5-10s)
+4. **Confirmer** : méthode Teach-Back avec inhalateur placebo
+
+<AlertBox type="trap">Après formation initiale, les erreurs réapparaissent en **4 à 6 semaines** → re-vérifier la technique à chaque visite.</AlertBox>
+
+**pMDI vs DPI :**
+
+<table>
+<thead><tr><th></th><th>pMDI (aérosol-doseur)</th><th>DPI (poudre sèche)</th></tr></thead>
+<tbody>
+<tr><td>Mécanisme</td><td>Propulseur actif</td><td>Passif (effort inspiratoire)</td></tr>
+<tr><td>Flux inspiratoire</td><td>Lent et profond</td><td>Fort et rapide</td></tr>
+<tr><td>Défi principal</td><td>Coordination main-poumon</td><td>Force musculaire inspiratoire</td></tr>
+</tbody>
+</table>
+
+La **chambre d'inhalation** transforme une épreuve de coordination complexe en un simple exercice de respiration à volume courant → indispensable chez l'enfant, recommandée chez l'adulte.
+
+</Card>
+
+<Card title="ETP et gestion de la crise au cabinet">
+
+**Plan d'action personnalisé — Système feu tricolore (DEP) :**
+- **Vert** (80-100% du meilleur DEP) : traitement habituel
+- **Orange** (50-80%) : augmenter le traitement de secours
+- **Rouge** (< 50%) : urgence médicale
+
+**Gestion d'une exacerbation au cabinet :**
+1. **Reconnaître** : chute DEP, respiration sifflante excessive, muscles accessoires, incapacité à parler
+2. **Agir** : arrêter l'effort, asseoir droit (ne pas allonger), administrer le traitement de crise
+3. **Évaluer** : si amélioration → repos et surveillance. Si aggravation → appeler le 15, ne pas laisser seul
+
+**Les 4 piliers du kinésithérapeute :**
+
+<Grid2>
+  <div>
+    1. **Comprendre** : décrypter le dossier, le contrôle et le traitement
+    2. **Optimiser** : améliorer la ventilation mécanique
+  </div>
+  <div>
+    3. **Reconditionner** : prescrire une activité physique en prévenant le BIE
+    4. **Sécuriser** : vérifier l'inhalateur et gérer les exacerbations
+  </div>
+</Grid2>
+
+**Impact des comorbidités :**
+- **Obésité** : modifie la mécanique ventilatoire, amplifie l'inflammation → surprescription fréquente
+- **RGO** : peut déclencher une toux chronique imitant l'asthme
+- **Anxiété/dépression** : impacte l'observance, fausse la perception de la dyspnée (boucles de panique)
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-rea
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-rea">
+
+<Card title="Généralités — Réanimation, soins intensifs, surveillance continue">
+
+<table>
+<thead><tr><th>Structure</th><th>Définition</th><th>Ratio IDE/patient</th></tr></thead>
+<tbody>
+<tr><td>**Réanimation**</td><td>Plusieurs défaillances d'organes engageant le pronostic vital. Ventilation artificielle, support hémodynamique, assistance rénale.</td><td>1 IDE / 2,5 patients</td></tr>
+<tr><td>**Surveillance continue**</td><td>Risque de défaillance vitale, niveau intermédiaire entre réa et service classique.</td><td>1 IDE / 6 patients</td></tr>
+<tr><td>**Soins intensifs**</td><td>1 seul organe défaillant (1 spécialité). Ex : pneumologique, chirurgie cardiaque.</td><td>Normé mais > réa</td></tr>
+</tbody>
+</table>
+
+**Personnel réa :** médecins anesthésistes-réanimateurs, IDE (formation non spécialisée mais compétences accrues : dialyse, dispositifs médicaux), aides-soignantes (4 patients/plage).
+
+**Matériel dans un box :**
+- Chariot d'urgence avec matériel d'intubation
+- Respirateur + circuit de ventilation
+- Humidificateur-réchauffeur
+- Système d'aspiration (sondes vertes = taille intermédiaire, universelles)
+- Scop (moniteur paramètres vitaux), répétiteur devant le box
+- ECG, échographe, analyseur de sang (gazométrie instantanée)
+- ECMO si nécessaire (assistance cardio-respiratoire)
+
+<AlertBox type="key">Moyen mnémotechnique ECG : **"Rien Ne Va Jamais"** (Rouge > Noir > Vert > Jaune, sens inverse des aiguilles d'une montre). Rouge = Right = droite.</AlertBox>
+
+</Card>
+
+<Card title="Ventilation mécanique — Bases physiologiques">
+
+**Ventilation spontanée :**
+- Inspiration : phénomène **actif** (contraction diaphragme → pression négative)
+- Expiration : phénomène **passif** (relâchement → pression positive)
+
+**Ventilation mécanique :** pression **toujours positive** pour éviter le collapsus alvéolaire.
+
+**Modes ventilatoires :**
+
+<Grid2>
+  <div>
+    <Badge color="blue">Ventilation invasive</Badge>
+
+    - **Volumétrique** (réglage du volume, pression variable) :
+      - VC (ventilation contrôlée) — le plus utilisé
+      - VACI (assistée contrôlée) — lors du réveil
+    - **Barométrique** (réglage des pressions, volume variable) :
+      - PPC (pression contrôlée)
+      - VSAI (aide inspiratoire) — sevrage ventilatoire
+  </div>
+  <div>
+    <Badge color="teal">Ventilation non invasive (VNI)</Badge>
+
+    Objectifs :
+    - Améliorer l'oxygénation
+    - Décarboxylation (épuration CO2)
+    - Limiter le travail respiratoire
+    - Mise au repos des muscles respiratoires
+
+    Interface : différents masques selon le patient
+  </div>
+</Grid2>
+
+**Paramètres VNI à adapter :**
+
+<table>
+<thead><tr><th>Paramètre</th><th>Valeur cible</th><th>Question au patient</th></tr></thead>
+<tbody>
+<tr><td>Trigger inspiratoire</td><td>Prescrit en débit</td><td>"Sentez-vous l'air arriver ?"</td></tr>
+<tr><td>Pente (montée en pression)</td><td>—</td><td>"L'air arrive-t-il trop vite ?"</td></tr>
+<tr><td>Niveau d'aide inspiratoire</td><td>5-15 cmH₂O (Vte = 8 mL/kg)</td><td>"Avez-vous assez d'air ?"</td></tr>
+<tr><td>Trigger expiratoire</td><td>40-60% en % / 1-1,25s en Timax</td><td>"Quand avez-vous besoin d'expirer ?"</td></tr>
+<tr><td>PEP</td><td>Départ 4-5 cmH₂O</td><td>—</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="key">Plus on laisse un patient ventilé longtemps, plus le taux de mortalité est important. **Objectif : extuber le plus tôt possible.**</AlertBox>
+
+</Card>
+
+<Card title="Évaluation clinique du patient en réanimation">
+
+**Bilan du MK — Analyse de l'environnement d'abord :**
+
+Observer les machines AVANT d'observer le patient (monitoring : SaO₂, FC, FR, TA, T°).
+
+**Observation du patient (signes d'alerte) :**
+- **Visage** : sueurs (hypoxie/hypercapnie), battements des ailes du nez, cyanose des lèvres
+- **Cou** : signe de tirage (détresse respiratoire), enfoncement sus-sternal (obstacle laryngé)
+- **Thorax** : immobilité d'un hémithorax (pneumothorax?), respiration paradoxale (BPCO), signe de Hoover
+- **Abdomen** : effet "abdomen de bois" (diaphragme bloqué)
+- **Peau** : cyanose des extrémités, hippocratisme digital (hypoxie), marbrures (hypoxie majeure)
+
+**Écoute des bruits à la bouche :**
+- Bruit inspiratoire (stridor) : obstacle très haut ou œdème laryngé (souvent post-intubation)
+- Bruit expiratoire : syndrome obstructif, soucis bronchiques
+
+**Scores en réanimation :**
+
+<Grid2>
+  <div>
+    <Badge color="blue">Glasgow (3-15)</Badge>
+    État psychologique / neurologique
+  </div>
+  <div>
+    <Badge color="amber">RASS — Richmond (-5 à +4)</Badge>
+    - 0 = éveillé et calme
+    - +4 = agité (délétère)
+    - -5 = sédaté profond
+    → Minimiser la sédation ++
+  </div>
+</Grid2>
+
+**Score MRC (neurosmusculaire) :** évalue 6 fonctions bilatéralement, score 0-60.
+- < 48 → **neuropathie en réanimation** : le patient ne pourra pas respirer seul → critère de sevrabilité.
+
+**Gazométrie — valeurs physiologiques :**
+<table>
+<thead><tr><th>Paramètre</th><th>Valeur normale</th></tr></thead>
+<tbody>
+<tr><td>pH</td><td>7,40 ± 0,02</td></tr>
+<tr><td>PaO₂</td><td>90 ± 5 mmHg</td></tr>
+<tr><td>PaCO₂</td><td>38-42 mmHg</td></tr>
+<tr><td>HCO₃</td><td>24 mmol/L</td></tr>
+<tr><td>SaO₂</td><td>95-98%</td></tr>
+<tr><td>Lactates</td><td>Artériel : 0,3-0,8 mmol/L</td></tr>
+</tbody>
+</table>
+
+</Card>
+
+<Card title="Rôle du MK en réanimation — Respiratoire et fonctionnel">
+
+**Causes d'encombrement bronchique en réanimation :**
+Position/décubitus, stagnation des sécrétions, pathologies, niveau d'éveil (réflexe de toux), hydratation/fausses routes, fatigue, douleur, infection.
+
+**Installation facilitatrice :** demi-assise à 30° avant toute manœuvre → aide au drainage, ventile des zones non ventilées, protège des inhalations.
+
+**Techniques de désencombrement :**
+- AFE, drainage à 4 mains
+- Cough assist (aide à la toux)
+- Changements de position et marche
+
+<AlertBox type="danger">**CI absolues aux aspirations** : OAP, embolie pulmonaire. Également : volet costal, pneumothorax.</AlertBox>
+
+**PEC du patient hypoxémique (O₂thérapie) :**
+- Lunettes à O₂ : jusqu'à 5 L/min
+- Masque simple : 5-7 L/min
+- Masque haute concentration : 7-15 L/min
+- **OHD (Optiflow)** : jusqu'à 60 L/min, air humidifié/réchauffé, crée une PEP intrinsèque. Très utilisé en immunodéprimé.
+
+**PEC du patient hypercapnique :** VNI en priorité.
+
+**Décubitus ventral (DV) :** recrute les territoires postérieurs non ventilés en DD, améliore le travail du diaphragme.
+
+**Sevrage ventilatoire — critères :**
+- Patient conscient
+- Capable d'avaler (déglutition)
+- Capable de tousser, de ventiler
+- Score RASS et MRC satisfaisants
+
+**Mobilisation précoce (dans les 24-48h) :**
+- Maintenir les fonctions physiques
+- Limiter les effets délétères de l'immobilisation (neuromusculaire, respiratoire)
+- Lutter contre les troubles du décubitus
+- Techniques : mobilisations passives/actives, cycloergomètres, électrostimulation, transferts au fauteuil, verticalisation, déambulation
+
+<AlertBox type="key">Parler au patient sédaté comme s'il était réveillé : se présenter, prévenir à chaque geste.</AlertBox>
+
+**Rôle dans la déglutition (en l'absence d'orthophoniste) :**
+Les tests de déglutition sont à faire par le kiné en réa. Observer : ouverture buccale, motricité linguale, temps de déglutition, voix (claire ou mouillée ?), posture de la tête, sensibilité faciale.
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-thoraco
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-thoraco">
+
+<Card title="Techniques chirurgicales et facteurs de risque">
+
+**2 types de techniques :**
+- **Laparotomie** : par incision directe
+- **Laparoscopie** (cœlioscopie) : moins invasive
+
+**Voies d'abord :** médiane (ligne blanche), cervico-thoraco-laparotomie (cancer de l'œsophage), sous-costale, transversale.
+
+**Facteurs de risques liés au patient :**
+Âge, condition physique, poids, habitudes alimentaires (dénutrition), tabagisme (cicatrisation + récupération ventilatoire), antécédents respiratoires, comorbidités.
+
+**Facteurs liés à la chirurgie :**
+- Dysfonctionnement du diaphragme (quel que soit le contrôle de la douleur)
+- Traumatismes tissulaires (grands droits)
+- Douleur postopératoire limitant la respiration
+- Position per-opératoire en DD → hypoventilation alvéolaire des bases
+
+**Facteurs liés à l'anesthésie générale :**
+- Curarisation → inhibition du tonus musculaire respiratoire
+- Intubation orotrachéale → inhibe les VAS, crée inflammation + hypersécrétion
+- Gaz froids et secs → encombrement par assèchement des voies
+- Dysfonctionnement des muscles respiratoires
+- Viscosité accrue des sécrétions + altération du surfactant
+
+<AlertBox type="key">**Syndrome MIXTE** : chirurgie (restrictif : réduction capacité ventilatoire) + anesthésie (obstructif : encombrement bronchique).</AlertBox>
+
+</Card>
+
+<Card title="Atélectasies et rééducation en chirurgie abdominale">
+
+**Atélectasie** = affaissement des alvéoles pulmonaires dépourvues de ventilation tandis que fonctionne la circulation sanguine.
+
+**Types :**
+- **Obstructive** : bouchon muqueux
+- **Restrictive d'adhérence** : altération du surfactant (nourrissons, SDRA)
+- **Passive** : défaut de compliance (pleurésie, pneumothorax)
+- **Compressive** : masses tumorales, obésité
+- **Gravité-dépendante** : position per-opératoire (peut se lever seule en asseyant le patient)
+
+**Rééducation en chirurgie abdominale — Techniques :**
+
+<Grid2>
+  <div>
+    <Badge color="blue">Désencombrement bronchique</Badge>
+
+    - Humidification par aérosol
+    - Position demi-assise ou assise
+    - AFE lente et rapide
+    - Travail d'expiration contre résistance (PEP)
+  </div>
+  <div>
+    <Badge color="teal">Récupération volumétrique inspiratoire</Badge>
+
+    - **Spirométrie inspiratoire incitative** (Respiflow = débits, Voldyne = volumes)
+    - Travail du diaphragme
+    - VNI au cas par cas
+  </div>
+</Grid2>
+
+**Prévention décubitus :**
+- Verticalisation précoce
+- Station assise dès le lendemain
+- Déambulation précoce (pédalier ou marche)
+
+**Protection de la toux :** apprendre au patient à croiser les bras devant le ventre et serrer pendant la toux → protège la cicatrice.
+
+<AlertBox type="trap">La ceinture abdominale est **très controversée** : aide la douleur mais diminue la ventilation des bases et peut compromettre la cicatrisation chez fumeurs/obèses.</AlertBox>
+
+</Card>
+
+<Card title="Chirurgie pulmonaire / thoracique">
+
+**Rééducation et lobectomie — 3 phases :**
+
+<table>
+<thead><tr><th>Phase</th><th>Situation</th><th>Priorité rééducation</th></tr></thead>
+<tbody>
+<tr><td>**Phase 1**</td><td>Avec le drain (150-200 cc/24h)</td><td>Travail expiratoire (drainage) + inspiratoire (regagner CV, spirométrie incitative)</td></tr>
+<tr><td>**Phase 2**</td><td>Ablation du drain</td><td>⚠️ Éviter travail inspiratoire (risque pneumothorax). Expansion thoraco-abdominale, assouplissements.</td></tr>
+<tr><td>**Phase 3**</td><td>Sans drain, CV prédictive atteinte</td><td>Travail expiratoire d'entretien. Épaule en actif. Rachis. Pas de travail inspiratoire intensif.</td></tr>
+</tbody>
+</table>
+
+**Surveillance du drain :**
+- Ni coudé, ni coincé (un bon drain bulle)
+- Système d'aspiration toujours **en dessous** du plan du thorax
+- Observer le type de contenu (purulent, sang…)
+
+**Douleur en chirurgie thoracique (fil conducteur) :**
+Section musculaire + écartement des côtes + étirement des nerfs intercostaux + drain pleural → attitude antalgique (recroquevillement) → asymétrie ventilatoire.
+
+**Pneumonectomie :** syndrome restrictif pur. Pas de drain. Éviter le décubitus latéral côté opéré. Pas de VNI. Risque de fistule du moignon bronchique, OAP, déformation rachidienne.
+
+**Différence hypersécrétion / encombrement :**
+- **Hypersécrétion** : augmentation de la production de mucus
+- **Encombrement bronchique** : stagnation du mucus dans les voies aériennes — déséquilibre entre production et évacuation
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-brulures1
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-brulures1">
+
+<Card title="Épidémiologie et évaluation de la brûlure">
+
+<Grid3>
+  <MiniCard val="500 000" label="Brûlés/an en France" />
+  <MiniCard val="18" label="Centres de traitement (CTB)" />
+  <MiniCard val="37 j" label="DMS pour brûlures graves" />
+</Grid3>
+
+**Causes :** 65-70% accidents domestiques (barbecue +++), 15-20% accidents du travail, 8% immolation.
+
+**Règle des 9 de Wallace (% SCT adulte) :**
+<table>
+<thead><tr><th>Zone</th><th>%</th></tr></thead>
+<tbody>
+<tr><td>Tête et cou</td><td>9%</td></tr>
+<tr><td>Tronc antérieur</td><td>2 × 9%</td></tr>
+<tr><td>Dos</td><td>2 × 9%</td></tr>
+<tr><td>1 membre supérieur complet</td><td>9%</td></tr>
+<tr><td>1 membre inférieur complet</td><td>2 × 9%</td></tr>
+<tr><td>Périnée / paume de main</td><td>1%</td></tr>
+</tbody>
+</table>
+
+Chez l'enfant → **Table de Lund et Browder** (tête proportionnellement plus grande).
+
+**Profondeur des brûlures :**
+<table>
+<thead><tr><th>Degré</th><th>Couches atteintes</th><th>Aspect</th><th>Cicatrisation</th></tr></thead>
+<tbody>
+<tr><td>1er degré</td><td>Épiderme</td><td>Rouge, chaleur, douleur</td><td>3-5 jours</td></tr>
+<tr><td>2nd degré superficiel</td><td>Début membrane basale</td><td>Phlyctène, très rouge (inflammatoire)</td><td>10-15 jours</td></tr>
+<tr><td>2nd degré profond</td><td>Épiderme + derme partiel</td><td>Phlyctène : pâle, rosé, ± hypoesthésie. Plus pâle = plus grave</td><td>15-30 jours (+/- greffe)</td></tr>
+<tr><td>3ème degré</td><td>Épiderme + derme + membrane basale</td><td>Blanc (sans vascularisation) ou brun/noir</td><td>Greffe obligatoire</td></tr>
+</tbody>
+</table>
+
+**Scores pronostics :**
+- **Index de Baux** : âge + % SCB. Si > 100 → 95% de risque de décès
+- **UBS** = SCB + (SCB 3e degré × 3). > 150 → pronostic très réservé
+- **ABSI** : > 8 → probabilité décès > 80%
+
+</Card>
+
+<Card title="Physiopathologie — Phases évolutives">
+
+**3 phases d'évolution :**
+
+<Grid3>
+  <div>
+    <Badge color="red">Phase 1 — Inflammatoire (J0-J4/J8)</Badge>
+
+    Dominée par le **choc hypovolémique** : plasmorragie massive via effet passoire (capillaires) + effet buvard (tissu interstitiel). Prise de 10-15 kg d'œdème. Urgence réanimatoire.
+  </div>
+  <div>
+    <Badge color="amber">Phase 2 — Proliférative</Badge>
+
+    Début de reconstruction cutanée. Formation d'un **bourgeon charnu** (macrophages + fibroblastes + néovascularisation). Métabolisme très actif → catabolisme → dénutrition.
+
+    **2 grandes séquelles :**
+    - **Rétractions** (myofibroblastes, max J5-J15)
+    - **Hypertrophie** (collagène anarchique, max 3-6 mois)
+  </div>
+  <div>
+    <Badge color="green">Phase 3 — Maturation (18-24 mois)</Badge>
+
+    Remodelage de la matrice. Disparition des myofibroblastes (fin des rétractions). Apparition de l'élastine. Éclaircissement vasculaire.
+  </div>
+</Grid3>
+
+**Cicatrisations pathologiques :**
+- **Hypertrophique** : apparaît 1-2 mois après fermeture, max 3-6 mois. Traitement : pansements compressifs 18-24 mois + pressothérapie + silicone.
+- **Rétractiles** : premières semaines, surtout sur 2e degré profond et 3e degré en cicatrisation dirigée
+- **Chéloïdes** : rares chez les brûlés, surtout peaux noires et enfants
+
+</Card>
+
+<Card title="Prise en charge initiale et traitements chirurgicaux">
+
+**Au ramassage (immédiat) :**
+1. Retirer les vêtements chauds qui n'adhèrent pas
+2. Assurer les fonctions vitales (O₂ systématique)
+3. Perfuser en urgence
+4. **Règle des 15** : eau fraîche (~15°C) pendant 15 min à 15 cm de la plaie → effet antalgique. Ne pas faire si perte de connaissance ou surface trop étendue (risque hypothermie).
+5. Lutter contre la douleur (morphine) et l'hypothermie
+
+**Traitements chirurgicaux :**
+- **Incision de décharge** : brûlure circulaire 3e degré pour éviter l'amputation par œdème
+- **Excision-greffe précoce** : si possible dans les 10 jours
+- **Recouvrements temporaires** : allogreffe, xénogreffe, substituts synthétiques, Integra (derme artificiel pour zones fonctionnelles)
+- **Autogreffe** : prélèvement sur le patient, expansé × 1 à 6. Met 5-6j à prendre. Greffe définitive = **autogreffe obligatoire** sinon rejet.
+- **Lambeaux** : brûlures très profondes, zones articulaires
+- **Cultures de kératinocytes** : grands brûlés > 80%, sauve la vie mais peau fragile/qualité médiocre
+
+<AlertBox type="key">**1ère cause de décès chez le brûlé = INFECTION.** La brûlure reste stérile pendant 6h seulement.</AlertBox>
+
+**Bilan kiné du grand brûlé (> 30%) — éléments clés :**
+- Cutané : localisation brûlures initiales et greffes (schéma), échelle CDMT, Échelle de Vancouver
+- Test de vitropression : < 3 sec → phase inflammatoire → techniques non inflammatoires uniquement
+- Articulaire, musculaire, sensitif, respiratoire, psychologique, autonomie (AVQ)
+
+</Card>
+
+<Card title="Échelles d'évaluation cicatricielle">
+
+**Échelle CDMT (France, plus précise que Vancouver) :**
+<table>
+<thead><tr><th>Dimension</th><th>Description</th><th>Cotation 0 → 5</th></tr></thead>
+<tbody>
+<tr><td>**Couleur**</td><td>Évalue l'inflammation</td><td>0 = nacré → 5 = blanc (non cicatrisé)</td></tr>
+<tr><td>**Densité**</td><td>Consistance et hauteur du derme</td><td>0 = normale → 5 = impossible (pli de peau)</td></tr>
+<tr><td>**Mobilité**</td><td>Adhérences (glissement dans différents sens)</td><td>0 = normale → 5 = abolie</td></tr>
+<tr><td>**Tension**</td><td>Rétractions (course cutanée maximale)</td><td>0 = absence → 5 = bride visible au repos</td></tr>
+</tbody>
+</table>
+
+**Échelle de Vancouver (validée internationalement) :** Pigmentation, coloration vasculaire (inflammation), épaisseur (hypertrophie), souplesse (adhérences + rétractions).
+
+**Concept HARA :** Hypertrophie / Adhérence / Rétraction (lignes de Langer) → description clinique préférable aux cotations chiffrées.
+
+**Test de vitropression :**
+Appuyer 3-5 sec sur une zone cicatricielle (sur un os pour appui ferme), retirer et compter le temps de recoloration.
+- < 3 sec → **phase inflammatoire** → techniques non inflammatoires, 0 douleur
+- ≥ 5 sec → pas d'inflammation → techniques de décollement, palper-rouler possibles
+- Non applicable sur peau noire.
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-brulures2
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-brulures2">
+
+<Card title="Rééducation en centre aigu (réanimation)">
+
+**Estimation de la durée :** 1 à 2 jours d'hospitalisation par % de surface brûlée. Le temps en centre de rééducation est estimé à **2 fois le temps en réanimation**.
+
+**Objectifs en centre aigu :**
+1. Objectifs respiratoires (encombrement, sevrage VM)
+2. Prévenir les troubles cicatriciels
+3. Prévenir les troubles du décubitus
+4. Autonomiser le patient le plus tôt possible
+
+**Principes fondamentaux :**
+
+<AlertBox type="danger">**INFRA-DOULOUREUX obligatoire.** Pas de mouvements itératifs ni rapides. Pas d'inflammation (→ séquelles). Respecter les **délais chirurgicaux** (6j après greffe = alitement zone greffée).</AlertBox>
+
+**Installation posturale (position de fonction) :**
+- Membres supérieurs en déclive, main > coude > épaule, épaules à 90° d'abduction, pouce en opposition (main playmobil)
+- Tête dans l'axe ou en extension si brûlure cervicale
+- Membres inférieurs en rectitude, chevilles à 90° **même si non brûlée** (prévention équin)
+- En cas de brûlure axillaire : 90° d'abduction/plan de l'omoplate
+
+**La posture efficace :** obtenir le **blanchiment cutané** (hypoxie locale → freine transformation fibroblastes → myofibroblastes). Durée minimale **10-15 min par zone**. Posture 3 points possible.
+
+**Kiné respiratoire en brûlé :**
+- Sans VM + ATCD BPCO : incitation volumique, éviter encombrement
+- Sous VM : sevrage ventilatoire, exercices abdominaux, désencombrement, stimulation diaphragmatique, rééducation à la déglutition
+- Inhalation de fumée : désencombrement ++ sur le long terme (risque fibrose pulmonaire)
+- Thorax brûlé : risque syndrome restrictif → mobiliser et posturer pour retrouver une ampliation thoracique complète
+
+</Card>
+
+<Card title="Appareillage et compression">
+
+**Orthèses statiques (en aigu) :**
+- "Intrinsèques plus" : flexion MP à 90° + extension IPP et IPD + ouverture 1ère commissure
+- Port 24-48h au début puis uniquement la nuit
+- Former l'équipe IDE pour la mise/retrait et surveiller les points d'appui
+
+**Compression — seul moyen contre l'hypertrophie :**
+- Plus on comprime tôt, moins la greffe s'épaissit
+- En réa : bandes cohésives (type PH) ou jersey tubulaire → compression progressive
+- **Face et cou** : conformateur cervico-facial thermoformé, transparent, 23H/24 si possible
+- **Corps** : jersey puis **vêtements compressifs sur-mesure** (ressemble à une combinaison de plongée), portés jusqu'à disparition de l'inflammation
+
+**Autonomisation progressive :**
+1. Renforcement musculaire au lit
+2. Retournements, transferts couché-assis
+3. Équilibre assis
+4. Transfert assis-debout, équilibre debout
+5. Marche qualitative et quantitative
+
+**Massage des zones cicatrisées (en aigu) :**
+- À distance des plaies, sur zones solides
+- Appui pour créer blanchiment cutané (pas plus de 10 min)
+- Retrouver plans de glissement sans inflammation
+
+</Card>
+
+<Card title="Rééducation en centre spécialisé et en libéral">
+
+**Objectifs en centre de rééducation :**
+- Limiter les séquelles cicatricielles (rétraction, hypertrophie) → appareillage + compression ++
+- Retrouver l'autonomie dans les AVQ
+- Entretenir/gagner des amplitudes articulaires
+- Renforcement musculaire fonctionnel
+- Réadaptation sociale, familiale, professionnelle + suivi psy (60% des brûlés développent un trouble psychologique)
+
+**Moyens :**
+- Postures en CCM, encore plus loin, longtemps (fatigant mais indispensable). Travail isométrique en phase inflammatoire.
+- Renforcement musculaire à visée fonctionnelle
+- Rééducation à la marche (patients "en bloc", pas de dissociation des ceintures)
+- Massages cutanés spécifiques (mobilisations cutanées en tangentiel, circumduction)
+- LPG au-delà de 6 mois
+
+**Rééducation en libéral :**
+
+<AlertBox type="trap">**Mal rééduquer c'est les condamner !** 50% des libéraux ont 1 à 2 patients brûlés par an. Le travail en libéral = surveiller et entretenir ce qui a été gagné en centre. Aucune bêtise sauf inflammatoire.</AlertBox>
+
+**Conseils aux patients brûlés :**
+- Protection solaire totale pendant **2 ans** (capital soleil épuisé)
+- Hydratation cutanée quotidienne (plusieurs fois par jour)
+- Vêtements compressifs 23H/24 jusqu'à fin d'inflammation
+- Piscine/mer : sans plaies, avec vêtements compressifs, max 1H
+- Auto-postures : 10 min minimum, 2-4 fois/jour, pendant au moins 6 mois si inflammatoire
+
+**Cures thermales (après fermeture complète des plaies) :**
+2 fois/an les 2 premières années, puis 1 semaine à vie. Centres : La Roche-Posay, Saint-Gervais.
+Soins : douches filiformes (4-15 bars), pulvérisation faciale, bains soufrés, massages dermiques.
+
+**Chirurgie des séquelles :** jamais avant 18 mois-2 ans. Débridement en Z ou T, substitut dermique, chirurgie esthétique, libération articulaire (arthrolyse).
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    COURS — c-deglutition
+════════════════════════════════════════════════════════════════════ */}
+<Section id="c-deglutition">
+
+<Card title="AVC et troubles de la déglutition — Épidémiologie">
+
+<Grid3>
+  <MiniCard val="150 000" label="AVC/an en France" />
+  <MiniCard val="2/3" label="Patients AVC dysphagiques" />
+  <MiniCard val="25%" label="Décès par fausse route à 1 an" />
+</Grid3>
+
+**Rappel des phases AVC :**
+- J0-J14 : phase aiguë
+- J14-6 mois : phase subaiguë
+- Au-delà de 6 mois : phase chronique
+
+**Phase flasque :** concerne le MS, le MI **et la sphère buccale**. La voie directe (non décussée) se réveille en premier → pas de paralysie diaphragmatique pure, mais asymétrie. **Signe du rideau** : hémi-voile du palais béant du côté paralysé.
+
+<AlertBox type="danger">Dans les premières heures (AVC ischémique) ou jours (hémorragique), le **risque de décès lié à une fausse route est majeur**.</AlertBox>
+
+**Pourquoi les troubles de la déglutition persistent-ils ?**
+Les fibres des nerfs crâniens ont une innervation bilatérale (voie croisée + voie directe), sauf le VII. Après un AVC, il faut du temps pour que la voie directe prenne le relais → retard du réflexe de déglutition, pas d'abolition totale.
+
+**Conséquences des troubles de la déglutition :**
+- État nutritionnel ↓ → insuffisance musculaire, diaphragmatique
+- Déshydratation → confusion (surtout PA)
+- Santé respiratoire : pneumopathies à répétition (bronche droite quasi verticale → fausses routes préférentielles à droite)
+- Qualité de vie, dépression, perte d'autonomie
+
+</Card>
+
+<Card title="Physiopathologie de la déglutition">
+
+**Définition :** processus de protection des voies aériennes permettant de faire passer les corps étrangers dans l'œsophage **sans risque respiratoire**. Génère une **apnée physiologique de 0,5s** (pathologique si 1,5-2s).
+
+**Temps de la déglutition :**
+0. **Préparation** : multisensorielle + autonomie de mise en bouche
+1. **Buccale** : 1a masticatoire + 1b propulsion/transport
+2. **Pharyngée** : déclenchement du réflexe (fermeture cordes vocales + épiglotte + contraction pharynx). **80% se font sur le temps expiratoire.**
+3. **Œsophagienne**
+
+**Après un AVC :** désynchronisation → le patient déglutit autant sur le temps inspiratoire → croisement avec flux d'air descendant → **majoration du risque de fausse route**.
+
+**Toux et AVC :**
+- **Toux réflexe** : voie monosynaptique, anatomiquement intacte mais **déprimée** après l'AVC. Peut devenir hyperréflexique (plus modulée par la voie pyramidale).
+- **Toux volontaire** : voie pyramidale (cortex → motoneurone alpha). **Très perturbée** en phase aiguë → toux difficile voire impossible.
+
+**CPF (Cough Peak Flow) :**
+- < 160/180 L/min : inefficace → aides à la toux nécessaires
+- < 270 L/min : introduire techniques d'assistance
+- > 360 L/min : totalement efficace
+
+</Card>
+
+<Card title="Signes cliniques et bilans">
+
+**Signes cliniques directs (à retenir ♥️) :**
+- **Voix mouillée** (= résidus sur les cordes vocales)
+- **Hemmage** (raclement de gorge = 1er mécanisme de protection avant la toux)
+- **Toux** dans les 10 minutes suivant la prise alimentaire ou hydrique
+- Toute gêne décrite par le patient
+
+**Signes cliniques évocateurs :**
+- Pneumopathies itératives ± fièvres
+- Perte de poids, déshydratation, dénutrition
+- Désaturation lors des repas, encombrement pulmonaire latéralisé à droite
+- Allongement du temps de repas
+
+<AlertBox type="trap">Les **fausses routes silencieuses** (sans toux) sont fréquentes (~50% des cas) car le réflexe tussif est déprimé après l'AVC. Surveiller les signes indirects.</AlertBox>
+
+**Examen clinique de l'avant vers l'arrière :**
+1. Fonctions supérieures, autonomie MS (phase 0)
+2. Paralysie faciale (VII), motricité linguale (XI, XII)
+3. **Signe du rideau** : hémi-voile béant. Si hémiplégie droite → luette déviée vers la gauche
+4. Bilan respiratoire (FR, auscultation, évaluation de la toux, CPF)
+5. Bilan postural : cervical (flexion légère recommandée), thoracique, installation assise
+6. Bilan bucco-dentaire : hygiène +++ (fausses routes infectieuses si bouche sale)
+
+**Tests d'évaluation :**
+<table>
+<thead><tr><th>Test</th><th>Caractéristiques</th></tr></thead>
+<tbody>
+<tr><td>**GUSS** (Gugging Swallowing Screen)</td><td>Le plus utilisé en réa par les kinés. Dépistage de l'eau.</td></tr>
+<tr><td>**TCFD** (Test Capacité Fonctionnelle Déglutition)</td><td>Le plus pratiqué selon Grilh, alimentaire (solide + liquide). Commence par l'eau (90% des FR). Non validé.</td></tr>
+<tr><td>**EAT-10**</td><td>Peu sensible et peu spécifique. Validé.</td></tr>
+<tr><td>**DHI**</td><td>30 items autoévaluation. Validé.</td></tr>
+</tbody>
+</table>
+
+<AlertBox type="info">Kinés ET infirmières peuvent réaliser les tests de capacité fonctionnelle de la déglutition. Les aspirations : médecins, infirmières, kinés (pas les orthophonistes).</AlertBox>
+
+</Card>
+
+<Card title="Prise en charge — Postures et stratégies adaptatives">
+
+**Postures :**
+
+<Grid2>
+  <div>
+    <Badge color="green">Flexion cervicale légère</Badge>
+    Met le larynx en protection sous la base de la langue. Détend les muscles sous-hyoïdiens. Augmente l'ouverture du SSO (sphincter supérieur de l'œsophage). **Position de déglutition optimale.**
+  </div>
+  <div>
+    <Badge color="blue">Rotation homolatérale à l'hémiplégie</Badge>
+    Ferme le pharynx du côté rotation → bol alimentaire passe du côté sain (opposé). Fait tourner le SSO → passage facilité. **Vérifier dans la bouche quel hémi-voile est paralytique.**
+  </div>
+</Grid2>
+
+**Installation à table :** dos au dossier, pieds à plat au sol, avant-bras posés sur la table → muscles cervicaux (trapèze, omo-hyoïdien) détendus.
+
+**Textures — Classification IDDSI (0 → 7) :**
+- De 0 (liquide) à 7 (normal). Plus j'épaissis les liquides, plus ils se rapprochent des textures mixées.
+- Stratégies pour liquides : eau froide, eau gazeuse, eau avec goût, épaississants (diminuent la vitesse)
+
+**Environnement :** calme, sans distraction (éteindre TV), ne pas parler pendant qu'il mâche, installation soignée.
+
+**Rééducation respiratoire — EMST :**
+Entraînement des muscles expirateurs en force (expirer dans un embout buccal à résistance = 75% de la PEM). 15-20 min/jour, 5 jours/semaine, 4 semaines.
+- Améliore la motricité hyoïdienne
+- Facilite le processus de déglutition
+- Travail sur le **temps expiratoire résisté (PEP)**
+
+**Toilette bronchique systématique après chaque repas** si FR avérées. Auscultation de la bronche droite en priorité.
+
+<AlertBox type="key">**Meilleure rééducation :** s'entraîner à manger devant son plateau avec des textures différentes. Les exercices de motricité linguale seuls ne suffisent pas à remuscler la base de la langue.</AlertBox>
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-asthme
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-asthme">
+
+<Card title="Fiche synthèse — Asthme">
+
+**Définition GINA 2024 :** état inflammatoire chronique (inflammation + hyperréactivité + remodelage). Limitation **variable** du débit expiratoire.
+
+<table>
+<thead><tr><th>Évaluation</th><th>Outils</th></tr></thead>
+<tbody>
+<tr><td>Contrôle des symptômes</td><td>Fréquence, diurne/nocturne, limitation activités, réveils nocturnes</td></tr>
+<tr><td>Fonction pulmonaire</td><td>Spirométrie (VEMS/CVF), DEP, test de réversibilité</td></tr>
+<tr><td>Capacité d'exercice</td><td>TDM6, TS6, EFCR (VO2max)</td></tr>
+<tr><td>Risque futur</td><td>Historique exacerbations, déclin fonctionnel</td></tr>
+</tbody>
+</table>
+
+<Grid2>
+  <div>
+    <Badge color="red">À ne JAMAIS faire</Badge>
+
+    - Clapping dans l'asthme
+    - SABA seul (GINA 2024)
+    - Éviter l'effort physique
+    - Demander "savez-vous utiliser votre inhalateur ?"
+  </div>
+  <div>
+    <Badge color="green">Toujours faire</Badge>
+
+    - Vérifier la technique d'inhalation (protocole 4C)
+    - Échauffement 15 min avant tout sport
+    - Re-vérifier la technique toutes les 4-6 semaines
+    - ETP + plan d'action personnalisé
+  </div>
+</Grid2>
+
+**Réseau en Occitanie :** Occitan'Air — programme de réadaptation respiratoire ambulatoire sur l'ensemble des départements.
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-rea
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-rea">
+
+<Card title="Fiche synthèse — Kinésithérapie en réanimation">
+
+**Ordre d'arrivée dans un box :** 1/ Observer l'environnement et les machines → 2/ Analyser le monitoring → 3/ Observer le patient.
+
+**Le MK en réanimation :**
+
+<Tree>
+Rôle respiratoire
+├── Désencombrement (AFE, drainage 4 mains, cough assist)
+├── Sevrage ventilatoire (critères : Glasgow, RASS, MRC, toux, déglutition)
+└── Oxygénothérapie (interface adaptée)
+Rôle fonctionnel
+├── Mobilisation précoce (24-48h)
+├── Verticalisation et déambulation
+├── Tests de déglutition
+└── Prévention raideurs/rétractions
+</Tree>
+
+<table>
+<thead><tr><th>Score</th><th>Seuil critique</th><th>Signification</th></tr></thead>
+<tbody>
+<tr><td>RASS</td><td>0</td><td>Éveillé et calme = objectif</td></tr>
+<tr><td>MRC</td><td>< 48</td><td>Neuropathie de réanimation → ne peut pas respirer seul</td></tr>
+<tr><td>Glasgow</td><td>3-15</td><td>État neurologique (collaboration possible ?)</td></tr>
+</tbody>
+</table>
+
+**Oxygénothérapie :** lunettes (5 L/min max) → masque simple → masque HO (15 L/min) → OHD Optiflow (60 L/min, humidifié/réchauffé, crée PEP).
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-brulures
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-brulures">
+
+<Card title="Fiche synthèse — Brûlures">
+
+**Estimation durée de séjour :**
+- CTB : 1-2 jours par % de surface brûlée
+- Centre de rééducation : × 2 le temps CTB
+
+**Règle infra-douloureux toujours valable** tant que la cicatrice est inflammatoire (test de vitropression < 3s).
+
+**Séquelles selon localisation :**
+
+<table>
+<thead><tr><th>Zone</th><th>Séquelle attendue</th><th>Traitement</th></tr></thead>
+<tbody>
+<tr><td>Zones articulaires (plis)</td><td>Rétractions (myofibroblastes)</td><td>Postures CCM, orthèses statiques</td></tr>
+<tr><td>Zones peu mobiles (thorax, milieu membre)</td><td>Hypertrophie (collagène anarchique)</td><td>Compression (concept ARA)</td></tr>
+<tr><td>Pigmentation</td><td>Dyschromies</td><td>Peu d'action kiné possible</td></tr>
+</tbody>
+</table>
+
+**Massage :**
+- Phase inflammatoire : pression en appui (blanchiment cutané), pas de friction
+- Phase non inflammatoire (vitropression > 3s, après 2-3 mois) : palper-rouler, décollement cutané
+- Durée : jamais plus de 10 min (éviter l'inflammation)
+
+**Conseils patients (à mémoriser) :**
+Protection solaire 2 ans · Hydratation cutanée pluriquotidienne · Vêtements compressifs 23H/24 · Pas de mouvements itératifs en phase inflammatoire · Auto-postures 10 min minimum, 2-4×/jour
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FICHE — f-deglutition
+════════════════════════════════════════════════════════════════════ */}
+<Section id="f-deglutition">
+
+<Card title="Fiche synthèse — Déglutition et AVC">
+
+**Triade diagnostique de fausse route :**
+1. Voix mouillée
+2. Hemmage (raclement de gorge)
+3. Toux dans les 10 min post-repas
+
+**Postures à retenir :**
+
+<Grid2>
+  <div>
+    <Badge color="green">Flexion cervicale légère</Badge>
+    Toujours en première intention. Larynx protégé sous la base de la langue.
+  </div>
+  <div>
+    <Badge color="blue">Rotation homolatérale à l'hémiplégie</Badge>
+    Ferme le côté paralysé. Bol passe par le côté sain. Vérifier dans la bouche avant d'appliquer.
+  </div>
+</Grid2>
+
+**Bronche droite quasi verticale** → encombrement latéralisé à droite prioritaire à l'auscultation.
+
+**80% des fausses routes se font à l'eau** → commencer les tests par l'eau.
+
+**Rôle MK vs orthophoniste :**
+- **MK** : bilan respiratoire, tests de déglutition (GUSS, TCFD), aspirations, rééducation respiratoire (EMST, toilette bronchique), volet moteur et postural
+- **Orthophoniste** : communication, voix, praxies linguales, planification des tâches (versant central)
+
+**Déglutition normale vs AVC :**
+- Normale : 80% sur temps expiratoire (protection naturelle)
+- AVC : désynchronisation → aussi sur temps inspiratoire → **risque majeur**
+
+</Card>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    FLASHCARDS
+════════════════════════════════════════════════════════════════════ */}
+<Section id="flashcards">
+
+<FlashCard theme="Asthme" q="Quels sont les 3 facteurs de l'obstruction bronchique dans l'asthme ?">
+  1. **Bronchospasme** (contraction muscles lisses) — 2. **Œdème** de la muqueuse — 3. **Hypersécrétion** de mucus adhérent
+</FlashCard>
+
+<FlashCard theme="Asthme" q="Quelle est la différence entre l'AIE et le BIE ?">
+  - **AIE** = chute des débits expiratoires à l'effort chez un patient ayant un asthme **sous-jacent connu**
+  - **BIE** = chute des débits à l'effort **sans autre manifestation d'asthme connue**
+</FlashCard>
+
+<FlashCard theme="Asthme" q="Pourquoi l'air froid et sec favorise-t-il la crise d'asthme à l'effort ?">
+  L'hyperventilation entraîne une **perte thermique et hydrique** au niveau de la muqueuse bronchique → bronchoconstriction réflexe (cascade inflammatoire + contraction muscles lisses).
+</FlashCard>
+
+<FlashCard theme="Asthme" ctx="Technique d'inhalation" q="Quelles sont les 4 étapes du protocole 4C ?">
+  1. **Choisir** : adéquation physique patient/dispositif  
+  2. **Contrôler** : auditer la technique (méthode Teach-Back, jamais "savez-vous utiliser ?")  
+  3. **Corriger** : posture → vidange → flux ciblé → apnée 5-10s  
+  4. **Confirmer** : redémonstration par le patient
+</FlashCard>
+
+<FlashCard theme="Asthme" q="Quelle est la durée recommandée d'un échauffement pour un asthmatique avant le sport ?">
+  **15 à 20 minutes** progressives pour induire une période réfractaire (4-6h de protection bronchique moindre contre les déclencheurs du BIE).
+</FlashCard>
+
+<FlashCard theme="Réanimation" q="Que signifie un score MRC < 48 en réanimation ?">
+  **Neuropathie de réanimation** : le patient n'a pas la capacité musculaire respiratoire pour respirer seul. C'est un critère pour déterminer si le patient peut être sevré de la ventilation mécanique.
+</FlashCard>
+
+<FlashCard theme="Réanimation" q="Quels sont les critères de sevrabilité de la ventilation mécanique ?">
+  - Patient **conscient** (Glasgow, RASS)
+  - Capable d'**avaler** (test de déglutition)
+  - Capable de **tousser** efficacement (CPF ≥ 160 L/min)
+  - Capable de **ventiler** (paramètres cliniques et gazométriques satisfaisants)
+  - **Score MRC** satisfaisant (≥ 48)
+</FlashCard>
+
+<FlashCard theme="Réanimation" q="Pourquoi le décubitus ventral est-il utilisé en réanimation ?">
+  En DD, la partie postérieure des poumons est écrasée → engorgement. Le DV **recrute les territoires postérieurs** non ventilés, améliore le travail du **diaphragme** et améliore les échanges gazeux.
+</FlashCard>
+
+<FlashCard theme="Chirurgie thoracique" q="Pourquoi évite-t-on le travail inspiratoire en phase 2 (ablation du drain) de la lobectomie ?">
+  Risque de **décollement de la plèvre** → **pneumothorax**. L'ablation du drain laisse un risque d'épanchement aérien. On attend la radio de contrôle avant de reprendre tout travail inspiratoire.
+</FlashCard>
+
+<FlashCard theme="Chirurgie thoracique" q="Qu'est-ce que l'atélectasie gravité-dépendante et comment la traiter ?">
+  Liée à la position per-opératoire (DD → bases non ventilées). Peut se **lever seule** simplement en asseyant le patient. Traitement : verticalisation précoce, position assise.
+</FlashCard>
+
+<FlashCard theme="Brûlures" q="Quelles sont les 3 phases d'évolution d'une brûlure ?">
+  1. **Inflammatoire** (J0-J4/J8) : choc hypovolémique, plasmorragie massive  
+  2. **Proliférative** : reconstruction cutanée, rétractions (max J5-J15), hypertrophie (max 3-6 mois)  
+  3. **Maturation** (18-24 mois) : remodelage, disparition myofibroblastes, apparition élastine
+</FlashCard>
+
+<FlashCard theme="Brûlures" q="Comment interprète-t-on le test de vitropression ?">
+  Appuyer 3-5 sec sur la cicatrice (sur un os), retirer, compter le temps de recoloration.
+  - **< 3 sec** → phase inflammatoire → techniques non inflammatoires uniquement, 0 douleur
+  - **≥ 5 sec** → pas d'inflammation → palper-rouler, décollement possibles
+  - **Non applicable sur peau noire**
+</FlashCard>
+
+<FlashCard theme="Brûlures" q="Quelle est la règle des 15 pour le refroidissement d'une brûlure ?">
+  Eau fraîche (~15°C), pendant **15 minutes**, à **15 cm** de la plaie. Ne pas faire si : perte de connaissance, surface trop étendue (risque hypothermie). Inutile si > 30 min post-brûlure.
+</FlashCard>
+
+<FlashCard theme="Déglutition" q="Quels sont les 3 signes cliniques directs d'une fausse route ?">
+  1. **Voix mouillée** (résidus sur cordes vocales)  
+  2. **Hemmage** (raclement de gorge, 1er mécanisme de protection)  
+  3. **Toux** dans les 10 minutes suivant la prise alimentaire ou hydrique
+</FlashCard>
+
+<FlashCard theme="Déglutition" ctx="Signe du rideau" q="Lors d'une hémiplégie droite, vers quel côté la luette est-elle déviée ?">
+  Vers la **gauche** (côté sain). Les muscles gauches, plus forts, tirent la luette de leur côté. L'hémi-voile **droit** est béant (paralytique). → La rotation de la tête doit être effectuée vers la droite (homolatéral à l'hémiplégie).
+</FlashCard>
+
+<FlashCard theme="Déglutition" q="Sur quel temps respiratoire s'effectue normalement la déglutition et pourquoi est-ce important ?">
+  **80% sur le temps expiratoire** → protection naturelle des poumons. Après un AVC, désynchronisation → le patient déglutit aussi sur le temps inspiratoire → flux descendant → majoration du risque de fausse route.
+</FlashCard>
+
+</Section>
+
+{/* ══════════════════════════════════════════════════════════════════
+    QCM
+════════════════════════════════════════════════════════════════════ */}
+<Section id="qcm">
+
+<QcmCard
+  n={1}
+  type="QCS"
+  tag="Asthme — Physiopathologie"
+  q="Parmi les techniques suivantes, laquelle est CONTRE-INDIQUÉE dans la prise en charge de l'asthme ?"
+  opts={[
+    "A. Accélération du Flux Expiratoire (AFE)",
+    "B. Drainage autogène",
+    "C. Clapping (percussions manuelles)",
+    "D. Freinage expiratoire (lèvres pincées)"
+  ]}
+  ans={[2]}
+>
+  Le **clapping** est formellement proscrit dans l'asthme : il est inefficace et peut déclencher un bronchospasme réflexe. On privilégie les techniques actives (AFE, drainage autogène, freinage expiratoire).
+</QcmCard>
+
+<QcmCard
+  n={2}
+  type="QCS"
+  tag="Asthme — Pharmacologie"
+  q="Selon les recommandations GINA 2024, quelle stratégie de traitement est privilégiée ?"
+  opts={[
+    "A. SABA seul à la demande",
+    "B. CSI quotidien + SABA séparé pour les crises (voie 2)",
+    "C. Un seul inhalateur CSI-formotérol utilisé comme traitement de fond ET de crise (stratégie MART)",
+    "D. Corticoïdes oraux en traitement de fond"
+  ]}
+  ans={[2]}
+>
+  La **stratégie MART** (voie 1 GINA) utilise 1 seul inhalateur CSI-formotérol en fond et en crise. Elle réduit le risque d'exacerbation sévère jusqu'à 65%. Le SABA seul n'est plus recommandé par GINA 2024.
+</QcmCard>
+
+<QcmCard
+  n={3}
+  type="QCM"
+  tag="Réanimation — Évaluation"
+  q="Quels sont les critères de sevrabilité de la ventilation mécanique ? (plusieurs réponses)"
+  opts={[
+    "A. Score MRC ≥ 48",
+    "B. Toux efficace (CPF ≥ 160 L/min)",
+    "C. Patient conscient (Glasgow, RASS)",
+    "D. FR < 20/min",
+    "E. Capacité à avaler (déglutition testée)"
+  ]}
+  ans={[0, 1, 2, 4]}
+>
+  Les critères essentiels sont : score MRC ≥ 48 (force musculaire), toux efficace, conscience (Glasgow, RASS), et capacité à avaler. La fréquence respiratoire seule n'est pas un critère suffisant.
+</QcmCard>
+
+<QcmCard
+  n={4}
+  type="QCS"
+  tag="Chirurgie thoracique"
+  q="En phase 2 de la rééducation après lobectomie (ablation du drain), quel travail est à ÉVITER ?"
+  opts={[
+    "A. Assouplissements thoraco-abdominaux",
+    "B. Spirométrie incitative",
+    "C. Travail en inspiration intense",
+    "D. Mobilisation de l'épaule"
+  ]}
+  ans={[2]}
+>
+  Après l'ablation du drain, le risque est le **décollement de la plèvre** → pneumothorax. Tout travail en **inspiration intense** est contre-indiqué. On se concentre sur les assouplissements et l'expansion douce.
+</QcmCard>
+
+<QcmCard
+  n={5}
+  type="QCS"
+  tag="Brûlures — Évaluation"
+  q="Selon la règle des 9 de Wallace, un patient adulte présentant des brûlures sur la face antérieure du tronc et un membre supérieur complet représente quelle surface corporelle brûlée ?"
+  opts={[
+    "A. 18%",
+    "B. 27%",
+    "C. 36%",
+    "D. 45%"
+  ]}
+  ans={[1]}
+>
+  Face antérieure du tronc = 2 × 9% = **18%**. Un membre supérieur complet = **9%**. Total = **27%**.
+</QcmCard>
+
+<QcmCard
+  n={6}
+  type="QCS"
+  tag="Brûlures — Rééducation"
+  q="Quel est le seul moyen pour lutter contre l'hypertrophie cicatricielle chez un patient brûlé ?"
+  opts={[
+    "A. La posture en course cutanée maximale",
+    "B. La compression (vêtements compressifs, conformateur)",
+    "C. Le massage profond quotidien",
+    "D. La thermothérapie infrarouge"
+  ]}
+  ans={[1]}
+>
+  La **compression** est le seul moyen efficace contre l'hypertrophie. Plus on comprime tôt, moins la greffe ou la brûlure s'épaissit. La posture lutte contre les rétractions, pas contre l'hypertrophie.
+</QcmCard>
+
+<QcmCard
+  n={7}
+  type="QCM"
+  tag="Déglutition — Signes cliniques"
+  q="Parmi ces signes, lesquels sont des signes DIRECTS de fausse route ? (plusieurs réponses)"
+  opts={[
+    "A. Voix mouillée après la déglutition",
+    "B. Perte de poids inexpliquée",
+    "C. Hemmage (raclement de gorge)",
+    "D. Toux dans les 10 minutes suivant le repas",
+    "E. Pneumopathies récidivantes"
+  ]}
+  ans={[0, 2, 3]}
+>
+  Les signes **directs** sont : voix mouillée, hemmage, toux post-repas, et toute gêne décrite par le patient. La perte de poids et les pneumopathies sont des signes **évocateurs** (indirects).
+</QcmCard>
+
+<QcmCard
+  n={8}
+  type="QCS"
+  tag="Déglutition — Postures"
+  q="Pour un patient présentant une hémiplégie gauche avec un hémi-voile gauche béant, quelle rotation de la tête faut-il appliquer lors des repas ?"
+  opts={[
+    "A. Rotation vers la droite (côté sain)",
+    "B. Rotation vers la gauche (côté hémiplégique)",
+    "C. Pas de rotation, uniquement la flexion cervicale suffit",
+    "D. Extension cervicale légère"
+  ]}
+  ans={[1]}
+>
+  La rotation est **homolatérale à l'hémiplégie** : rotation vers la gauche (côté paralysé). Cela ferme le pharynx gauche (côté parétique) et ouvre le côté droit (sain) → le bol alimentaire passe par le côté fonctionnel. **Toujours vérifier dans la bouche quel hémi-voile est béant avant d'appliquer la posture.**
+</QcmCard>
+
+</Section>
