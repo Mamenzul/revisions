@@ -1127,134 +1127,215 @@ Protection solaire 2 ans · Hydratation cutanée pluriquotidienne · Vêtements 
 ════════════════════════════════════════════════════════════════════ */}
 <Section id="qcm">
 
+{/* ── Annales promo 21-25 ─────────────────────────────────────── */}
+
 <QcmCard
   n={1}
-  type="QCS"
-  tag="Asthme — Physiopathologie"
-  q="Parmi les techniques suivantes, laquelle est CONTRE-INDIQUÉE dans la prise en charge de l'asthme ?"
+  type="QCM"
+  tag="Annales — Réanimation"
+  ctx="Selon l'article D. 712-125 / Circulaire DHOS/SDO n°2003-413 du 27 août 2003"
+  q="Concernant les services de réanimation, soins intensifs et surveillance continue, quelles propositions sont exactes ?"
   opts={[
-    "A. Accélération du Flux Expiratoire (AFE)",
-    "B. Drainage autogène",
-    "C. Clapping (percussions manuelles)",
-    "D. Freinage expiratoire (lèvres pincées)"
+    "A. Un service de réanimation comprend du personnel spécialisé et normé",
+    "B. Un service de réanimation doit être apte à prendre en charge des patients présentant ou susceptibles de présenter plusieurs défaillances viscérales aiguës circulatoires, rénales et respiratoires",
+    "C. Les unités de soins intensifs ont vocation à prendre en charge les défaillances viscérales liées à une seule spécialité d'organe",
+    "D. Un service de réanimation comprend du personnel non spécialisé et non normé",
+    "E. Les unités de soins intensifs comprennent du personnel spécialisé et non normé",
+    "F. Un service de surveillance médicale continue comprend du personnel non spécialisé et normé"
   ]}
-  ans={[2]}
+  ans={[0, 1, 2]}
 >
-  Le **clapping** est formellement proscrit dans l'asthme : il est inefficace et peut déclencher un bronchospasme réflexe. On privilégie les techniques actives (AFE, drainage autogène, freinage expiratoire).
+  **A, B, C.** La réanimation est spécialisée, normée, et prend en charge les **multi-défaillances** viscérales. Les soins intensifs ne concernent qu'**une seule spécialité d'organe**. D est faux (personnel non spécialisé = faux). E est faux (le personnel des USI est aussi normé). F est faux (la surveillance continue a du personnel spécialisé).
 </QcmCard>
 
 <QcmCard
   n={2}
-  type="QCS"
-  tag="Asthme — Pharmacologie"
-  q="Selon les recommandations GINA 2024, quelle stratégie de traitement est privilégiée ?"
+  type="QCM"
+  tag="Annales — Réanimation"
+  q="En secteur de réanimation, quel(s) score(s), test(s) ou échelle(s) permettent de déterminer le degré d'atteinte motrice dans le cadre d'une neuromyopathie acquise en réanimation ?"
   opts={[
-    "A. SABA seul à la demande",
-    "B. CSI quotidien + SABA séparé pour les crises (voie 2)",
-    "C. Un seul inhalateur CSI-formotérol utilisé comme traitement de fond ET de crise (stratégie MART)",
-    "D. Corticoïdes oraux en traitement de fond"
+    "A. Le score MRC (Medical Research Council)",
+    "B. Le score mMRC",
+    "C. L'échelle de RASS",
+    "D. La MIF",
+    "E. Le BNM",
+    "F. Le score de Brunnstrom"
   ]}
-  ans={[2]}
+  ans={[0]}
 >
-  La **stratégie MART** (voie 1 GINA) utilise 1 seul inhalateur CSI-formotérol en fond et en crise. Elle réduit le risque d'exacerbation sévère jusqu'à 65%. Le SABA seul n'est plus recommandé par GINA 2024.
+  **A. Le score MRC.** Il évalue 6 groupes musculaires bilatéralement (score 0-60). Un score < 48 définit la **neuropathie de réanimation** : le patient n'a pas la capacité musculaire respiratoire pour respirer seul → critère de sevrabilité. Le mMRC évalue la dyspnée, le RASS évalue la sédation/agitation, la MIF et le Brunnstrom concernent d'autres contextes.
 </QcmCard>
 
 <QcmCard
   n={3}
   type="QCM"
-  tag="Réanimation — Évaluation"
-  q="Quels sont les critères de sevrabilité de la ventilation mécanique ? (plusieurs réponses)"
+  tag="Annales — Chirurgie thoracique — Lobectomie"
+  q="Dans le cadre de la chirurgie thoracique de type lobectomie, quelles propositions sont exactes ?"
   opts={[
-    "A. Score MRC ≥ 48",
-    "B. Toux efficace (CPF ≥ 160 L/min)",
-    "C. Patient conscient (Glasgow, RASS)",
-    "D. FR < 20/min",
-    "E. Capacité à avaler (déglutition testée)"
+    "A. Dans la phase 1, le syndrome est obstructif, il faut donc travailler l'expiration",
+    "B. Dans la phase 1, le syndrome est restrictif, il faut donc travailler l'inspiration mais aussi l'expiration (pour lutter contre l'encombrement)",
+    "C. Dans la phase 2, le syndrome est restrictif, il faut travailler l'expiration pour lutter notamment contre la rigidité thoracique",
+    "D. Dans la phase 3, le syndrome est restrictif, il faut travailler l'expiration pour ne pas créer de zone pulmonaire non fonctionnelle"
   ]}
-  ans={[0, 1, 2, 4]}
+  ans={[1, 2, 3]}
 >
-  Les critères essentiels sont : score MRC ≥ 48 (force musculaire), toux efficace, conscience (Glasgow, RASS), et capacité à avaler. La fréquence respiratoire seule n'est pas un critère suffisant.
+  **B, C, D.** Le syndrome après lobectomie est toujours **restrictif** (pas obstructif). Phase 1 : travail inspiratoire (regagner la CV, spirométrie incitative) ET expiratoire (désencombrement). Phase 2 : ablation du drain, travail expiratoire + assouplissements, **pas de travail inspiratoire intense** (risque pneumothorax). Phase 3 : travail expiratoire d'entretien uniquement, la CV prédictive est atteinte.
 </QcmCard>
 
 <QcmCard
   n={4}
-  type="QCS"
-  tag="Chirurgie thoracique"
-  q="En phase 2 de la rééducation après lobectomie (ablation du drain), quel travail est à ÉVITER ?"
+  type="QCM"
+  tag="Annales — Oxygénothérapie"
+  q="Concernant les dispositifs d'oxygénothérapie conventionnelle, quelles associations débit/dispositif sont correctes ?"
   opts={[
-    "A. Assouplissements thoraco-abdominaux",
-    "B. Spirométrie incitative",
-    "C. Travail en inspiration intense",
-    "D. Mobilisation de l'épaule"
+    "A. Lunettes à O₂ : 0 à 5 L/min",
+    "B. Masque à moyenne concentration : 5 à 7 L/min",
+    "C. Masque à haute concentration : 7 à 15 L/min",
+    "D. Lunettes à O₂ : 0 à 15 L/min",
+    "E. Masque à haute concentration : 5 à 10 L/min"
   ]}
-  ans={[2]}
+  ans={[0, 1, 2]}
 >
-  Après l'ablation du drain, le risque est le **décollement de la plèvre** → pneumothorax. Tout travail en **inspiration intense** est contre-indiqué. On se concentre sur les assouplissements et l'expansion douce.
+  **A, B, C.** — Lunettes : 0 à **5 L/min** (max). — Masque moyenne concentration : **5 à 7 L/min**. — Masque haute concentration : **7 à 15 L/min**. Au-delà, on recourt à l'oxygène à haut débit (OHD/Optiflow, jusqu'à 60 L/min).
 </QcmCard>
 
 <QcmCard
   n={5}
   type="QCS"
-  tag="Brûlures — Évaluation"
-  q="Selon la règle des 9 de Wallace, un patient adulte présentant des brûlures sur la face antérieure du tronc et un membre supérieur complet représente quelle surface corporelle brûlée ?"
+  tag="Annales — Dossier progressif"
+  ctx="Mr Z, 59 ans, tabagisme actif à 30 paquets/années."
+  q="Que signifie la notion de 30 paquets-années ?"
   opts={[
-    "A. 18%",
-    "B. 27%",
-    "C. 36%",
-    "D. 45%"
+    "A. 30 cigarettes par jour pendant 20 ans",
+    "B. 1 paquet par jour pendant 30 ans",
+    "C. 30 paquets par an pendant 30 ans",
+    "D. 1,5 paquet par jour pendant 20 ans",
+    "E. 20 cigarettes par jour pendant 15 ans"
   ]}
   ans={[1]}
 >
-  Face antérieure du tronc = 2 × 9% = **18%**. Un membre supérieur complet = **9%**. Total = **27%**.
+  **B.** 1 paquet-année = 1 paquet/jour pendant 1 an (ou 20 cigarettes/jour pendant 1 an). 30 paquets-années = **1 paquet/jour × 30 ans**, ou 2 paquets/jour × 15 ans, etc. La formule est : nb paquets/jour × nb années.
 </QcmCard>
 
 <QcmCard
   n={6}
   type="QCS"
-  tag="Brûlures — Rééducation"
-  q="Quel est le seul moyen pour lutter contre l'hypertrophie cicatricielle chez un patient brûlé ?"
+  tag="Annales — Dossier progressif"
+  ctx="Mr Z post-œsophagectomie, J3 : douleur 8/10, T° 39°C, crachats muco-purulents, voix mouillée, hemmage fréquent. GdS : PO₂ 65 mmHg, PCO₂ 50 mmHg, pH 7,5. Échographie : condensation alvéolaire gauche."
+  q="Après ce type de chirurgie et à cette phase, quel est le syndrome respiratoire résultant ?"
   opts={[
-    "A. La posture en course cutanée maximale",
-    "B. La compression (vêtements compressifs, conformateur)",
-    "C. Le massage profond quotidien",
-    "D. La thermothérapie infrarouge"
+    "A. Syndrome restrictif mixte",
+    "B. Syndrome respiratoire obstructif",
+    "C. Syndrome respiratoire restrictif",
+    "D. Syndrome respiratoire type bronchospasme",
+    "E. Syndrome respiratoire type épanchement pleural"
   ]}
-  ans={[1]}
+  ans={[2]}
 >
-  La **compression** est le seul moyen efficace contre l'hypertrophie. Plus on comprime tôt, moins la greffe ou la brûlure s'épaissit. La posture lutte contre les rétractions, pas contre l'hypertrophie.
+  **C. Syndrome respiratoire restrictif.** L'œsophagectomie par voie trans-thoracique (Lewis Santy) combine une thoracotomie et une laparotomie. Le syndrome est **restrictif** : dysfonction diaphragmatique, épanchements pleuraux, diminution de la compliance. La condensation alvéolaire (pneumopathie d'inhalation probable, vu la voix mouillée/hemmage) s'y surajoute. La PCO₂ à 50 mmHg (hypercapnie) et le pH à 7,5 (alcalose respiratoire compensatrice) confirment la détresse respiratoire.
 </QcmCard>
 
 <QcmCard
   n={7}
   type="QCM"
-  tag="Déglutition — Signes cliniques"
-  q="Parmi ces signes, lesquels sont des signes DIRECTS de fausse route ? (plusieurs réponses)"
+  tag="Annales — Asthme — Techniques"
+  q="Parmi les techniques suivantes, lesquelles sont recommandées dans la prise en charge kinésithérapique de l'asthme ? (plusieurs réponses)"
+  opts={[
+    "A. Accélération du Flux Expiratoire (AFE)",
+    "B. Clapping (percussions manuelles thoraciques)",
+    "C. Drainage autogène",
+    "D. Freinage expiratoire (lèvres pincées / PEP)",
+    "E. Respiration diaphragmatique"
+  ]}
+  ans={[0, 2, 3, 4]}
+>
+  **A, C, D, E.** Le **clapping** (B) est formellement **proscrit** dans l'asthme : inefficace et susceptible de déclencher un bronchospasme réflexe. Toutes les autres techniques sont recommandées : AFE (sécrétions distales → proximales), drainage autogène (sans collapsus), freinage expiratoire (stabilise les bronches), respiration diaphragmatique (réduit l'essoufflement).
+</QcmCard>
+
+<QcmCard
+  n={8}
+  type="QCM"
+  tag="Annales — Réanimation — Neuromyopathie"
+  ctx="Annales promo 21-25"
+  q="Concernant les particularités du MKDE en secteur de réanimation, quelles affirmations sont exactes ?"
+  opts={[
+    "A. La mobilisation précoce est indispensable pour diminuer le temps de séjour",
+    "B. La mobilisation précoce est définie comme devant être effectuée dans les 24 à 48h",
+    "C. L'état musculaire périphérique est corrélé à l'état musculaire cardio-respiratoire",
+    "D. Le MKDE ne joue aucun rôle dans la déglutition en réanimation",
+    "E. Le décubitus ventral permet de recruter des territoires respiratoires postérieurs non ventilés"
+  ]}
+  ans={[0, 1, 2, 4]}
+>
+  **A, B, C, E.** La mobilisation précoce (24-48h) est indispensable pour maintenir les fonctions physiques et diminuer la mortalité. L'état musculaire périphérique (score MRC) est corrélé aux capacités respiratoires. Le DV recrute les zones postérieures engorgées. D est **faux** : en l'absence d'orthophoniste, le MK réalise les tests de déglutition en réanimation.
+</QcmCard>
+
+<QcmCard
+  n={9}
+  type="QCM"
+  tag="Annales — Déglutition AVC"
+  ctx="Signes cliniques de fausse route"
+  q="Parmi ces signes, lesquels sont des signes DIRECTS de fausse route chez un patient AVC ?"
   opts={[
     "A. Voix mouillée après la déglutition",
     "B. Perte de poids inexpliquée",
     "C. Hemmage (raclement de gorge)",
     "D. Toux dans les 10 minutes suivant le repas",
-    "E. Pneumopathies récidivantes"
+    "E. Pneumopathies récidivantes",
+    "F. Désaturation lors des repas"
   ]}
   ans={[0, 2, 3]}
 >
-  Les signes **directs** sont : voix mouillée, hemmage, toux post-repas, et toute gêne décrite par le patient. La perte de poids et les pneumopathies sont des signes **évocateurs** (indirects).
+  **A, C, D.** Les signes **directs** sont : voix mouillée, hemmage, toux post-repas, et toute gêne décrite par le patient. La perte de poids (B), les pneumopathies (E) et la désaturation (F) sont des signes **évocateurs** (indirects), témoignant d'une conséquence à distance de la fausse route.
 </QcmCard>
 
 <QcmCard
-  n={8}
+  n={10}
   type="QCS"
-  tag="Déglutition — Postures"
-  q="Pour un patient présentant une hémiplégie gauche avec un hémi-voile gauche béant, quelle rotation de la tête faut-il appliquer lors des repas ?"
+  tag="Annales — Brûlures"
+  q="Quel est le seul moyen efficace pour lutter contre l'hypertrophie cicatricielle chez un patient brûlé ?"
   opts={[
-    "A. Rotation vers la droite (côté sain)",
-    "B. Rotation vers la gauche (côté hémiplégique)",
-    "C. Pas de rotation, uniquement la flexion cervicale suffit",
-    "D. Extension cervicale légère"
+    "A. La posture en course cutanée maximale (CCM)",
+    "B. La compression (vêtements compressifs, conformateur cervico-facial)",
+    "C. Le massage profond quotidien (palper-rouler)",
+    "D. Les cures thermales (douches filiformes)"
   ]}
   ans={[1]}
 >
-  La rotation est **homolatérale à l'hémiplégie** : rotation vers la gauche (côté paralysé). Cela ferme le pharynx gauche (côté parétique) et ouvre le côté droit (sain) → le bol alimentaire passe par le côté fonctionnel. **Toujours vérifier dans la bouche quel hémi-voile est béant avant d'appliquer la posture.**
+  **B.** La **compression** est le seul moyen contre l'hypertrophie. Plus on comprime tôt après la fermeture des plaies, moins la cicatrice s'épaissit. La posture en CCM lutte contre les **rétractions**, pas l'hypertrophie. Le palper-rouler n'est possible qu'en phase non inflammatoire (vitropression > 3s). Les cures thermales améliorent la souplesse mais ne sont pas le traitement de l'hypertrophie.
+</QcmCard>
+
+<QcmCard
+  n={11}
+  type="QCS"
+  tag="Annales — Déglutition — Postures"
+  q="Pour un patient présentant une hémiplégie gauche avec hémi-voile gauche béant, quelle rotation de tête appliquer pendant les repas ?"
+  opts={[
+    "A. Rotation vers la droite (côté sain)",
+    "B. Rotation vers la gauche (côté hémiplégique)",
+    "C. Pas de rotation, uniquement la flexion cervicale",
+    "D. Extension cervicale légère pour ouvrir le SSO"
+  ]}
+  ans={[1]}
+>
+  **B.** La rotation est **homolatérale à l'hémiplégie** (vers le côté paralysé). Cela ferme le pharynx parétique et ouvre le côté sain → le bol alimentaire passe par le côté fonctionnel. L'extension cervicale (D) est **contre-indiquée** : elle plaque le larynx, gêne l'ouverture du SSO et favorise les fausses routes. **Toujours vérifier dans la bouche quel hémi-voile est béant avant d'appliquer la posture.**
+</QcmCard>
+
+<QcmCard
+  n={12}
+  type="QCS"
+  tag="Annales — Chirurgie abdominale"
+  ctx="Dossier progressif — post-œsophagectomie"
+  q="Après une chirurgie thoraco-abdominale (œsophagectomie par voie trans-thoracique), quel type de syndrome respiratoire résulte de la combinaison chirurgie + anesthésie générale ?"
+  opts={[
+    "A. Syndrome obstructif pur (encombrement bronchique)",
+    "B. Syndrome restrictif pur (dysfonction diaphragmatique)",
+    "C. Syndrome mixte : restrictif (chirurgie) + obstructif (anesthésie)",
+    "D. Syndrome de bronchospasme réflexe"
+  ]}
+  ans={[2]}
+>
+  **C. Syndrome mixte.** La chirurgie engendre un syndrome **restrictif** (dysfonction diaphragmatique, douleur, épanchement pleural). L'anesthésie générale engendre un syndrome **obstructif** (intubation → inflammation → hypersécrétion, assèchement des voies par les gaz froids et secs, altération du surfactant). Les deux se combinent → **syndrome mixte** à traiter par des techniques inspiratoires ET expiratoires.
 </QcmCard>
 
 </Section>
